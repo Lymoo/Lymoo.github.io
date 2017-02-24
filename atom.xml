@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-24T13:18:28.000Z</updated>
+  <updated>2017-02-24T13:48:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ajax的探索</title>
+    <link href="http://yoursite.com/2017/02/24/Ajax%E7%9A%84%E6%8E%A2%E7%B4%A2/"/>
+    <id>http://yoursite.com/2017/02/24/Ajax的探索/</id>
+    <published>2017-02-24T13:24:39.000Z</published>
+    <updated>2017-02-24T13:48:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是Ajax"><a href="#什么是Ajax" class="headerlink" title="什么是Ajax"></a>什么是Ajax</h1><p>Ajax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是<br>一项新的技术，而是由多种技术组合而成。<a id="more"></a></p>
+<h1 id="Ajax的关键技术"><a href="#Ajax的关键技术" class="headerlink" title="Ajax的关键技术"></a>Ajax的关键技术</h1><p>1.Javascript脚本语言<br>2.XMLHttpRequest对象<br>3.可扩展标记语言(XML) JSON<br>4.文档对象模型(DOM)<br>5.层叠样式表(CSS)</p>
+<h1 id="前后台通讯"><a href="#前后台通讯" class="headerlink" title="前后台通讯"></a>前后台通讯</h1><p>封装一个Ajax的方法这里名字为GetAndPost.js<br>内容展示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">function toUrl(url,data)&#123;</div><div class="line">	var time = new Date().getTime();</div><div class="line">	data.time = time;</div><div class="line">	var arr = []; ///存储经过遍历之后形成的名和值的字符串</div><div class="line"></div><div class="line">	for(var i in data)&#123;</div><div class="line">		var str = i + &quot;=&quot; + data[i];</div><div class="line">		arr.push(str);</div><div class="line">	&#125;</div><div class="line">	var str = arr.join(&quot;&amp;&quot;);</div><div class="line">	var path = url + &quot;?&quot; + str;</div><div class="line">	return path;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function fnAjax(obj)&#123;</div><div class="line">	// 兼容浏览器写法</div><div class="line">	if (window.XMLHttpRequest) &#123;</div><div class="line">		var ajax = new XMLHttpRequest();</div><div class="line">	&#125; else &#123;</div><div class="line">		var ajax = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	var data = obj.data || &#123;&#125;;</div><div class="line">	var succFn = obj.succFn || false;</div><div class="line">	var failFn = obj.failFn || false;</div><div class="line"></div><div class="line">	var path = toUrl(obj.url,data);</div><div class="line">	var pathArr = path.split(&quot;?&quot;);</div><div class="line">	var time = new Date().getTime();</div><div class="line">	var type = obj.type || &quot;get&quot;;</div><div class="line">	</div><div class="line">	if (type == &quot;get&quot;) &#123;</div><div class="line">		ajax.open(&quot;GET&quot;, path, true);</div><div class="line">		ajax.send(null);</div><div class="line">	&#125; else &#123;</div><div class="line">		ajax.open(&quot;POST&quot;, pathArr[0], true);</div><div class="line">		ajax.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">		ajax.send(pathArr[1]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	// 对状态的检测</div><div class="line">	ajax.onreadystatechange = function()&#123;</div><div class="line">//		console.log(ajax.readyState);  //当前的请求状态</div><div class="line">		if (ajax.readyState == 4) &#123;</div><div class="line">			// console.log(&quot;请求成功了&quot;);</div><div class="line">			// console.log(ajax.status);  //请求结果的状态码</div><div class="line">			if (ajax.status &gt;= 200 &amp;&amp; ajax.status &lt;= 207 || ajax.status == 304) &#123;</div><div class="line">				if (succFn) &#123;</div><div class="line">					succFn(ajax.responseText);</div><div class="line">				&#125;</div><div class="line">			&#125; else &#123;</div><div class="line">				if (failFn) &#123;</div><div class="line">					failFn(ajax.status);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是Ajax&quot;&gt;&lt;a href=&quot;#什么是Ajax&quot; class=&quot;headerlink&quot; title=&quot;什么是Ajax&quot;&gt;&lt;/a&gt;什么是Ajax&lt;/h1&gt;&lt;p&gt;Ajax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是&lt;br&gt;一项新的技术，而是由多种技术组合而成。
+    
+    </summary>
+    
+      <category term="Ajax" scheme="http://yoursite.com/categories/Ajax/"/>
+    
+    
+      <category term="Ajax" scheme="http://yoursite.com/tags/Ajax/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP基础(四)</title>

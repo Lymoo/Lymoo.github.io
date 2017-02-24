@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/02/24/PHP%E5%9F%BA%E7%A1%80(%E5%9B%9B)/</loc>
+    <lastmod>2017-02-24T13:18:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础(四)</title>
+        <pubTime>2017-02-24T12:16:05.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://yoursite.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/02/21/PHP%E5%9F%BA%E7%A1%80(%E4%B8%89)/</loc>
-    <lastmod>2017-02-24T11:44:43.000Z</lastmod>
+    <lastmod>2017-02-24T12:34:43.000Z</lastmod>
     <data>
         <display>
         <title>PHP基础(三)</title>

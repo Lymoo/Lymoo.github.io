@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/02/21/PHP%E5%9F%BA%E7%A1%80(%E4%B8%89)/</loc>
+    <lastmod>2017-02-24T11:44:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>PHP基础(三)</title>
+        <pubTime>2017-02-21T12:57:01.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://yoursite.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/02/22/mac%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-02-24T11:38:43.000Z</lastmod>
     <data>
@@ -61,26 +81,6 @@
            
              
               <breadCrumb title="JavaScript" url="http://yoursite.com/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/02/21/PHP%E5%9F%BA%E7%A1%80(%E4%B8%89)/</loc>
-    <lastmod>2017-02-21T14:35:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>PHP基础(三)</title>
-        <pubTime>2017-02-21T12:57:01.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="http://yoursite.com/categories/PHP/"/>
           
         </display>
     </data>

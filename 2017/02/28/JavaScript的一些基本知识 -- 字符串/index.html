@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="PHP," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -89,16 +89,18 @@
 
 
 
-<meta name="description" content="PHP的文件上传这里还是举例子说明创建两个页面，一个fileup.html和一个fileup.phpfileup.html代码如下：">
+<meta name="description" content="JavaScript的字符串转化为字符串toString();">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP基础(四)">
-<meta property="og:url" content="http://yoursite.com/2017/02/24/PHP基础(四)/index.html">
+<meta property="og:title" content="JavaScript的一些基本知识 -- 字符串">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/index.html">
 <meta property="og:site_name" content="Lymoo's Blog">
-<meta property="og:description" content="PHP的文件上传这里还是举例子说明创建两个页面，一个fileup.html和一个fileup.phpfileup.html代码如下：">
-<meta property="og:updated_time" content="2017-02-24T13:18:28.000Z">
+<meta property="og:description" content="JavaScript的字符串转化为字符串toString();">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png">
+<meta property="og:updated_time" content="2017-02-28T13:25:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP基础(四)">
-<meta name="twitter:description" content="PHP的文件上传这里还是举例子说明创建两个页面，一个fileup.html和一个fileup.phpfileup.html代码如下：">
+<meta name="twitter:title" content="JavaScript的一些基本知识 -- 字符串">
+<meta name="twitter:description" content="JavaScript的字符串转化为字符串toString();">
+<meta name="twitter:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/24/PHP基础(四)/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/"/>
 
 
 
 
 
-  <title> PHP基础(四) | Lymoo's Blog </title>
+  <title> JavaScript的一些基本知识 -- 字符串 | Lymoo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -462,7 +464,7 @@ O.push(A)
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/24/PHP基础(四)/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Lymoo">
@@ -486,7 +488,7 @@ O.push(A)
             
             
               
-                PHP基础(四)
+                JavaScript的一些基本知识 -- 字符串
               
             
           </h1>
@@ -501,8 +503,8 @@ O.push(A)
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-24T20:16:05+08:00">
-                2017-02-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-28T20:43:27+08:00">
+                2017-02-28
               </time>
             
 
@@ -524,8 +526,8 @@ O.push(A)
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PHP/" itemprop="url" rel="index">
-                    <span itemprop="name">PHP</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -542,8 +544,8 @@ O.push(A)
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/24/PHP基础(四)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/24/PHP基础(四)/" itemprop="commentCount"></span>
+                <a href="/2017/02/28/JavaScript的一些基本知识 -- 字符串/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/JavaScript的一些基本知识 -- 字符串/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -574,24 +576,20 @@ O.push(A)
       
 
       
-        <h1 id="PHP的文件上传"><a href="#PHP的文件上传" class="headerlink" title="PHP的文件上传"></a>PHP的文件上传</h1><p>这里还是举例子说明<br>创建两个页面，一个<strong style="color: #ff620c;">fileup.html</strong>和一个<strong style="color: #ff620c;">fileup.php</strong><br>fileup.html代码如下：<a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;utf-8&quot; /&gt;</div><div class="line">		&lt;title&gt;文件上传&lt;/title&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;!--enctype是设置编码格式的--&gt;</div><div class="line">		&lt;form action=&quot;fileup.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">			&lt;!--限制上传的最大大小--&gt;</div><div class="line">			&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; id=&quot;MAX_FILE_SIZE&quot; value=&quot;300000&quot; /&gt;</div><div class="line">			&lt;input type=&quot;file&quot; name=&quot;fileup&quot; /&gt;</div><div class="line">			&lt;input type=&quot;submit&quot; value=&quot;提交&quot;/&gt;</div><div class="line">		&lt;/form&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<p>fileup.php代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">	date_default_timezone_set(&apos;PRC&apos;); // 设置默认时区</div><div class="line">	$file = $_FILES[&quot;fileup&quot;];</div><div class="line">	// 根据错误码，判断是否上传成功</div><div class="line">	if ($file[&quot;error&quot;] == 0) &#123;</div><div class="line">		// 根据类型判断是图片还是其他</div><div class="line">		$imgArr = array(&quot;image/jpeg&quot;,&quot;image/png&quot;,&quot;image/gif&quot;);</div><div class="line">		if (in_array($file[&quot;type&quot;], $imgArr)) &#123;</div><div class="line">			$type = explode(&quot;/&quot;, $file[&quot;type&quot;])[1];</div><div class="line">			if ($type == &quot;jpeg&quot;) &#123;</div><div class="line">				$type = &quot;jpg&quot;;</div><div class="line">			&#125;</div><div class="line">			$time = time(); // 时间戳，以秒为单位</div><div class="line">			$time = date(&quot;YmdHis&quot;, $time); // 设置显示时间的格式</div><div class="line">			// 若要放到其他文件夹</div><div class="line">			$name = &quot;../2.21php4/&quot;.$time.&quot;.&quot;.$type;</div><div class="line">			$bol = move_uploaded_file($file[&quot;tmp_name&quot;], $name);</div><div class="line">			if ($bol) &#123;</div><div class="line">				echo &quot;移至服务器成功&quot;;</div><div class="line">			&#125; else &#123;</div><div class="line">				echo &quot;移至失败&quot;;</div><div class="line">			&#125;</div><div class="line">		&#125; else &#123;</div><div class="line">			echo &quot;不是图片&quot;;</div><div class="line">		&#125;</div><div class="line">	&#125; else &#123;</div><div class="line">		echo &quot;上传失败&quot;;</div><div class="line">	&#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure></p>
-<h1 id="PHP的正则表达式"><a href="#PHP的正则表达式" class="headerlink" title="PHP的正则表达式"></a>PHP的正则表达式</h1><h2 id="查找匹配"><a href="#查找匹配" class="headerlink" title="查找匹配"></a>查找匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$reg = &quot;/\d+/&quot;;</div><div class="line">$str = &quot;asda4 244g h64 485 14&quot;;</div><div class="line">echo preg_match($reg, $str); // 返回匹配的次数</div><div class="line">echo preg_match_all($reg, $str); // 返回匹配次数，多次匹配</div></pre></td></tr></table></figure>
-<h2 id="替换匹配"><a href="#替换匹配" class="headerlink" title="替换匹配"></a>替换匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$reg = &quot;/\d+/&quot;;</div><div class="line">$str = &quot;asda4 244g h64 485 14&quot;;</div><div class="line">$str = preg_replace($reg, &quot;*&quot;, $str);</div></pre></td></tr></table></figure>
-<h2 id="分隔字符串"><a href="#分隔字符串" class="headerlink" title="分隔字符串"></a>分隔字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$reg = &quot;/\d+/&quot;;</div><div class="line">$str = &quot;asda4 244g h64 485 14&quot;;</div><div class="line">$arr = preg_split(&quot;/\s/&quot;, $str);</div><div class="line">var_dump($arr);</div></pre></td></tr></table></figure>
-<h2 id="小练习"><a href="#小练习" class="headerlink" title="小练习"></a>小练习</h2><p>返回数组中能与正则进行匹配的每一项，并以数组进行输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$arr = array(&quot;514ada&quot;, &quot;Asda5a153&quot;,&quot;awda6531&quot;);</div><div class="line">$str = preg_grep(&quot;/\d+/&quot;, $arr);</div><div class="line">var_dump($str);</div></pre></td></tr></table></figure></p>
-<h1 id="mysql数据库"><a href="#mysql数据库" class="headerlink" title="mysql数据库"></a>mysql数据库</h1><p>PS：博主用的是XAMPP自带集成的MySql</p>
-<h2 id="第一步-连接数据库"><a href="#第一步-连接数据库" class="headerlink" title="第一步 连接数据库"></a>第一步 连接数据库</h2><p>参数分别为主机名，用户名，密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$mysql = mysql_connect(&quot;localhost&quot;, &quot;root&quot;, &quot;&quot;);</div><div class="line">if (!$mysql) &#123;</div><div class="line">	echo &quot;连接失败&quot;;</div><div class="line">	exit(); // 退出后面的执行</div><div class="line">&#125; else &#123;</div><div class="line">	echo &quot;连接成功&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="第二步-选择需要的数据库"><a href="#第二步-选择需要的数据库" class="headerlink" title="第二步 选择需要的数据库"></a>第二步 选择需要的数据库</h2><p><pre><br>mysql_select_db(“20170222”); // 数据库名<br>mysql_query(“set <strong style="color: #ff620c;">names</strong> utf8”); // 编码格式设置为utf-8<br></pre></p>
-<h2 id="第三步-进行增删改的操作"><a href="#第三步-进行增删改的操作" class="headerlink" title="第三步 进行增删改的操作"></a>第三步 进行增删改的操作</h2><h3 id="1）查询语句"><a href="#1）查询语句" class="headerlink" title="1）查询语句"></a>1）查询语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// SELECT（字段名） FROM （数据表名）（查询的限制条件）</div><div class="line">$sql = &quot;SELECT * FROM userinfo&quot;;</div><div class="line">// 限制条件有WHERE语句，LIMIT语句，ORDER BY语句</div><div class="line">// 例：$sql = &quot;SELECT * FROM userinfo WHERE id=3&quot;;</div><div class="line">// $sql = &quot;SELECT * FROM userinfo LIMIT 1, 2&quot;; 1表示从第二条查找，2表示查找出来两条</div><div class="line">// $sql = &quot;SELECT * FROM userinfo ORDER BY age asc&quot;; 按照年龄升序，asc是默认的升序</div><div class="line">$result = mysql_query($sql);</div></pre></td></tr></table></figure>
-<h3 id="2）-插入语句"><a href="#2）-插入语句" class="headerlink" title="2） 插入语句"></a>2） 插入语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sql = &quot;INSERT INTO userinfo (id, user, pass, age, sex) VALUES (NULL, &apos;测试&apos;, &apos;test&apos; , 100, &apos;男&apos;)&quot;;</div></pre></td></tr></table></figure>
-<h3 id="3）-更新语句"><a href="#3）-更新语句" class="headerlink" title="3） 更新语句"></a>3） 更新语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sql = &quot;UPDATE userinfo SET username = &apos;admin1&apos;, passwd =&apos;12345678&apos;  WHERE id = 10;</div></pre></td></tr></table></figure>
-<h3 id="4）-删除语句"><a href="#4）-删除语句" class="headerlink" title="4） 删除语句"></a>4） 删除语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sql = &quot;DELETE FROM user WHERE id = 10&quot;;</div></pre></td></tr></table></figure>
-<h2 id="第四步-对操作结果进行处理"><a href="#第四步-对操作结果进行处理" class="headerlink" title="第四步 对操作结果进行处理"></a>第四步 对操作结果进行处理</h2><h3 id="1）-以索引数组的形式输出"><a href="#1）-以索引数组的形式输出" class="headerlink" title="1） 以索引数组的形式输出"></a>1） 以索引数组的形式输出</h3><p><pre><br>while ($arr = mysql_fetch_<strong style="color: #ff620c;">row</strong>($result)) {<br>    var_dump($arr);<br>}<br></pre></p>
-<h3 id="2）-以关联数组形式进行返回"><a href="#2）-以关联数组形式进行返回" class="headerlink" title="2） 以关联数组形式进行返回"></a>2） 以关联数组形式进行返回</h3><p><pre><br>while ($arr = mysql_fetch_<strong style="color: #ff620c;">assoc</strong>($result)) {<br>    var_dump($arr);<br>}<br></pre></p>
-<h3 id="3）-以关联数组和索引数组的形式输出"><a href="#3）-以关联数组和索引数组的形式输出" class="headerlink" title="3） 以关联数组和索引数组的形式输出"></a>3） 以关联数组和索引数组的形式输出</h3><p><pre><br>while ($arr = mysql_fetch_<strong style="color: #ff620c;">array</strong>($result)) {<br>    var_dump($arr);<br>}<br></pre></p>
-<h3 id="4）-以对象的形式进行输出"><a href="#4）-以对象的形式进行输出" class="headerlink" title="4） 以对象的形式进行输出"></a>4） 以对象的形式进行输出</h3><p><pre><br>while ($obj = mysql_fetch_<strong style="color: #ff620c;">object</strong>($result)) {<br>    var_dump($arr);<br>}<br></pre></p>
-<h2 id="第五步-关闭数据库"><a href="#第五步-关闭数据库" class="headerlink" title="第五步 关闭数据库"></a>第五步 关闭数据库</h2><p><code>mysql_close();</code></p>
+        <h1 id="JavaScript的字符串"><a href="#JavaScript的字符串" class="headerlink" title="JavaScript的字符串"></a>JavaScript的字符串</h1><h2 id="转化为字符串"><a href="#转化为字符串" class="headerlink" title="转化为字符串"></a>转化为字符串</h2><p><strong>toString();</strong><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">var str = num.toString();</div></pre></td></tr></table></figure></p>
+<h2 id="创建字符串"><a href="#创建字符串" class="headerlink" title="创建字符串"></a>创建字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var str = new String(&quot;123456&quot;);</div></pre></td></tr></table></figure>
+<h2 id="查找方法"><a href="#查找方法" class="headerlink" title="查找方法"></a>查找方法</h2><h3 id="1-charAt"><a href="#1-charAt" class="headerlink" title="1.charAt"></a>1.charAt</h3><p><strong>charAt();</strong>去字符串里面寻找下标为括号内传入的参数的字符，从零开始，空格也算做字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">console.log(str.charAt(15)); // 打印结果为m</div></pre></td></tr></table></figure></p>
+<h3 id="2-search"><a href="#2-search" class="headerlink" title="2.search"></a>2.search</h3><p><strong>search();</strong><br>在字符串中，搜索某个单词，然后返回这个单词在字符串中首字母的位置，搜索不到返回 -1，出现多个匹配的字符串之后，只返回第一个的位置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">console.log(str.search(&quot;you&quot;)); // 打印结果为8</div></pre></td></tr></table></figure></p>
+<h3 id="3-indexOf"><a href="#3-indexOf" class="headerlink" title="3.indexOf"></a>3.indexOf</h3><p><strong>indexOf();</strong><br>从前往后获取字符串的位置，如果没有则返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;adssddsssdfsa&quot;;</div><div class="line">console.log(str.indexOf(&quot;a&quot;)); // 打印结果为0</div></pre></td></tr></table></figure></p>
+<h3 id="4-lastIndexOf"><a href="#4-lastIndexOf" class="headerlink" title="4.lastIndexOf"></a>4.lastIndexOf</h3><p><strong>lastIndexOf();</strong><br>从后往前从前往后获取字符串的位置，如果没有则返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;adssddsssdfsa&quot;;</div><div class="line">console.log(str.lastIndexOf(&quot;a&quot;)); // 打印结果为12</div></pre></td></tr></table></figure></p>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="substring"><a href="#substring" class="headerlink" title="substring"></a>substring</h3><p><strong>substring(起始位置, 结束位置);</strong><br>截取字符串，给一个参数的时候代表，从这个位置开始，截取到字符串结束。给两个参数的时候，一个代表起始位置，一个代表结束位置(不包含最后一个位置)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.substring(4, 11);</div><div class="line">console.log(str2); // 打印结果为are you</div></pre></td></tr></table></figure></p>
+<h3 id="substr"><a href="#substr" class="headerlink" title="substr"></a>substr</h3><p><strong>substr(起始位置, 截取长度);</strong><br>截取字符串，第一个参数代表其实位置，第二个字符串代表截取的长度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.substr(4, 7);</div><div class="line">console.log(str2); // 打印结果为are you</div></pre></td></tr></table></figure></p>
+<h2 id="替换字符串"><a href="#替换字符串" class="headerlink" title="替换字符串"></a>替换字符串</h2><h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><p><strong>replace(替换的值, 被替换的值);</strong><br>字符串替换，把前面的替换成后面的，只会替换第一个。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.replace(&quot;you&quot;, &quot;ni&quot;);</div></pre></td></tr></table></figure></p>
+<h3 id="split"><a href="#split" class="headerlink" title="split"></a>split</h3><p><strong>split();</strong><br>把一个字符串按照参数分割成N个元素的数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.split(&quot;,&quot;); // 打印结果为[&quot;how are you&quot;, &quot; i&apos;m fine thank you&quot;, &quot; and you&quot;]</div></pre></td></tr></table></figure></p>
+<h2 id="字符串的拼接"><a href="#字符串的拼接" class="headerlink" title="字符串的拼接"></a>字符串的拼接</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h3><p><strong>concat();</strong><br>将一个字符串或多个字符串拼接起来，获得一个新的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = &quot;--------Hello!&quot;;</div><div class="line">console.log(str.concat(str2)); // 打印结果为how are you, i&apos;m fine thank you, and you--------Hello!</div></pre></td></tr></table></figure></p>
+<h2 id="字符串的转换方式"><a href="#字符串的转换方式" class="headerlink" title="字符串的转换方式"></a>字符串的转换方式</h2><h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase"></a>toLowerCase</h3><p><strong>toLowerCase();</strong><br>方法返回一个字符串，该字符串中的字母被转换成小写。</p>
+<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase"></a>toUpperCase</h3><p><strong>toUpperCase();</strong><br>方法返回一个字符串，该字符串中的所有字母都被转换为大写字母。</p>
+<h2 id="字符串小结"><a href="#字符串小结" class="headerlink" title="字符串小结"></a>字符串小结</h2><p><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png" alt="博主自己整理的JavaScript字符串的知识"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中字符串的知识</span></p>
 
       
     </div>
@@ -636,7 +634,7 @@ O.push(A)
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag"># PHP</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -649,8 +647,8 @@ O.push(A)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/22/mac搭建一个属于自己的hexo博客/" rel="next" title="mac搭建一个属于自己的hexo博客(github page)">
-                <i class="fa fa-chevron-left"></i> mac搭建一个属于自己的hexo博客(github page)
+              <a href="/2017/02/24/Ajax的探索/" rel="next" title="Ajax的探索">
+                <i class="fa fa-chevron-left"></i> Ajax的探索
               </a>
             
           </div>
@@ -658,10 +656,6 @@ O.push(A)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/24/Ajax的探索/" rel="prev" title="Ajax的探索">
-                Ajax的探索 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -687,8 +681,8 @@ O.push(A)
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/24/PHP基础(四)/"
-           data-title="PHP基础(四)" data-url="http://yoursite.com/2017/02/24/PHP基础(四)/">
+      <div class="ds-thread" data-thread-key="2017/02/28/JavaScript的一些基本知识 -- 字符串/"
+           data-title="JavaScript的一些基本知识 -- 字符串" data-url="http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/">
       </div>
     
   </div>
@@ -868,7 +862,7 @@ O.push(A)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP的文件上传"><span class="nav-number">1.</span> <span class="nav-text">PHP的文件上传</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP的正则表达式"><span class="nav-number">2.</span> <span class="nav-text">PHP的正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查找匹配"><span class="nav-number">2.1.</span> <span class="nav-text">查找匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换匹配"><span class="nav-number">2.2.</span> <span class="nav-text">替换匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分隔字符串"><span class="nav-number">2.3.</span> <span class="nav-text">分隔字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小练习"><span class="nav-number">2.4.</span> <span class="nav-text">小练习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql数据库"><span class="nav-number">3.</span> <span class="nav-text">mysql数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步-连接数据库"><span class="nav-number">3.1.</span> <span class="nav-text">第一步 连接数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步-选择需要的数据库"><span class="nav-number">3.2.</span> <span class="nav-text">第二步 选择需要的数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步-进行增删改的操作"><span class="nav-number">3.3.</span> <span class="nav-text">第三步 进行增删改的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）查询语句"><span class="nav-number">3.3.1.</span> <span class="nav-text">1）查询语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）-插入语句"><span class="nav-number">3.3.2.</span> <span class="nav-text">2） 插入语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）-更新语句"><span class="nav-number">3.3.3.</span> <span class="nav-text">3） 更新语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4）-删除语句"><span class="nav-number">3.3.4.</span> <span class="nav-text">4） 删除语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步-对操作结果进行处理"><span class="nav-number">3.4.</span> <span class="nav-text">第四步 对操作结果进行处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）-以索引数组的形式输出"><span class="nav-number">3.4.1.</span> <span class="nav-text">1） 以索引数组的形式输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）-以关联数组形式进行返回"><span class="nav-number">3.4.2.</span> <span class="nav-text">2） 以关联数组形式进行返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）-以关联数组和索引数组的形式输出"><span class="nav-number">3.4.3.</span> <span class="nav-text">3） 以关联数组和索引数组的形式输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4）-以对象的形式进行输出"><span class="nav-number">3.4.4.</span> <span class="nav-text">4） 以对象的形式进行输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步-关闭数据库"><span class="nav-number">3.5.</span> <span class="nav-text">第五步 关闭数据库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript的字符串"><span class="nav-number">1.</span> <span class="nav-text">JavaScript的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#转化为字符串"><span class="nav-number">1.1.</span> <span class="nav-text">转化为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建字符串"><span class="nav-number">1.2.</span> <span class="nav-text">创建字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找方法"><span class="nav-number">1.3.</span> <span class="nav-text">查找方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-charAt"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.charAt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-search"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-indexOf"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.indexOf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-lastIndexOf"><span class="nav-number">1.3.4.</span> <span class="nav-text">4.lastIndexOf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#截取字符串"><span class="nav-number">1.4.</span> <span class="nav-text">截取字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#substring"><span class="nav-number">1.4.1.</span> <span class="nav-text">substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substr"><span class="nav-number">1.4.2.</span> <span class="nav-text">substr</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换字符串"><span class="nav-number">1.5.</span> <span class="nav-text">替换字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#replace"><span class="nav-number">1.5.1.</span> <span class="nav-text">replace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split"><span class="nav-number">1.5.2.</span> <span class="nav-text">split</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的拼接"><span class="nav-number">1.6.</span> <span class="nav-text">字符串的拼接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-number">1.6.1.</span> <span class="nav-text">concat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的转换方式"><span class="nav-number">1.7.</span> <span class="nav-text">字符串的转换方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toLowerCase"><span class="nav-number">1.7.1.</span> <span class="nav-text">toLowerCase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toUpperCase"><span class="nav-number">1.7.2.</span> <span class="nav-text">toUpperCase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串小结"><span class="nav-number">1.8.</span> <span class="nav-text">字符串小结</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-24T13:48:57.000Z</updated>
+  <updated>2017-02-28T13:25:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript的一些基本知识 -- 字符串</title>
+    <link href="http://yoursite.com/2017/02/28/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/</id>
+    <published>2017-02-28T12:43:27.000Z</published>
+    <updated>2017-02-28T13:25:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript的字符串"><a href="#JavaScript的字符串" class="headerlink" title="JavaScript的字符串"></a>JavaScript的字符串</h1><h2 id="转化为字符串"><a href="#转化为字符串" class="headerlink" title="转化为字符串"></a>转化为字符串</h2><p><strong>toString();</strong><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">var str = num.toString();</div></pre></td></tr></table></figure></p>
+<h2 id="创建字符串"><a href="#创建字符串" class="headerlink" title="创建字符串"></a>创建字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var str = new String(&quot;123456&quot;);</div></pre></td></tr></table></figure>
+<h2 id="查找方法"><a href="#查找方法" class="headerlink" title="查找方法"></a>查找方法</h2><h3 id="1-charAt"><a href="#1-charAt" class="headerlink" title="1.charAt"></a>1.charAt</h3><p><strong>charAt();</strong>去字符串里面寻找下标为括号内传入的参数的字符，从零开始，空格也算做字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">console.log(str.charAt(15)); // 打印结果为m</div></pre></td></tr></table></figure></p>
+<h3 id="2-search"><a href="#2-search" class="headerlink" title="2.search"></a>2.search</h3><p><strong>search();</strong><br>在字符串中，搜索某个单词，然后返回这个单词在字符串中首字母的位置，搜索不到返回 -1，出现多个匹配的字符串之后，只返回第一个的位置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">console.log(str.search(&quot;you&quot;)); // 打印结果为8</div></pre></td></tr></table></figure></p>
+<h3 id="3-indexOf"><a href="#3-indexOf" class="headerlink" title="3.indexOf"></a>3.indexOf</h3><p><strong>indexOf();</strong><br>从前往后获取字符串的位置，如果没有则返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;adssddsssdfsa&quot;;</div><div class="line">console.log(str.indexOf(&quot;a&quot;)); // 打印结果为0</div></pre></td></tr></table></figure></p>
+<h3 id="4-lastIndexOf"><a href="#4-lastIndexOf" class="headerlink" title="4.lastIndexOf"></a>4.lastIndexOf</h3><p><strong>lastIndexOf();</strong><br>从后往前从前往后获取字符串的位置，如果没有则返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;adssddsssdfsa&quot;;</div><div class="line">console.log(str.lastIndexOf(&quot;a&quot;)); // 打印结果为12</div></pre></td></tr></table></figure></p>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="substring"><a href="#substring" class="headerlink" title="substring"></a>substring</h3><p><strong>substring(起始位置, 结束位置);</strong><br>截取字符串，给一个参数的时候代表，从这个位置开始，截取到字符串结束。给两个参数的时候，一个代表起始位置，一个代表结束位置(不包含最后一个位置)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.substring(4, 11);</div><div class="line">console.log(str2); // 打印结果为are you</div></pre></td></tr></table></figure></p>
+<h3 id="substr"><a href="#substr" class="headerlink" title="substr"></a>substr</h3><p><strong>substr(起始位置, 截取长度);</strong><br>截取字符串，第一个参数代表其实位置，第二个字符串代表截取的长度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.substr(4, 7);</div><div class="line">console.log(str2); // 打印结果为are you</div></pre></td></tr></table></figure></p>
+<h2 id="替换字符串"><a href="#替换字符串" class="headerlink" title="替换字符串"></a>替换字符串</h2><h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><p><strong>replace(替换的值, 被替换的值);</strong><br>字符串替换，把前面的替换成后面的，只会替换第一个。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.replace(&quot;you&quot;, &quot;ni&quot;);</div></pre></td></tr></table></figure></p>
+<h3 id="split"><a href="#split" class="headerlink" title="split"></a>split</h3><p><strong>split();</strong><br>把一个字符串按照参数分割成N个元素的数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = str.split(&quot;,&quot;); // 打印结果为[&quot;how are you&quot;, &quot; i&apos;m fine thank you&quot;, &quot; and you&quot;]</div></pre></td></tr></table></figure></p>
+<h2 id="字符串的拼接"><a href="#字符串的拼接" class="headerlink" title="字符串的拼接"></a>字符串的拼接</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h3><p><strong>concat();</strong><br>将一个字符串或多个字符串拼接起来，获得一个新的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = &quot;--------Hello!&quot;;</div><div class="line">console.log(str.concat(str2)); // 打印结果为how are you, i&apos;m fine thank you, and you--------Hello!</div></pre></td></tr></table></figure></p>
+<h2 id="字符串的转换方式"><a href="#字符串的转换方式" class="headerlink" title="字符串的转换方式"></a>字符串的转换方式</h2><h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase"></a>toLowerCase</h3><p><strong>toLowerCase();</strong><br>方法返回一个字符串，该字符串中的字母被转换成小写。</p>
+<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase"></a>toUpperCase</h3><p><strong>toUpperCase();</strong><br>方法返回一个字符串，该字符串中的所有字母都被转换为大写字母。</p>
+<h2 id="字符串小结"><a href="#字符串小结" class="headerlink" title="字符串小结"></a>字符串小结</h2><p><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png" alt="博主自己整理的JavaScript字符串的知识"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中字符串的知识</span></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript的字符串&quot;&gt;&lt;a href=&quot;#JavaScript的字符串&quot; class=&quot;headerlink&quot; title=&quot;JavaScript的字符串&quot;&gt;&lt;/a&gt;JavaScript的字符串&lt;/h1&gt;&lt;h2 id=&quot;转化为字符串&quot;&gt;&lt;a href=&quot;#转化为字符串&quot; class=&quot;headerlink&quot; title=&quot;转化为字符串&quot;&gt;&lt;/a&gt;转化为字符串&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;toString();&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Ajax的探索</title>

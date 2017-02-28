@@ -101,7 +101,7 @@
 1.首字母必须是英文字母或者下划线2.由英文字母、数字、下划线和$组成3.不能与JavaScript关键词和保留字重名4.最好以驼峰命名法，第一个单词首字母小写，其它单词首字母大写">
 <meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-variable.jpg">
 <meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-ysf.jpg">
-<meta property="og:updated_time" content="2017-02-22T01:34:41.000Z">
+<meta property="og:updated_time" content="2017-02-28T08:01:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的一些基本知识">
 <meta name="twitter:description" content="JavaScript中的变量
@@ -585,7 +585,7 @@ O.push(A)
       
         <p></p><h1 id="JavaScript中的变量" style="text-align: center; background-color: #eee;">JavaScript中的变量</h1><p></p>
 <p></p><h2 id="变量的规则">一、变量的规则</h2><p></p>
-<p></p><p style="margin-bottom: 0;">1.首字母必须是英文字母或者下划线<br>2.由英文字母、数字、下划线和$组成<br>3.不能与JavaScript关键词和保留字重名<br>4.最好以驼峰命名法，第一个单词首字母小写，其它单词首字母大写<br></p><a id="more"></a><h2 id="变量的声明方法">二、变量的声明方法</h2><p>var 变量名<br>例如：<code>var a = 10;</code>&nbsp;&nbsp;(变量名a是不分类型的，但是a里面存储的值是分类型的)<br>如果想获取变量a的值的类型可以是用”typeof”。如：console.log(typeof a) 打印一下a的值的种类<br></p><h2 id="变量的转换方式">三、变量的转换方式</h2><h3 id="显示转换">1.显示转换</h3><p>1.String(); 可以把括号内的值转化为字符串类型<br>2.Number(); 可以把括号内的值转化为数值类型，如果是字符串，字符串的内容必须是整数或者小数，不能有其他字符<br>3.parseInt(); 转数值类型，可以理解为是取整操作，可以有其他字符，转化的时候其它字符以后的内容不转化。</p><h3 id="隐示转换">2.隐示转换</h3><p>隐士转换是声明意思呢?<br>就是计算机自己帮我们做的类型转换。<br>比如： 1 + “2”  会出现什么结果呢?<br><span style="color: red">计算机会认为+是一个取正操作符，运算符重载。把1转化成”1”然后和2进行拼接。</span><br>所以结果是12</p><h2 id="变量的作用域">四、变量的作用域</h2><strong style="color: red; font-weight: normal;">不管全局变量还是局部变量，尽量都不要重名。</strong><h3 id="全局变量">1.全局变量</h3><p></p>
+<p></p><p style="margin-bottom: 0;">1.首字母必须是英文字母或者下划线<br>2.由英文字母、数字、下划线和$组成<br>3.不能与JavaScript关键词和保留字重名<br>4.最好以驼峰命名法，第一个单词首字母小写，其它单词首字母大写<br></p><a id="more"></a><h2 id="变量的声明方法">二、变量的声明方法</h2><p>var 变量名<br>例如：<code>var a = 10;</code>&nbsp;&nbsp;(变量名a是不分类型的，但是a里面存储的值是分类型的)<br>如果想获取变量a的值的类型可以是用”typeof”。如：console.log(typeof a) 打印一下a的值的种类<br></p><h2 id="变量的转换方式">三、变量的转换方式</h2><h3 id="显示转换">1.显示转换</h3><p>1.String(); 可以把括号内的值转化为字符串类型<br>2.Number(); 可以把括号内的值转化为数值类型，如果是字符串，字符串的内容必须是整数或者小数，不能有其他字符<br>3.parseInt(); 转数值类型，可以理解为是取整操作，可以有其他字符，转化的时候其它字符以后的内容不转化。</p><h3 id="隐示转换">2.隐示转换</h3><p>隐士转换是什么意思呢?<br>就是计算机自己帮我们做的类型转换。<br>比如： 1 + “2”  会出现什么结果呢?<br><span style="color: red">计算机会认为+是一个取正操作符，运算符重载。把1转化成”1”然后和2进行拼接。</span><br>所以结果是12</p><h2 id="变量的作用域">四、变量的作用域</h2><strong style="color: red; font-weight: normal;">不管全局变量还是局部变量，尽量都不要重名。</strong><h3 id="全局变量">1.全局变量</h3><p></p>
 <p></p><p>在函数外部声明的可以称之为是全局变量，在任何地方都可以使用。</p><h3 id="局部变量">2.局部变量</h3><p></p>
 <p></p><p>局部变量值，在函数内声明的变量，只能在函数内部使用。<br></p><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-variable.jpg"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中变量的知识</span><p></p>
 <p></p><h2 id="变量的数据类型">五、变量的数据类型</h2><h3 id="基本数据类型">1.基本数据类型</h3><p>number<br>string<br>bool<br>undefined<br>null</p><h3 id="复杂数据类型">2.复杂数据类型</h3><p>object</p><p></p>
@@ -811,6 +811,15 @@ O.push(A)
                     <i class="fa fa-fw fa-bank"></i>
                   
                   CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/185b5853712e" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
                 </a>
               </span>
             

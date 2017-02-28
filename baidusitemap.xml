@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/02/20/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2017-02-28T08:01:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的一些基本知识</title>
+        <pubTime>2017-02-20T05:33:31.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://yoursite.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/02/24/Ajax%E7%9A%84%E6%8E%A2%E7%B4%A2/</loc>
     <lastmod>2017-02-24T13:48:57.000Z</lastmod>
     <data>
@@ -101,26 +121,6 @@
            
              
               <breadCrumb title="PHP" url="http://yoursite.com/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/02/20/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2017-02-22T01:34:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的一些基本知识</title>
-        <pubTime>2017-02-20T05:33:31.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="http://yoursite.com/categories/JavaScript/"/>
           
         </display>
     </data>

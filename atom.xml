@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-28T13:25:05.000Z</updated>
+  <updated>2017-03-01T11:24:47.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/28/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/</id>
     <published>2017-02-28T12:43:27.000Z</published>
-    <updated>2017-02-28T13:25:05.000Z</updated>
+    <updated>2017-03-01T11:24:47.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript的字符串"><a href="#JavaScript的字符串" class="headerlink" title="JavaScript的字符串"></a>JavaScript的字符串</h1><h2 id="转化为字符串"><a href="#转化为字符串" class="headerlink" title="转化为字符串"></a>转化为字符串</h2><p><strong>toString();</strong><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">var str = num.toString();</div></pre></td></tr></table></figure></p>
 <h2 id="创建字符串"><a href="#创建字符串" class="headerlink" title="创建字符串"></a>创建字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var str = new String(&quot;123456&quot;);</div></pre></td></tr></table></figure>

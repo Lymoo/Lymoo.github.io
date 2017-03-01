@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-01T11:24:47.000Z</updated>
+  <updated>2017-03-01T13:13:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript的一些基本知识 -- 数组</title>
+    <link href="http://yoursite.com/2017/03/01/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E6%95%B0%E7%BB%84/"/>
+    <id>http://yoursite.com/2017/03/01/JavaScript的一些基本知识 -- 数组/</id>
+    <published>2017-03-01T12:35:35.000Z</published>
+    <updated>2017-03-01T13:13:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript的数组"><a href="#JavaScript的数组" class="headerlink" title="JavaScript的数组"></a>JavaScript的数组</h1><h2 id="数组的创建方法"><a href="#数组的创建方法" class="headerlink" title="数组的创建方法"></a>数组的创建方法</h2><h3 id="1-创建空数组"><a href="#1-创建空数组" class="headerlink" title="1.创建空数组"></a>1.创建空数组<a id="more"></a></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
+<h3 id="2-创建指定元素的数组"><a href="#2-创建指定元素的数组" class="headerlink" title="2.创建指定元素的数组"></a>2.创建指定元素的数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(元素<span class="number">1</span>, 元素<span class="number">2</span>…);</div></pre></td></tr></table></figure>
+<h3 id="3-单维数组"><a href="#3-单维数组" class="headerlink" title="3.单维数组"></a>3.单维数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [元素<span class="number">1</span>, 元素<span class="number">2.</span>..];</div></pre></td></tr></table></figure>
+<h3 id="4-多维数组"><a href="#4-多维数组" class="headerlink" title="4.多维数组"></a>4.多维数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>([数组<span class="number">1</span>], [数组<span class="number">2</span>]…);</div></pre></td></tr></table></figure>
+<h2 id="数组的长度"><a href="#数组的长度" class="headerlink" title="数组的长度"></a>数组的长度</h2><p><strong>array.length</strong>返还数组的长度</p>
+<h2 id="数组的基本操作"><a href="#数组的基本操作" class="headerlink" title="数组的基本操作"></a>数组的基本操作</h2><h3 id="获取数组元素"><a href="#获取数组元素" class="headerlink" title="获取数组元素"></a>获取数组元素</h3><p><strong>注意：数字的下标是从0开始计算的！</strong></p>
+<h4 id="单维数组"><a href="#单维数组" class="headerlink" title="单维数组"></a>单维数组</h4><p>数组名[下标索引值]</p>
+<h4 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h4><p>数组名[外层下标索引值][内层下标索引值]</p>
+<h3 id="增加数组"><a href="#增加数组" class="headerlink" title="增加数组"></a>增加数组</h3><p>使用“[]”指定一个新的下标</p>
+<h3 id="删除数组"><a href="#删除数组" class="headerlink" title="删除数组"></a>删除数组</h3><p>delete 数组名[下标];</p>
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><p>使用for…in…来遍历<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> <span class="built_in">Array</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="数组的一些方法"><a href="#数组的一些方法" class="headerlink" title="数组的一些方法"></a>数组的一些方法</h2><h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><h4 id="1-在数组末尾添加数组"><a href="#1-在数组末尾添加数组" class="headerlink" title="1.在数组末尾添加数组"></a>1.在数组末尾添加数组</h4><p><strong>push();</strong></p>
+<h4 id="2-在数组头部添加数组"><a href="#2-在数组头部添加数组" class="headerlink" title="2.在数组头部添加数组"></a>2.在数组头部添加数组</h4><p><strong>unshift();</strong></p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><h4 id="1-从数组头部删除一个元素"><a href="#1-从数组头部删除一个元素" class="headerlink" title="1.从数组头部删除一个元素"></a>1.从数组头部删除一个元素</h4><p><strong>shift();</strong></p>
+<h4 id="2-从数组尾部删除一个元素"><a href="#2-从数组尾部删除一个元素" class="headerlink" title="2.从数组尾部删除一个元素"></a>2.从数组尾部删除一个元素</h4><p><strong>pop();</strong></p>
+<h3 id="截取"><a href="#截取" class="headerlink" title="截取"></a>截取</h3><p><strong>slice(起始位置, 结束位置);</strong>两个参数分别代表要获取的数组的起始位置和结束位置。可以用-1代表倒数第一个，-2代表倒数第二个</p>
+<h3 id="splice方法"><a href="#splice方法" class="headerlink" title="splice方法"></a>splice方法</h3><h4 id="①-splice-起始位置，删除的长度"><a href="#①-splice-起始位置，删除的长度" class="headerlink" title="①.splice(起始位置，删除的长度)"></a>①.splice(起始位置，删除的长度)</h4><p>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> math = [<span class="number">90</span>, <span class="number">88</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">54</span>, <span class="number">98</span>, <span class="number">66</span>, <span class="number">76</span>];</div><div class="line">math.splice(<span class="number">0</span>, <span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(math); <span class="comment">// 打印结果为[30, 45, 54, 98, 66, 76]</span></div></pre></td></tr></table></figure></p>
+<h4 id="②-splice-起始位置-删除长度为0-要添加的元素1-要添加的元素2…-）"><a href="#②-splice-起始位置-删除长度为0-要添加的元素1-要添加的元素2…-）" class="headerlink" title="②.splice(起始位置,删除长度为0,要添加的元素1,要添加的元素2…..）"></a>②.splice(起始位置,删除长度为0,要添加的元素1,要添加的元素2…..）</h4><p>例如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> math = [<span class="number">90</span>, <span class="number">88</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">54</span>, <span class="number">98</span>, <span class="number">66</span>, <span class="number">76</span>];</div><div class="line">math.splice(<span class="number">0</span>, <span class="number">0</span>, <span class="number">10</span>, <span class="number">12</span>,<span class="number">65</span>);</div><div class="line"><span class="built_in">console</span>.log(math); [<span class="number">10</span>, <span class="number">12</span>, <span class="number">65</span>, <span class="number">90</span>, <span class="number">88</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">54</span>, <span class="number">98</span>, <span class="number">66</span>, <span class="number">76</span>]</div></pre></td></tr></table></figure></p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>排序不按照数值大小，而是把元素看出一个字符串，按照首字母来排<strong>sort();</strong><br>将数组中元素的顺序颠倒<strong>reverse();</strong></p>
+<h3 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h3><p><strong>concat();</strong>数组拼接，数组不会在原有的数组上进行拼接，而是返回一个拼接之后的新数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line"><span class="keyword">var</span> test2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</div><div class="line"><span class="keyword">var</span> a = test.concat(test2);</div><div class="line"><span class="built_in">console</span>.log(test);  <span class="comment">// [1, 2, 3]</span></div><div class="line"><span class="built_in">console</span>.log(test2); <span class="comment">// [4, 5, 6]</span></div><div class="line"><span class="built_in">console</span>.log(a);     <span class="comment">// [1, 2, 3, 4, 5, 6]</span></div></pre></td></tr></table></figure></p>
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><p>使用数组的<strong>join();</strong>方法，可以把这个数组用一个字符串来连接起来，然后返回一个新的字符串，原来的数组不会发生变化。</p>
+<h2 id="数组小结"><a href="#数组小结" class="headerlink" title="数组小结"></a>数组小结</h2><p><img src="http://olk97sdgv.bkt.clouddn.com/jsArray.png" alt="博主自己整理的JavaScript数组的知识"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中数组的知识</span></p>
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p><strong>数组直接赋值的时候是-地址引用</strong><br><strong>基本数据类型赋值是-值拷贝</strong><br><strong>对象类型赋值是-地址引用</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript的数组&quot;&gt;&lt;a href=&quot;#JavaScript的数组&quot; class=&quot;headerlink&quot; title=&quot;JavaScript的数组&quot;&gt;&lt;/a&gt;JavaScript的数组&lt;/h1&gt;&lt;h2 id=&quot;数组的创建方法&quot;&gt;&lt;a href=&quot;#数组的创建方法&quot; class=&quot;headerlink&quot; title=&quot;数组的创建方法&quot;&gt;&lt;/a&gt;数组的创建方法&lt;/h2&gt;&lt;h3 id=&quot;1-创建空数组&quot;&gt;&lt;a href=&quot;#1-创建空数组&quot; class=&quot;headerlink&quot; title=&quot;1.创建空数组&quot;&gt;&lt;/a&gt;1.创建空数组
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript的一些基本知识 -- 字符串</title>

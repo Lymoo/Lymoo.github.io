@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-02T12:05:52.000Z</updated>
+  <updated>2017-03-02T12:15:58.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/03/02/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20DOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/</id>
     <published>2017-03-02T11:18:01.000Z</published>
-    <updated>2017-03-02T12:05:52.000Z</updated>
+    <updated>2017-03-02T12:15:58.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Dom基本操作"><a href="#Dom基本操作" class="headerlink" title="Dom基本操作"></a>Dom基本操作</h1><h2 id="获取节点"><a href="#获取节点" class="headerlink" title="获取节点"></a>获取节点</h2><h3 id="一、document"><a href="#一、document" class="headerlink" title="一、document"></a>一、document</h3><h4 id="1-querySelectorAll"><a href="#1-querySelectorAll" class="headerlink" title="1.querySelectorAll"></a>1.querySelectorAll</h4><p>根据CSS里面的选择器来获取一组元素(获取的是数组)<br>用法：<strong>document.querySelectorAll(“选择器”);</strong><br>选择器可以是后代选择器，群组选择器，nth-child(1)等等<br>获取的数组不会随着dom的操作发生变化而变化</p>
+    <content type="html"><![CDATA[<h1 id="Dom基本操作"><a href="#Dom基本操作" class="headerlink" title="Dom基本操作"></a>Dom基本操作</h1><h2 id="获取节点"><a href="#获取节点" class="headerlink" title="获取节点"></a>获取节点</h2><h3 id="一、document"><a href="#一、document" class="headerlink" title="一、document"></a>一、document<a id="more"></a></h3><h4 id="1-querySelectorAll"><a href="#1-querySelectorAll" class="headerlink" title="1.querySelectorAll"></a>1.querySelectorAll</h4><p>根据CSS里面的选择器来获取一组元素(获取的是数组)<br>用法：<strong>document.querySelectorAll(“选择器”);</strong><br>选择器可以是后代选择器，群组选择器，nth-child(1)等等<br>获取的数组不会随着dom的操作发生变化而变化</p>
 <h4 id="2-querySelector"><a href="#2-querySelector" class="headerlink" title="2.querySelector"></a>2.querySelector</h4><p>获取querySelectorAll获取到的第一个元素<br>用法：<strong>document.querySelector(“选择器”);</strong></p>
 <h4 id="3-通过元素ID获取节点"><a href="#3-通过元素ID获取节点" class="headerlink" title="3.通过元素ID获取节点"></a>3.通过元素ID获取节点</h4><p>用法：<strong>document.getElementById(“元素ID”);</strong></p>
 <h4 id="4-通过类名获取节点"><a href="#4-通过类名获取节点" class="headerlink" title="4.通过类名获取节点"></a>4.通过类名获取节点</h4><p>用法：<strong>document.getElementsByClassName(“元素类名”);</strong><br>通过类名获取节点(获取的是动态数组)<br>动态数组会跟随dom操作发生变化之后做出相应的变化</p>
@@ -55,7 +55,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Dom基本操作&quot;&gt;&lt;a href=&quot;#Dom基本操作&quot; class=&quot;headerlink&quot; title=&quot;Dom基本操作&quot;&gt;&lt;/a&gt;Dom基本操作&lt;/h1&gt;&lt;h2 id=&quot;获取节点&quot;&gt;&lt;a href=&quot;#获取节点&quot; class=&quot;headerlink&quot; titl
+      &lt;h1 id=&quot;Dom基本操作&quot;&gt;&lt;a href=&quot;#Dom基本操作&quot; class=&quot;headerlink&quot; title=&quot;Dom基本操作&quot;&gt;&lt;/a&gt;Dom基本操作&lt;/h1&gt;&lt;h2 id=&quot;获取节点&quot;&gt;&lt;a href=&quot;#获取节点&quot; class=&quot;headerlink&quot; title=&quot;获取节点&quot;&gt;&lt;/a&gt;获取节点&lt;/h2&gt;&lt;h3 id=&quot;一、document&quot;&gt;&lt;a href=&quot;#一、document&quot; class=&quot;headerlink&quot; title=&quot;一、document&quot;&gt;&lt;/a&gt;一、document
     
     </summary>
     

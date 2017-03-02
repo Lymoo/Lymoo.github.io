@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-01T13:13:31.000Z</updated>
+  <updated>2017-03-02T12:05:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript的一些基本知识 -- DOM操作</title>
+    <link href="http://yoursite.com/2017/03/02/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20DOM%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/</id>
+    <published>2017-03-02T11:18:01.000Z</published>
+    <updated>2017-03-02T12:05:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Dom基本操作"><a href="#Dom基本操作" class="headerlink" title="Dom基本操作"></a>Dom基本操作</h1><h2 id="获取节点"><a href="#获取节点" class="headerlink" title="获取节点"></a>获取节点</h2><h3 id="一、document"><a href="#一、document" class="headerlink" title="一、document"></a>一、document</h3><h4 id="1-querySelectorAll"><a href="#1-querySelectorAll" class="headerlink" title="1.querySelectorAll"></a>1.querySelectorAll</h4><p>根据CSS里面的选择器来获取一组元素(获取的是数组)<br>用法：<strong>document.querySelectorAll(“选择器”);</strong><br>选择器可以是后代选择器，群组选择器，nth-child(1)等等<br>获取的数组不会随着dom的操作发生变化而变化</p>
+<h4 id="2-querySelector"><a href="#2-querySelector" class="headerlink" title="2.querySelector"></a>2.querySelector</h4><p>获取querySelectorAll获取到的第一个元素<br>用法：<strong>document.querySelector(“选择器”);</strong></p>
+<h4 id="3-通过元素ID获取节点"><a href="#3-通过元素ID获取节点" class="headerlink" title="3.通过元素ID获取节点"></a>3.通过元素ID获取节点</h4><p>用法：<strong>document.getElementById(“元素ID”);</strong></p>
+<h4 id="4-通过类名获取节点"><a href="#4-通过类名获取节点" class="headerlink" title="4.通过类名获取节点"></a>4.通过类名获取节点</h4><p>用法：<strong>document.getElementsByClassName(“元素类名”);</strong><br>通过类名获取节点(获取的是动态数组)<br>动态数组会跟随dom操作发生变化之后做出相应的变化</p>
+<h4 id="5-通过元素标签名获取节点"><a href="#5-通过元素标签名获取节点" class="headerlink" title="5.通过元素标签名获取节点"></a>5.通过元素标签名获取节点</h4><p>用法：<strong>document.getElementsByTagName(“元素标签名”);</strong><br>通过元素标签名获取的也是动态数组</p>
+<h4 id="6-通过name属性来获取节点"><a href="#6-通过name属性来获取节点" class="headerlink" title="6.通过name属性来获取节点"></a>6.通过name属性来获取节点</h4><p>用法：<strong>document.getElementsByName(“name值”);</strong><br>通过name属性获取的也是动态数组</p>
+<h3 id="二、节点指针"><a href="#二、节点指针" class="headerlink" title="二、节点指针"></a>二、节点指针</h3><h4 id="1-获取元素的首个子节点"><a href="#1-获取元素的首个子节点" class="headerlink" title="1.获取元素的首个子节点"></a>1.获取元素的首个子节点</h4><p>用法：<strong>父节点.firstChild;</strong></p>
+<h4 id="2-获取元素的最后一个子节点"><a href="#2-获取元素的最后一个子节点" class="headerlink" title="2.获取元素的最后一个子节点"></a>2.获取元素的最后一个子节点</h4><p>用法：<strong>父节点.lastChild;</strong></p>
+<h4 id="3-获取元素的子节点列表"><a href="#3-获取元素的子节点列表" class="headerlink" title="3.获取元素的子节点列表"></a>3.获取元素的子节点列表</h4><p>用法：<strong>父节点.childNodes;</strong></p>
+<h4 id="4-获取已知节点的前一个节点"><a href="#4-获取已知节点的前一个节点" class="headerlink" title="4.获取已知节点的前一个节点"></a>4.获取已知节点的前一个节点</h4><p>用法：<strong>兄弟节点.previousSibling;</strong></p>
+<h4 id="5-获取已知节点的后一个节点"><a href="#5-获取已知节点的后一个节点" class="headerlink" title="5.获取已知节点的后一个节点"></a>5.获取已知节点的后一个节点</h4><p>用法：<strong>父节点.nextSibling;</strong></p>
+<h4 id="6-获取已知节点的父节点"><a href="#6-获取已知节点的父节点" class="headerlink" title="6.获取已知节点的父节点"></a>6.获取已知节点的父节点</h4><p>用法：<strong>父节点.parentNode;</strong></p>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="一、创建节点"><a href="#一、创建节点" class="headerlink" title="一、创建节点"></a>一、创建节点</h3><h4 id="1-创建属性节点"><a href="#1-创建属性节点" class="headerlink" title="1.创建属性节点"></a>1.创建属性节点</h4><p>用法：<strong>document.createAttribute(“创建的元素属性”);</strong></p>
+<h4 id="2-创建文本节点"><a href="#2-创建文本节点" class="headerlink" title="2.创建文本节点"></a>2.创建文本节点</h4><p>用法：<strong>document.createTextNode(“创建的文本内容”);</strong></p>
+<h4 id="3-创建元素节点"><a href="#3-创建元素节点" class="headerlink" title="3.创建元素节点"></a>3.创建元素节点</h4><p>用法：<strong>document.createElement(“创建的元素标签名”);</strong></p>
+<h3 id="二、删除节点"><a href="#二、删除节点" class="headerlink" title="二、删除节点"></a>二、删除节点</h3><p>删除指定的节点<br>用法：<strong>removeChild(要删除的节点名);</strong></p>
+<h3 id="三、替换节点"><a href="#三、替换节点" class="headerlink" title="三、替换节点"></a>三、替换节点</h3><p>将某个子节点替换为另一个<br>用法：<strong>replaceChild(新节点, 原节点);</strong></p>
+<h3 id="四、插入节点"><a href="#四、插入节点" class="headerlink" title="四、插入节点"></a>四、插入节点</h3><h4 id="1-向节点的子节点列表的末尾添加新的子节点"><a href="#1-向节点的子节点列表的末尾添加新的子节点" class="headerlink" title="1.向节点的子节点列表的末尾添加新的子节点"></a>1.向节点的子节点列表的末尾添加新的子节点</h4><p>用法：<strong>appendChild(所添加的新节点);</strong></p>
+<h4 id="2-在已知的子节点前插入一个新的子节点"><a href="#2-在已知的子节点前插入一个新的子节点" class="headerlink" title="2.在已知的子节点前插入一个新的子节点"></a>2.在已知的子节点前插入一个新的子节点</h4><p>用法：<strong>insertBefore(新节点, 原节点)</strong></p>
+<h3 id="五、复制节点"><a href="#五、复制节点" class="headerlink" title="五、复制节点"></a>五、复制节点</h3><p>复制节点标签<br>用法：<strong>cloneNode(bool);</strong><br>哪个节点调用就复制哪个，true代表深复制，会复制子节点树，false代表浅复制，只复制本身</p>
+<h2 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h2><h3 id="一、获取属性"><a href="#一、获取属性" class="headerlink" title="一、获取属性"></a>一、获取属性</h3><p>获取元素节点中指定属性的属性值<br>用法：<strong>元素节点.getAttribute(元素属性名);</strong></p>
+<h3 id="二、设置属性"><a href="#二、设置属性" class="headerlink" title="二、设置属性"></a>二、设置属性</h3><p>创建或改变元素节点的属性<br>用法：<strong>元素节点.setAttribute(属性名, 属性值);</strong></p>
+<h3 id="三、删除属性"><a href="#三、删除属性" class="headerlink" title="三、删除属性"></a>三、删除属性</h3><p>删除元素中的指定属性<br>用法：<strong>元素节点.removeAttribute(属性名);</strong></p>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><h3 id="1-从指定的位置插入字符串"><a href="#1-从指定的位置插入字符串" class="headerlink" title="1.从指定的位置插入字符串"></a>1.从指定的位置插入字符串</h3><p>用法：<strong>insertData(offset, string);</strong></p>
+<h3 id="2-从指定的位置起删除一些字符"><a href="#2-从指定的位置起删除一些字符" class="headerlink" title="2.从指定的位置起删除一些字符"></a>2.从指定的位置起删除一些字符</h3><p>用法：<strong>deleteData(offset, count);</strong></p>
+<h3 id="3-将字符串插入到文本尾部"><a href="#3-将字符串插入到文本尾部" class="headerlink" title="3.将字符串插入到文本尾部"></a>3.将字符串插入到文本尾部</h3><p>用法：<strong>appendData(string);</strong></p>
+<h3 id="4-从指定的位置起将文本节点分成两个节点"><a href="#4-从指定的位置起将文本节点分成两个节点" class="headerlink" title="4.从指定的位置起将文本节点分成两个节点"></a>4.从指定的位置起将文本节点分成两个节点</h3><p>用法：<strong>splitData(offset);</strong></p>
+<h3 id="5-从指定的位置起将一些字符用其他字符串代替"><a href="#5-从指定的位置起将一些字符用其他字符串代替" class="headerlink" title="5.从指定的位置起将一些字符用其他字符串代替"></a>5.从指定的位置起将一些字符用其他字符串代替</h3><p>用法：<strong>replaceData(offset, count, string);</strong></p>
+<h3 id="6-从指定的位置起返回一些节点"><a href="#6-从指定的位置起返回一些节点" class="headerlink" title="6.从指定的位置起返回一些节点"></a>6.从指定的位置起返回一些节点</h3><p>用法：<strong>substringData(offset, count);</strong><br><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Dom.png" alt="Image"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中Dom的基础知识</span></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Dom基本操作&quot;&gt;&lt;a href=&quot;#Dom基本操作&quot; class=&quot;headerlink&quot; title=&quot;Dom基本操作&quot;&gt;&lt;/a&gt;Dom基本操作&lt;/h1&gt;&lt;h2 id=&quot;获取节点&quot;&gt;&lt;a href=&quot;#获取节点&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript的一些基本知识 -- 数组</title>
@@ -65,7 +116,7 @@
     <link href="http://yoursite.com/2017/02/28/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>http://yoursite.com/2017/02/28/JavaScript的一些基本知识 -- 字符串/</id>
     <published>2017-02-28T12:43:27.000Z</published>
-    <updated>2017-03-01T11:24:47.000Z</updated>
+    <updated>2017-03-02T12:05:50.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript的字符串"><a href="#JavaScript的字符串" class="headerlink" title="JavaScript的字符串"></a>JavaScript的字符串</h1><h2 id="转化为字符串"><a href="#转化为字符串" class="headerlink" title="转化为字符串"></a>转化为字符串</h2><p><strong>toString();</strong><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var num = 10;</div><div class="line">var str = num.toString();</div></pre></td></tr></table></figure></p>
 <h2 id="创建字符串"><a href="#创建字符串" class="headerlink" title="创建字符串"></a>创建字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var str = new String(&quot;123456&quot;);</div></pre></td></tr></table></figure>
@@ -80,7 +131,7 @@
 <h2 id="字符串的拼接"><a href="#字符串的拼接" class="headerlink" title="字符串的拼接"></a>字符串的拼接</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h3><p><strong>concat();</strong><br>将一个字符串或多个字符串拼接起来，获得一个新的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;how are you, i&apos;m fine thank you, and you&quot;;</div><div class="line">var str2 = &quot;--------Hello!&quot;;</div><div class="line">console.log(str.concat(str2)); // 打印结果为how are you, i&apos;m fine thank you, and you--------Hello!</div></pre></td></tr></table></figure></p>
 <h2 id="字符串的转换方式"><a href="#字符串的转换方式" class="headerlink" title="字符串的转换方式"></a>字符串的转换方式</h2><h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase"></a>toLowerCase</h3><p><strong>toLowerCase();</strong><br>方法返回一个字符串，该字符串中的字母被转换成小写。</p>
 <h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase"></a>toUpperCase</h3><p><strong>toUpperCase();</strong><br>方法返回一个字符串，该字符串中的所有字母都被转换为大写字母。</p>
-<h2 id="字符串小结"><a href="#字符串小结" class="headerlink" title="字符串小结"></a>字符串小结</h2><p><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png" alt="博主自己整理的JavaScript字符串的知识"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中字符串的知识</span></p>
+<h2 id="字符串小结"><a href="#字符串小结" class="headerlink" title="字符串小结"></a>字符串小结</h2><p><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-string.png" alt="Image"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中字符串的知识</span></p>
 ]]></content>
     
     <summary type="html">

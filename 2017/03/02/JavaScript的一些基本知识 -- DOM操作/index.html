@@ -75,7 +75,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ajax," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -93,16 +93,21 @@
 
 
 
-<meta name="description" content="什么是AjaxAjax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是一项新的技术，而是由多种技术组合而成。">
+<meta name="description" content="Dom基本操作获取节点一、document1.querySelectorAll根据CSS里面的选择器来获取一组元素(获取的是数组)用法：document.querySelectorAll(“选择器”);选择器可以是后代选择器，群组选择器，nth-child(1)等等获取的数组不会随着dom的操作发生变化而变化
+2.querySelector获取querySelectorAll获取到的第一个元素用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax的探索">
-<meta property="og:url" content="http://yoursite.com/2017/02/24/Ajax的探索/index.html">
+<meta property="og:title" content="JavaScript的一些基本知识 -- DOM操作">
+<meta property="og:url" content="http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/index.html">
 <meta property="og:site_name" content="Lymoo's Blog">
-<meta property="og:description" content="什么是AjaxAjax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是一项新的技术，而是由多种技术组合而成。">
-<meta property="og:updated_time" content="2017-02-24T13:48:57.000Z">
+<meta property="og:description" content="Dom基本操作获取节点一、document1.querySelectorAll根据CSS里面的选择器来获取一组元素(获取的是数组)用法：document.querySelectorAll(“选择器”);选择器可以是后代选择器，群组选择器，nth-child(1)等等获取的数组不会随着dom的操作发生变化而变化
+2.querySelector获取querySelectorAll获取到的第一个元素用法">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Dom.png">
+<meta property="og:updated_time" content="2017-03-02T12:05:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax的探索">
-<meta name="twitter:description" content="什么是AjaxAjax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是一项新的技术，而是由多种技术组合而成。">
+<meta name="twitter:title" content="JavaScript的一些基本知识 -- DOM操作">
+<meta name="twitter:description" content="Dom基本操作获取节点一、document1.querySelectorAll根据CSS里面的选择器来获取一组元素(获取的是数组)用法：document.querySelectorAll(“选择器”);选择器可以是后代选择器，群组选择器，nth-child(1)等等获取的数组不会随着dom的操作发生变化而变化
+2.querySelector获取querySelectorAll获取到的第一个元素用法">
+<meta name="twitter:image" content="http://olk97sdgv.bkt.clouddn.com/JavaScript-Dom.png">
 
 
 
@@ -130,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/24/Ajax的探索/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/"/>
 
 
 
 
 
-  <title> Ajax的探索 | Lymoo's Blog </title>
+  <title> JavaScript的一些基本知识 -- DOM操作 | Lymoo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -466,7 +471,7 @@ O.push(A)
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/24/Ajax的探索/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Lymoo">
@@ -490,7 +495,7 @@ O.push(A)
             
             
               
-                Ajax的探索
+                JavaScript的一些基本知识 -- DOM操作
               
             
           </h1>
@@ -505,8 +510,8 @@ O.push(A)
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-24T21:24:39+08:00">
-                2017-02-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-02T19:18:01+08:00">
+                2017-03-02
               </time>
             
 
@@ -528,8 +533,8 @@ O.push(A)
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ajax/" itemprop="url" rel="index">
-                    <span itemprop="name">Ajax</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -546,8 +551,8 @@ O.push(A)
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/24/Ajax的探索/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/24/Ajax的探索/" itemprop="commentCount"></span>
+                <a href="/2017/03/02/JavaScript的一些基本知识 -- DOM操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/JavaScript的一些基本知识 -- DOM操作/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -578,9 +583,35 @@ O.push(A)
       
 
       
-        <h1 id="什么是Ajax"><a href="#什么是Ajax" class="headerlink" title="什么是Ajax"></a>什么是Ajax</h1><p>Ajax的全称是Asynchronous JavaScript And XML(异步Javascript和XML)。它不是<br>一项新的技术，而是由多种技术组合而成。<a id="more"></a></p>
-<h1 id="Ajax的关键技术"><a href="#Ajax的关键技术" class="headerlink" title="Ajax的关键技术"></a>Ajax的关键技术</h1><p>1.Javascript脚本语言<br>2.XMLHttpRequest对象<br>3.可扩展标记语言(XML) JSON<br>4.文档对象模型(DOM)<br>5.层叠样式表(CSS)</p>
-<h1 id="前后台通讯"><a href="#前后台通讯" class="headerlink" title="前后台通讯"></a>前后台通讯</h1><p>封装一个Ajax的方法这里名字为GetAndPost.js<br>内容展示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">function toUrl(url,data)&#123;</div><div class="line">	var time = new Date().getTime();</div><div class="line">	data.time = time;</div><div class="line">	var arr = []; ///存储经过遍历之后形成的名和值的字符串</div><div class="line"></div><div class="line">	for(var i in data)&#123;</div><div class="line">		var str = i + &quot;=&quot; + data[i];</div><div class="line">		arr.push(str);</div><div class="line">	&#125;</div><div class="line">	var str = arr.join(&quot;&amp;&quot;);</div><div class="line">	var path = url + &quot;?&quot; + str;</div><div class="line">	return path;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function fnAjax(obj)&#123;</div><div class="line">	// 兼容浏览器写法</div><div class="line">	if (window.XMLHttpRequest) &#123;</div><div class="line">		var ajax = new XMLHttpRequest();</div><div class="line">	&#125; else &#123;</div><div class="line">		var ajax = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	var data = obj.data || &#123;&#125;;</div><div class="line">	var succFn = obj.succFn || false;</div><div class="line">	var failFn = obj.failFn || false;</div><div class="line"></div><div class="line">	var path = toUrl(obj.url,data);</div><div class="line">	var pathArr = path.split(&quot;?&quot;);</div><div class="line">	var time = new Date().getTime();</div><div class="line">	var type = obj.type || &quot;get&quot;;</div><div class="line">	</div><div class="line">	if (type == &quot;get&quot;) &#123;</div><div class="line">		ajax.open(&quot;GET&quot;, path, true);</div><div class="line">		ajax.send(null);</div><div class="line">	&#125; else &#123;</div><div class="line">		ajax.open(&quot;POST&quot;, pathArr[0], true);</div><div class="line">		ajax.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">		ajax.send(pathArr[1]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	// 对状态的检测</div><div class="line">	ajax.onreadystatechange = function()&#123;</div><div class="line">//		console.log(ajax.readyState);  //当前的请求状态</div><div class="line">		if (ajax.readyState == 4) &#123;</div><div class="line">			// console.log(&quot;请求成功了&quot;);</div><div class="line">			// console.log(ajax.status);  //请求结果的状态码</div><div class="line">			if (ajax.status &gt;= 200 &amp;&amp; ajax.status &lt;= 207 || ajax.status == 304) &#123;</div><div class="line">				if (succFn) &#123;</div><div class="line">					succFn(ajax.responseText);</div><div class="line">				&#125;</div><div class="line">			&#125; else &#123;</div><div class="line">				if (failFn) &#123;</div><div class="line">					failFn(ajax.status);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <h1 id="Dom基本操作"><a href="#Dom基本操作" class="headerlink" title="Dom基本操作"></a>Dom基本操作</h1><h2 id="获取节点"><a href="#获取节点" class="headerlink" title="获取节点"></a>获取节点</h2><h3 id="一、document"><a href="#一、document" class="headerlink" title="一、document"></a>一、document</h3><h4 id="1-querySelectorAll"><a href="#1-querySelectorAll" class="headerlink" title="1.querySelectorAll"></a>1.querySelectorAll</h4><p>根据CSS里面的选择器来获取一组元素(获取的是数组)<br>用法：<strong>document.querySelectorAll(“选择器”);</strong><br>选择器可以是后代选择器，群组选择器，nth-child(1)等等<br>获取的数组不会随着dom的操作发生变化而变化</p>
+<h4 id="2-querySelector"><a href="#2-querySelector" class="headerlink" title="2.querySelector"></a>2.querySelector</h4><p>获取querySelectorAll获取到的第一个元素<br>用法：<strong>document.querySelector(“选择器”);</strong></p>
+<h4 id="3-通过元素ID获取节点"><a href="#3-通过元素ID获取节点" class="headerlink" title="3.通过元素ID获取节点"></a>3.通过元素ID获取节点</h4><p>用法：<strong>document.getElementById(“元素ID”);</strong></p>
+<h4 id="4-通过类名获取节点"><a href="#4-通过类名获取节点" class="headerlink" title="4.通过类名获取节点"></a>4.通过类名获取节点</h4><p>用法：<strong>document.getElementsByClassName(“元素类名”);</strong><br>通过类名获取节点(获取的是动态数组)<br>动态数组会跟随dom操作发生变化之后做出相应的变化</p>
+<h4 id="5-通过元素标签名获取节点"><a href="#5-通过元素标签名获取节点" class="headerlink" title="5.通过元素标签名获取节点"></a>5.通过元素标签名获取节点</h4><p>用法：<strong>document.getElementsByTagName(“元素标签名”);</strong><br>通过元素标签名获取的也是动态数组</p>
+<h4 id="6-通过name属性来获取节点"><a href="#6-通过name属性来获取节点" class="headerlink" title="6.通过name属性来获取节点"></a>6.通过name属性来获取节点</h4><p>用法：<strong>document.getElementsByName(“name值”);</strong><br>通过name属性获取的也是动态数组</p>
+<h3 id="二、节点指针"><a href="#二、节点指针" class="headerlink" title="二、节点指针"></a>二、节点指针</h3><h4 id="1-获取元素的首个子节点"><a href="#1-获取元素的首个子节点" class="headerlink" title="1.获取元素的首个子节点"></a>1.获取元素的首个子节点</h4><p>用法：<strong>父节点.firstChild;</strong></p>
+<h4 id="2-获取元素的最后一个子节点"><a href="#2-获取元素的最后一个子节点" class="headerlink" title="2.获取元素的最后一个子节点"></a>2.获取元素的最后一个子节点</h4><p>用法：<strong>父节点.lastChild;</strong></p>
+<h4 id="3-获取元素的子节点列表"><a href="#3-获取元素的子节点列表" class="headerlink" title="3.获取元素的子节点列表"></a>3.获取元素的子节点列表</h4><p>用法：<strong>父节点.childNodes;</strong></p>
+<h4 id="4-获取已知节点的前一个节点"><a href="#4-获取已知节点的前一个节点" class="headerlink" title="4.获取已知节点的前一个节点"></a>4.获取已知节点的前一个节点</h4><p>用法：<strong>兄弟节点.previousSibling;</strong></p>
+<h4 id="5-获取已知节点的后一个节点"><a href="#5-获取已知节点的后一个节点" class="headerlink" title="5.获取已知节点的后一个节点"></a>5.获取已知节点的后一个节点</h4><p>用法：<strong>父节点.nextSibling;</strong></p>
+<h4 id="6-获取已知节点的父节点"><a href="#6-获取已知节点的父节点" class="headerlink" title="6.获取已知节点的父节点"></a>6.获取已知节点的父节点</h4><p>用法：<strong>父节点.parentNode;</strong></p>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="一、创建节点"><a href="#一、创建节点" class="headerlink" title="一、创建节点"></a>一、创建节点</h3><h4 id="1-创建属性节点"><a href="#1-创建属性节点" class="headerlink" title="1.创建属性节点"></a>1.创建属性节点</h4><p>用法：<strong>document.createAttribute(“创建的元素属性”);</strong></p>
+<h4 id="2-创建文本节点"><a href="#2-创建文本节点" class="headerlink" title="2.创建文本节点"></a>2.创建文本节点</h4><p>用法：<strong>document.createTextNode(“创建的文本内容”);</strong></p>
+<h4 id="3-创建元素节点"><a href="#3-创建元素节点" class="headerlink" title="3.创建元素节点"></a>3.创建元素节点</h4><p>用法：<strong>document.createElement(“创建的元素标签名”);</strong></p>
+<h3 id="二、删除节点"><a href="#二、删除节点" class="headerlink" title="二、删除节点"></a>二、删除节点</h3><p>删除指定的节点<br>用法：<strong>removeChild(要删除的节点名);</strong></p>
+<h3 id="三、替换节点"><a href="#三、替换节点" class="headerlink" title="三、替换节点"></a>三、替换节点</h3><p>将某个子节点替换为另一个<br>用法：<strong>replaceChild(新节点, 原节点);</strong></p>
+<h3 id="四、插入节点"><a href="#四、插入节点" class="headerlink" title="四、插入节点"></a>四、插入节点</h3><h4 id="1-向节点的子节点列表的末尾添加新的子节点"><a href="#1-向节点的子节点列表的末尾添加新的子节点" class="headerlink" title="1.向节点的子节点列表的末尾添加新的子节点"></a>1.向节点的子节点列表的末尾添加新的子节点</h4><p>用法：<strong>appendChild(所添加的新节点);</strong></p>
+<h4 id="2-在已知的子节点前插入一个新的子节点"><a href="#2-在已知的子节点前插入一个新的子节点" class="headerlink" title="2.在已知的子节点前插入一个新的子节点"></a>2.在已知的子节点前插入一个新的子节点</h4><p>用法：<strong>insertBefore(新节点, 原节点)</strong></p>
+<h3 id="五、复制节点"><a href="#五、复制节点" class="headerlink" title="五、复制节点"></a>五、复制节点</h3><p>复制节点标签<br>用法：<strong>cloneNode(bool);</strong><br>哪个节点调用就复制哪个，true代表深复制，会复制子节点树，false代表浅复制，只复制本身</p>
+<h2 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h2><h3 id="一、获取属性"><a href="#一、获取属性" class="headerlink" title="一、获取属性"></a>一、获取属性</h3><p>获取元素节点中指定属性的属性值<br>用法：<strong>元素节点.getAttribute(元素属性名);</strong></p>
+<h3 id="二、设置属性"><a href="#二、设置属性" class="headerlink" title="二、设置属性"></a>二、设置属性</h3><p>创建或改变元素节点的属性<br>用法：<strong>元素节点.setAttribute(属性名, 属性值);</strong></p>
+<h3 id="三、删除属性"><a href="#三、删除属性" class="headerlink" title="三、删除属性"></a>三、删除属性</h3><p>删除元素中的指定属性<br>用法：<strong>元素节点.removeAttribute(属性名);</strong></p>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><h3 id="1-从指定的位置插入字符串"><a href="#1-从指定的位置插入字符串" class="headerlink" title="1.从指定的位置插入字符串"></a>1.从指定的位置插入字符串</h3><p>用法：<strong>insertData(offset, string);</strong></p>
+<h3 id="2-从指定的位置起删除一些字符"><a href="#2-从指定的位置起删除一些字符" class="headerlink" title="2.从指定的位置起删除一些字符"></a>2.从指定的位置起删除一些字符</h3><p>用法：<strong>deleteData(offset, count);</strong></p>
+<h3 id="3-将字符串插入到文本尾部"><a href="#3-将字符串插入到文本尾部" class="headerlink" title="3.将字符串插入到文本尾部"></a>3.将字符串插入到文本尾部</h3><p>用法：<strong>appendData(string);</strong></p>
+<h3 id="4-从指定的位置起将文本节点分成两个节点"><a href="#4-从指定的位置起将文本节点分成两个节点" class="headerlink" title="4.从指定的位置起将文本节点分成两个节点"></a>4.从指定的位置起将文本节点分成两个节点</h3><p>用法：<strong>splitData(offset);</strong></p>
+<h3 id="5-从指定的位置起将一些字符用其他字符串代替"><a href="#5-从指定的位置起将一些字符用其他字符串代替" class="headerlink" title="5.从指定的位置起将一些字符用其他字符串代替"></a>5.从指定的位置起将一些字符用其他字符串代替</h3><p>用法：<strong>replaceData(offset, count, string);</strong></p>
+<h3 id="6-从指定的位置起返回一些节点"><a href="#6-从指定的位置起返回一些节点" class="headerlink" title="6.从指定的位置起返回一些节点"></a>6.从指定的位置起返回一些节点</h3><p>用法：<strong>substringData(offset, count);</strong><br><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Dom.png" alt="Image"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中Dom的基础知识</span></p>
 
       
     </div>
@@ -630,7 +661,7 @@ O.push(A)
       
         <div class="post-tags">
           
-            <a href="/tags/Ajax/" rel="tag"># Ajax</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -643,8 +674,8 @@ O.push(A)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/24/PHP基础(四)/" rel="next" title="PHP基础(四)">
-                <i class="fa fa-chevron-left"></i> PHP基础(四)
+              <a href="/2017/03/01/JavaScript的一些基本知识 -- 数组/" rel="next" title="JavaScript的一些基本知识 -- 数组">
+                <i class="fa fa-chevron-left"></i> JavaScript的一些基本知识 -- 数组
               </a>
             
           </div>
@@ -652,10 +683,6 @@ O.push(A)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/28/JavaScript的一些基本知识 -- 字符串/" rel="prev" title="JavaScript的一些基本知识 -- 字符串">
-                JavaScript的一些基本知识 -- 字符串 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -681,8 +708,8 @@ O.push(A)
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/24/Ajax的探索/"
-           data-title="Ajax的探索" data-url="http://yoursite.com/2017/02/24/Ajax的探索/">
+      <div class="ds-thread" data-thread-key="2017/03/02/JavaScript的一些基本知识 -- DOM操作/"
+           data-title="JavaScript的一些基本知识 -- DOM操作" data-url="http://yoursite.com/2017/03/02/JavaScript的一些基本知识 -- DOM操作/">
       </div>
     
   </div>
@@ -870,7 +897,7 @@ O.push(A)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Ajax"><span class="nav-number">1.</span> <span class="nav-text">什么是Ajax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax的关键技术"><span class="nav-number">2.</span> <span class="nav-text">Ajax的关键技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前后台通讯"><span class="nav-number">3.</span> <span class="nav-text">前后台通讯</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Dom基本操作"><span class="nav-number">1.</span> <span class="nav-text">Dom基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取节点"><span class="nav-number">1.1.</span> <span class="nav-text">获取节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、document"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、document</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-querySelectorAll"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.querySelectorAll</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-querySelector"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">2.querySelector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-通过元素ID获取节点"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">3.通过元素ID获取节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-通过类名获取节点"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">4.通过类名获取节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-通过元素标签名获取节点"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">5.通过元素标签名获取节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-通过name属性来获取节点"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">6.通过name属性来获取节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、节点指针"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、节点指针</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-获取元素的首个子节点"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.获取元素的首个子节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-获取元素的最后一个子节点"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2.获取元素的最后一个子节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-获取元素的子节点列表"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">3.获取元素的子节点列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-获取已知节点的前一个节点"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">4.获取已知节点的前一个节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-获取已知节点的后一个节点"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">5.获取已知节点的后一个节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-获取已知节点的父节点"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">6.获取已知节点的父节点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点操作"><span class="nav-number">1.2.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建节点"><span class="nav-number">1.2.1.</span> <span class="nav-text">一、创建节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建属性节点"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">1.创建属性节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建文本节点"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.创建文本节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-创建元素节点"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">3.创建元素节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、删除节点"><span class="nav-number">1.2.2.</span> <span class="nav-text">二、删除节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、替换节点"><span class="nav-number">1.2.3.</span> <span class="nav-text">三、替换节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、插入节点"><span class="nav-number">1.2.4.</span> <span class="nav-text">四、插入节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-向节点的子节点列表的末尾添加新的子节点"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">1.向节点的子节点列表的末尾添加新的子节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-在已知的子节点前插入一个新的子节点"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">2.在已知的子节点前插入一个新的子节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、复制节点"><span class="nav-number">1.2.5.</span> <span class="nav-text">五、复制节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点属性"><span class="nav-number">1.3.</span> <span class="nav-text">节点属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、获取属性"><span class="nav-number">1.3.1.</span> <span class="nav-text">一、获取属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、设置属性"><span class="nav-number">1.3.2.</span> <span class="nav-text">二、设置属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、删除属性"><span class="nav-number">1.3.3.</span> <span class="nav-text">三、删除属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本操作"><span class="nav-number">1.4.</span> <span class="nav-text">文本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-从指定的位置插入字符串"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.从指定的位置插入字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-从指定的位置起删除一些字符"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.从指定的位置起删除一些字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将字符串插入到文本尾部"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.将字符串插入到文本尾部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-从指定的位置起将文本节点分成两个节点"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.从指定的位置起将文本节点分成两个节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-从指定的位置起将一些字符用其他字符串代替"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.从指定的位置起将一些字符用其他字符串代替</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-从指定的位置起返回一些节点"><span class="nav-number">1.4.6.</span> <span class="nav-text">6.从指定的位置起返回一些节点</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

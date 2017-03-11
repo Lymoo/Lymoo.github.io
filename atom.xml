@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-11T13:12:30.000Z</updated>
+  <updated>2017-03-11T13:17:20.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/11/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E5%87%BD%E6%95%B0/"/>
     <id>http://yoursite.com/2017/03/11/JavaScript的一些基本知识 -- 函数/</id>
     <published>2017-03-11T12:42:24.000Z</published>
-    <updated>2017-03-11T13:12:30.000Z</updated>
+    <updated>2017-03-11T13:17:20.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript的基本函数"><a href="#JavaScript的基本函数" class="headerlink" title="JavaScript的基本函数"></a>JavaScript的基本函数</h1><h2 id="函数的定义方法"><a href="#函数的定义方法" class="headerlink" title="函数的定义方法"></a>函数的定义方法</h2><h3 id="1-静态方法"><a href="#1-静态方法" class="headerlink" title="1.静态方法"></a>1.静态方法<a id="more"></a></h3><p><strong>function 函数名 (参数) {code….};</strong><br>函数定义之后不会立即执行{}里面的代码，而是会等到调用的时候才会执行。</p>
 <h3 id="2-匿名方法"><a href="#2-匿名方法" class="headerlink" title="2.匿名方法"></a>2.匿名方法</h3><p><strong>var 函数名 = function (参数) {code….};</strong></p>
@@ -41,7 +41,7 @@
 <h2 id="函数的回调"><a href="#函数的回调" class="headerlink" title="函数的回调"></a>函数的回调</h2><p>把函数2当做参数传到函数1里面，在函数1里面调用函数2，就叫函数回调。</p>
 <h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><p>函数里面写了<strong>return</strong>之后，下面不能写代码，不会被执行<br>当调用这个函数之后，可以接收到什么东西。可以在函数里面通过<strong>return 返回值名</strong>来返回</p>
 <h2 id="函数的闭包"><a href="#函数的闭包" class="headerlink" title="函数的闭包"></a>函数的闭包</h2><p>函数内部的函数就是闭包<br>闭包的两个基本作用：<br>1.每次访问函数1得到的函数2的函数是不一样的函数。他们的空间不是同一块内存空间<br>2.通过闭包可以访问函数内部的局部变量</p>
-<h2 id="函数的递归"><a href="#函数的递归" class="headerlink" title="函数的递归"></a>函数的递归</h2><p>在函数内部调用自己这个函数，这样会形成一个死循环，所以使用递归的时候必须给程序一个出口。</p>
+<h2 id="函数的递归"><a href="#函数的递归" class="headerlink" title="函数的递归"></a>函数的递归</h2><p>在函数内部调用自己这个函数，这样会形成一个死循环，所以使用递归的时候必须给程序一个出口。<br><img src="http://olk97sdgv.bkt.clouddn.com/JavaScript-Basics/JS-function.png" alt="Image"><br><span style="display: block; margin-top: -25px; text-align: center; font-size: 12px;">博主自己整理的一些JavaScript中函数的基本知识</span></p>
 ]]></content>
     
     <summary type="html">

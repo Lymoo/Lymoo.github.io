@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-02T12:15:58.000Z</updated>
+  <updated>2017-03-11T13:12:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript的一些基本知识 -- 函数</title>
+    <link href="http://yoursite.com/2017/03/11/JavaScript%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%20--%20%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2017/03/11/JavaScript的一些基本知识 -- 函数/</id>
+    <published>2017-03-11T12:42:24.000Z</published>
+    <updated>2017-03-11T13:12:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript的基本函数"><a href="#JavaScript的基本函数" class="headerlink" title="JavaScript的基本函数"></a>JavaScript的基本函数</h1><h2 id="函数的定义方法"><a href="#函数的定义方法" class="headerlink" title="函数的定义方法"></a>函数的定义方法</h2><h3 id="1-静态方法"><a href="#1-静态方法" class="headerlink" title="1.静态方法"></a>1.静态方法<a id="more"></a></h3><p><strong>function 函数名 (参数) {code….};</strong><br>函数定义之后不会立即执行{}里面的代码，而是会等到调用的时候才会执行。</p>
+<h3 id="2-匿名方法"><a href="#2-匿名方法" class="headerlink" title="2.匿名方法"></a>2.匿名方法</h3><p><strong>var 函数名 = function (参数) {code….};</strong></p>
+<h3 id="3-直接量方法"><a href="#3-直接量方法" class="headerlink" title="3.直接量方法"></a>3.直接量方法</h3><p><strong>函数名 = function (参数) {code….};</strong></p>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="参数的类型"><a href="#参数的类型" class="headerlink" title="参数的类型"></a>参数的类型</h3><h4 id="形式参数"><a href="#形式参数" class="headerlink" title="形式参数"></a>形式参数</h4><p>形参不会改变实参的值<br>定义函数时使用的参数</p>
+<h4 id="实际参数"><a href="#实际参数" class="headerlink" title="实际参数"></a>实际参数</h4><p>调用函数时传递给函数的实际参数</p>
+<h3 id="参数的特性"><a href="#参数的特性" class="headerlink" title="参数的特性"></a>参数的特性</h3><p>函数的参数没有个数限制<br>参数的数据类型也没有限制<br>通过arguments对象访问函数参数的数组<br>参数始终按值传递</p>
+<h2 id="函数的arguments对象"><a href="#函数的arguments对象" class="headerlink" title="函数的arguments对象"></a>函数的arguments对象</h2><p>arguments对象是存放函数实际参数的参数列表<br>它只能在函数内部使用，它不是数组，但是带有下标属性<br>每次函数声明时它会自动初始化<br>它有三个基本属性：<br><strong>1.length</strong><br>获取实际参数的长度<br><strong>2.callee</strong><br>返回当前正在指向的函数<br><strong>3.caler</strong><br>返回调用当前正在执行函数的函数名</p>
+<h2 id="函数的类型"><a href="#函数的类型" class="headerlink" title="函数的类型"></a>函数的类型</h2><p>1.有参数有返回值<br>2.无参数无返回值<br>3.有参数无返回值<br>4.无参数有返回值</p>
+<h2 id="函数的指针标识"><a href="#函数的指针标识" class="headerlink" title="函数的指针标识"></a>函数的指针标识</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>指向当前操作对象</p>
+<h3 id="callee"><a href="#callee" class="headerlink" title="callee"></a>callee</h3><p>指向参数集合所属函数</p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>指向函数附带的原型对象</p>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p>指向创建该对象的构造函数</p>
+<h2 id="函数的调用方法"><a href="#函数的调用方法" class="headerlink" title="函数的调用方法"></a>函数的调用方法</h2><h3 id="1-在事件中调用"><a href="#1-在事件中调用" class="headerlink" title="1.在事件中调用"></a>1.在事件中调用</h3><p><strong>事件类型 = 函数名();</strong></p>
+<h3 id="2-直接调用"><a href="#2-直接调用" class="headerlink" title="2.直接调用"></a>2.直接调用</h3><p><strong>函数名();</strong></p>
+<h3 id="3-自执行"><a href="#3-自执行" class="headerlink" title="3.自执行"></a>3.自执行</h3><p>**(function (){})();</p>
+<h3 id="4-在连接中调用"><a href="#4-在连接中调用" class="headerlink" title="4.在连接中调用"></a>4.在连接中调用</h3><p><strong><a href="javascript:函数名()" target="_blank" rel="external"></a></strong></p>
+<h2 id="函数的回调"><a href="#函数的回调" class="headerlink" title="函数的回调"></a>函数的回调</h2><p>把函数2当做参数传到函数1里面，在函数1里面调用函数2，就叫函数回调。</p>
+<h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><p>函数里面写了<strong>return</strong>之后，下面不能写代码，不会被执行<br>当调用这个函数之后，可以接收到什么东西。可以在函数里面通过<strong>return 返回值名</strong>来返回</p>
+<h2 id="函数的闭包"><a href="#函数的闭包" class="headerlink" title="函数的闭包"></a>函数的闭包</h2><p>函数内部的函数就是闭包<br>闭包的两个基本作用：<br>1.每次访问函数1得到的函数2的函数是不一样的函数。他们的空间不是同一块内存空间<br>2.通过闭包可以访问函数内部的局部变量</p>
+<h2 id="函数的递归"><a href="#函数的递归" class="headerlink" title="函数的递归"></a>函数的递归</h2><p>在函数内部调用自己这个函数，这样会形成一个死循环，所以使用递归的时候必须给程序一个出口。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript的基本函数&quot;&gt;&lt;a href=&quot;#JavaScript的基本函数&quot; class=&quot;headerlink&quot; title=&quot;JavaScript的基本函数&quot;&gt;&lt;/a&gt;JavaScript的基本函数&lt;/h1&gt;&lt;h2 id=&quot;函数的定义方法&quot;&gt;&lt;a href=&quot;#函数的定义方法&quot; class=&quot;headerlink&quot; title=&quot;函数的定义方法&quot;&gt;&lt;/a&gt;函数的定义方法&lt;/h2&gt;&lt;h3 id=&quot;1-静态方法&quot;&gt;&lt;a href=&quot;#1-静态方法&quot; class=&quot;headerlink&quot; title=&quot;1.静态方法&quot;&gt;&lt;/a&gt;1.静态方法
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript的一些基本知识 -- DOM操作</title>

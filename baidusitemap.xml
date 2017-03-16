@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/16/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    <lastmod>2017-03-16T13:32:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>node.js基础（二）</title>
+        <pubTime>2017-03-16T11:14:41.000Z</pubTime>
+        
+        <tag>nodeJs</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodeJs" url="http://yoursite.com/categories/nodeJs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/16/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2017-03-16T07:07:09.000Z</lastmod>
+    <lastmod>2017-03-16T12:12:30.000Z</lastmod>
     <data>
         <display>
         <title>node.js基础（一）</title>

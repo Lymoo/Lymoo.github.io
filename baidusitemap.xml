@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/03/16/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2017-03-17T01:42:24.000Z</lastmod>
+    <loc>http://yoursite.com/2017/03/17/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89/</loc>
+    <lastmod>2017-03-17T13:23:35.000Z</lastmod>
     <data>
         <display>
-        <title>node.js基础（一）</title>
-        <pubTime>2017-03-16T02:31:59.000Z</pubTime>
+        <title>node.js基础（三）</title>
+        <pubTime>2017-03-17T03:01:13.000Z</pubTime>
         
         <tag>nodeJs</tag>
          
@@ -25,11 +25,31 @@
     
   <url>
     <loc>http://yoursite.com/2017/03/16/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
-    <lastmod>2017-03-17T01:19:11.000Z</lastmod>
+    <lastmod>2017-03-17T08:13:48.000Z</lastmod>
     <data>
         <display>
         <title>node.js基础（二）</title>
         <pubTime>2017-03-16T11:14:41.000Z</pubTime>
+        
+        <tag>nodeJs</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodeJs" url="http://yoursite.com/categories/nodeJs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/16/node.js%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2017-03-17T01:42:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>node.js基础（一）</title>
+        <pubTime>2017-03-16T02:31:59.000Z</pubTime>
         
         <tag>nodeJs</tag>
          

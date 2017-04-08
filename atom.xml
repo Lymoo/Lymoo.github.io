@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-08T08:10:48.000Z</updated>
+  <updated>2017-04-08T08:13:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2017/04/08/%E4%B8%80%E4%BA%9B%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9A%84%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/08/一些前端面试题的整理/</id>
     <published>2017-04-08T07:23:33.000Z</published>
-    <updated>2017-04-08T08:10:48.000Z</updated>
+    <updated>2017-04-08T08:13:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="标签属性中title和alt的区别"><a href="#标签属性中title和alt的区别" class="headerlink" title="标签属性中title和alt的区别"></a>标签属性中title和alt的区别</h1><p>答:title是设置鼠标移动到图片上时显示的内容，而alt是用于当图片没有正常显示时出现的提示文字，另外alt还用于在seo中针对图片的优化说明.</p>
+    <content type="html"><![CDATA[<p>个人整理的一些最近碰到的一些较为有用的前端题目<a id="more"></a></p>
+<h1 id="标签属性中title和alt的区别"><a href="#标签属性中title和alt的区别" class="headerlink" title="标签属性中title和alt的区别"></a>标签属性中title和alt的区别</h1><p>答:title是设置鼠标移动到图片上时显示的内容，而alt是用于当图片没有正常显示时出现的提示文字，另外alt还用于在seo中针对图片的优化说明.</p>
 <h1 id="隐藏元素的几种方法"><a href="#隐藏元素的几种方法" class="headerlink" title="隐藏元素的几种方法"></a>隐藏元素的几种方法</h1><p>答: 1.display:none;<br>2.visibility:hidden;<br>3.opacity:0;<br>4.position:absolute;<br>left:-10000px;</p>
 <h1 id="JavaScript中有哪几种数据类型"><a href="#JavaScript中有哪几种数据类型" class="headerlink" title="JavaScript中有哪几种数据类型"></a>JavaScript中有哪几种数据类型</h1><p>答:JavaScript中有5种简单数据类型（也称为基本数据类型）:Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，Object本质上是由一组无序的名值对组成的</p>
 <h1 id="回答以下输出的类型"><a href="#回答以下输出的类型" class="headerlink" title="回答以下输出的类型"></a>回答以下输出的类型</h1><p>答:alert(typeof(null));//object<br>alert(typeof(NaN));//number<br>alert(typeof(undefined));//undefined<br>alert(typeof(“undefined”));//string<br>alert(NaN == undefined);//false<br>alert(NaN == NaN);//false</p>
@@ -61,7 +62,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;标签属性中title和alt的区别&quot;&gt;&lt;a href=&quot;#标签属性中title和alt的区别&quot; class=&quot;headerlink&quot; title=&quot;标签属性中title和alt的区别&quot;&gt;&lt;/a&gt;标签属性中title和alt的区别&lt;/h1&gt;&lt;p&gt;答:title是设置
+      &lt;p&gt;个人整理的一些最近碰到的一些较为有用的前端题目
     
     </summary>
     

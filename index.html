@@ -467,6 +467,193 @@ O.push(A)
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/08/一些前端面试题的整理/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lymoo">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olk97sdgv.bkt.clouddn.com/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Lymoo's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Lymoo's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/08/一些前端面试题的整理/" itemprop="url">
+                  一些前端面试题的整理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T15:23:33+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试题/" itemprop="url" rel="index">
+                    <span itemprop="name">面试题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/08/一些前端面试题的整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/08/一些前端面试题的整理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="标签属性中title和alt的区别"><a href="#标签属性中title和alt的区别" class="headerlink" title="标签属性中title和alt的区别"></a>标签属性中title和alt的区别</h1><p>答:title是设置鼠标移动到图片上时显示的内容，而alt是用于当图片没有正常显示时出现的提示文字，另外alt还用于在seo中针对图片的优化说明.</p>
+<h1 id="隐藏元素的几种方法"><a href="#隐藏元素的几种方法" class="headerlink" title="隐藏元素的几种方法"></a>隐藏元素的几种方法</h1><p>答: 1.display:none;<br>2.visibility:hidden;<br>3.opacity:0;<br>4.position:absolute;<br>left:-10000px;</p>
+<h1 id="JavaScript中有哪几种数据类型"><a href="#JavaScript中有哪几种数据类型" class="headerlink" title="JavaScript中有哪几种数据类型"></a>JavaScript中有哪几种数据类型</h1><p>答:JavaScript中有5种简单数据类型（也称为基本数据类型）:Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，Object本质上是由一组无序的名值对组成的</p>
+<h1 id="回答以下输出的类型"><a href="#回答以下输出的类型" class="headerlink" title="回答以下输出的类型"></a>回答以下输出的类型</h1><p>答:alert(typeof(null));//object<br>alert(typeof(NaN));//number<br>alert(typeof(undefined));//undefined<br>alert(typeof(“undefined”));//string<br>alert(NaN == undefined);//false<br>alert(NaN == NaN);//false</p>
+<h1 id="用jquery和原生js获取元素中的内容"><a href="#用jquery和原生js获取元素中的内容" class="headerlink" title="用jquery和原生js获取元素中的内容"></a>用jquery和原生js获取元素中的内容</h1><p>答:JS:document.getElementById(“div1”).innerHTML;<br>document.querySelector(“#div1”).innerText;<br>JQ:$(“#div1”).html()</p>
+<h1 id="用原生js封装一个添加监听事件的兼容写法"><a href="#用原生js封装一个添加监听事件的兼容写法" class="headerlink" title="用原生js封装一个添加监听事件的兼容写法"></a>用原生js封装一个添加监听事件的兼容写法</h1><p>答:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">obj,event,fn</span>)</span>&#123;</div><div class="line">	<span class="comment">//现代：addEventLister 不用加on</span></div><div class="line">	<span class="comment">//ie：touchEvent 需要加on</span></div><div class="line">	<span class="keyword">if</span> (<span class="built_in">window</span>.addEventListener)&#123;</div><div class="line">		obj.addEventListener(event,fn);</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		obj.attachEvent(<span class="string">"on"</span>+event, fn);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="对跨域的理解和解决办法"><a href="#对跨域的理解和解决办法" class="headerlink" title="对跨域的理解和解决办法"></a>对跨域的理解和解决办法</h1><p>答:跨域简单的理解即为当前服务器目录下的前端需求要请求非本服务器(本域名)下的后台服务就称为跨域请求。跨域请求我们使用普通的ajax请求是无法进行的同源策略，一般来说位于 server1.example.com 的网页无法与不是 server2.example.com的服务器沟通，或者说如果在server1.example.com下想获取server2.example.com的话就得用跨域请求。<br>跨域的解决方法及解决：通过script标签请求，或者通过jQuery跨域</p>
+<h1 id="Ajax的原理"><a href="#Ajax的原理" class="headerlink" title="Ajax的原理"></a>Ajax的原理</h1><p>答:Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。<br>XMLHttpRequest是ajax的核心机制，它是在IE5中首先引入的，是一种支持异步请求的技术。简单的说，也就是javascript可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果。</p>
+<h1 id="jQuery库中的-是什么"><a href="#jQuery库中的-是什么" class="headerlink" title="jQuery库中的$()是什么"></a>jQuery库中的$()是什么</h1><p>答:$()函数用于将任何对象包裹成jQuery对象，接着你就被允许调用定义在 jQuery对象上的多个不同方法。你甚至可以将一个选择器字符串传入$()函数，它会返回一个包含所有匹配的DOM元素数组的jQuery对象。</p>
+<h1 id="JavaScript的window-onload事件和jQuery的ready函数有何不同"><a href="#JavaScript的window-onload事件和jQuery的ready函数有何不同" class="headerlink" title="JavaScript的window.onload事件和jQuery的ready函数有何不同"></a>JavaScript的window.onload事件和jQuery的ready函数有何不同</h1><p>答:JavaScript的window.onload事件和jQuery的ready函数之间的主要区别是，前者除了要等待DOM被创建还要等到包括大型图片、音频、视频在内的所有外部资源都完全加载。如果加载图片和媒体内容花费了大量时间，用户就会感受到定义在window.onload 事件上的代码在执行时有明显的延迟。<br>另一方面，jQuery的ready()函数只需对DOM树的等待，而无需对图像或外部资源加载的等待，从而执行起来更快。使用jQuery $(document).ready()的另一个优势是你可以在网页里多次使用它，浏览器会按它们在HTML页面里出现的顺序执行它们，相反对于onload技术而言，只能在单一函数里使用。鉴于这个好处，用jQuery的ready()函数比用JavaScript的window.onload 事件要更好些。</p>
+<h1 id="用原生js封装一个能获取元素到页面最上方和最左侧的函数，再用JQ封装一个同样的函数"><a href="#用原生js封装一个能获取元素到页面最上方和最左侧的函数，再用JQ封装一个同样的函数" class="headerlink" title="用原生js封装一个能获取元素到页面最上方和最左侧的函数，再用JQ封装一个同样的函数"></a>用原生js封装一个能获取元素到页面最上方和最左侧的函数，再用JQ封装一个同样的函数</h1><p>答:原生:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">offset</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> l = <span class="number">0</span>;</div><div class="line">	<span class="keyword">var</span> t = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(obj)&#123;</div><div class="line">		l+=obj.offsetLeft;</div><div class="line">		t+=obj.offsetTop;</div><div class="line">		obj = obj.offsetParent;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> &#123;<span class="attr">left</span>:l,<span class="attr">top</span>:t&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>jQuery：<code>$().offset().left;$().offset().top</code></p>
+<h1 id="如何实现一个EventEmitter"><a href="#如何实现一个EventEmitter" class="headerlink" title="如何实现一个EventEmitter"></a>如何实现一个EventEmitter</h1><p>答:主要分三步：定义一个子类，调用构造函数，继承EventEmitter<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> util = <span class="built_in">require</span>(<span class="string">'util'</span>);</div><div class="line"><span class="keyword">var</span> EventEmitter = <span class="built_in">require</span>(<span class="string">'events'</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyEmitter</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    EventEmitter.call(<span class="keyword">this</span>);</div><div class="line">&#125; <span class="comment">// 构造函数</span></div><div class="line">util.inherits(MyEmitter, EventEmitter); <span class="comment">// 继承</span></div><div class="line"><span class="keyword">var</span> em = <span class="keyword">new</span> MyEmitter();</div><div class="line">em.on(<span class="string">'hello'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'收到事件hello的数据:'</span>, data);</div><div class="line">&#125;); <span class="comment">// 接收事件，并打印到控制台</span></div><div class="line">em.emit(<span class="string">'hello'</span>, <span class="string">'EventEmitter传递消息真方便!'</span>);</div></pre></td></tr></table></figure></p>
+<h1 id="如何通过stream实现一个文件的复制"><a href="#如何通过stream实现一个文件的复制" class="headerlink" title="如何通过stream实现一个文件的复制"></a>如何通过stream实现一个文件的复制</h1><p>答:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var fs = require("fs");</div><div class="line">var rs = fs.createReadStream(“1.jpg");</div><div class="line">var ws = fs.createWriteStream("2.jpg");</div><div class="line">rs.pipe(ws);</div></pre></td></tr></table></figure></p>
+<h1 id="如何理解node的同步和异步"><a href="#如何理解node的同步和异步" class="headerlink" title="如何理解node的同步和异步"></a>如何理解node的同步和异步</h1><p>答:”同步模式”就是上一段的模式，后一个任务等待前一个任务结束，然后再执行，程序的执行顺序与任务的排列顺序是一致的、同步的；”异步模式”则完全不同，每一个任务有一个或多个回调函数（callback），前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的。</p>
+<h1 id="使用node构建一个服务器并对向”-post”发起的post请求进行处理，要求拿到post请求传输的数据（不包括文件上传）"><a href="#使用node构建一个服务器并对向”-post”发起的post请求进行处理，要求拿到post请求传输的数据（不包括文件上传）" class="headerlink" title="使用node构建一个服务器并对向”/post”发起的post请求进行处理，要求拿到post请求传输的数据（不包括文件上传）"></a>使用node构建一个服务器并对向”/post”发起的post请求进行处理，要求拿到post请求传输的数据（不包括文件上传）</h1><p>答:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line"><span class="keyword">var</span> queryString = <span class="built_in">require</span>(<span class="string">"querystring"</span>);</div><div class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req,res</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(urlObj.pathname == <span class="string">"/post"</span>)&#123;</div><div class="line">          <span class="keyword">var</span> str = <span class="string">""</span>;</div><div class="line">       req.on(<span class="string">"data"</span>,<span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</div><div class="line">             str+=chunk;</div><div class="line">         &#125;);</div><div class="line">         req.on(<span class="string">"end"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="keyword">var</span> query = queryString.parse(str);</div><div class="line">              <span class="built_in">console</span>.log(query);</div><div class="line">         &#125;)</div><div class="line">       res.end(<span class="string">"你请求的地址是"</span>+urlObj.pathname);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">server.listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure></p>
+<h1 id="用node模拟客户端发起请求"><a href="#用node模拟客户端发起请求" class="headerlink" title="用node模拟客户端发起请求"></a>用node模拟客户端发起请求</h1><p>答:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line"><span class="keyword">var</span> request = http.request(&#123;</div><div class="line">    <span class="attr">host</span>:<span class="string">"localhost"</span>,</div><div class="line">    <span class="attr">port</span>:<span class="string">"8080"</span>,</div><div class="line">    <span class="attr">path</span>:<span class="string">"/request"</span>,</div><div class="line">    <span class="attr">method</span>:<span class="string">"post"</span></div><div class="line">&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</div><div class="line">    res.on(<span class="string">"data"</span>,<span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(chunk.toString());</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line">request.write(<span class="string">"user=zhang&amp;pass=111"</span>);</div><div class="line">request.end(<span class="string">"请求结束"</span>);<span class="comment">//结束本次请求</span></div></pre></td></tr></table></figure></p>
+<h1 id="图片预加载的意义和原理"><a href="#图片预加载的意义和原理" class="headerlink" title="图片预加载的意义和原理"></a>图片预加载的意义和原理</h1><p>答:预加载图片是提高用户体验的一个很好方法。图片预先加载到浏览器中，这对图片画廊及图片占据很大比例的网站来说十分有利，它保证了图片快速、无缝地发布，也可帮助用户在浏览网站内容时获得更好的用户体验。<br>实例代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//obj.imgArr 图片数组</span></div><div class="line"><span class="comment">//obj.loadingProgress 加载进度</span></div><div class="line"><span class="comment">//obj.loadingOver 加载结果</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> imgObjs = [];</div><div class="line">	loadingFn = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> index = <span class="number">0</span>; </div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; obj.imgArr.length; i++) &#123;</div><div class="line">			<span class="keyword">var</span> imgObj = <span class="keyword">new</span> Image();</div><div class="line">			imgObj.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				index++;</div><div class="line">				imgObjs.push(<span class="keyword">this</span>);</div><div class="line">				<span class="keyword">if</span> (obj.loadingProgress)&#123;</div><div class="line">					obj.loadingProgress(index, <span class="keyword">this</span>);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span> (index &gt; obj.imgArr.length<span class="number">-1</span>)&#123;</div><div class="line">					obj.loadingOver(imgObjs);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			imgObj.src = obj.imgArr[i];</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">console</span>.log(obj);</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="浏览器页面有哪三层构成，分别是什么，作用是什么"><a href="#浏览器页面有哪三层构成，分别是什么，作用是什么" class="headerlink" title="浏览器页面有哪三层构成，分别是什么，作用是什么?"></a>浏览器页面有哪三层构成，分别是什么，作用是什么?</h1><p>答:浏览器页面构成：结构层、表示层、行为层<br>分别是：HTML、CSS、JavaScript<br>作用：HTML实现页面结构，CSS完成页面的表现与风格，JavaScript实现一些客户端的功能与业务。</p>
+<h1 id="什么是语义化的HTML"><a href="#什么是语义化的HTML" class="headerlink" title="什么是语义化的HTML?"></a>什么是语义化的HTML?</h1><p>答:直观的认识标签，对于搜索引擎的抓取有好处，用正确的标签做正确的事情！<br>html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析，在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于SEO。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+<h1 id="CSS居中（包括水平居中和垂直居中）"><a href="#CSS居中（包括水平居中和垂直居中）" class="headerlink" title="CSS居中（包括水平居中和垂直居中）"></a>CSS居中（包括水平居中和垂直居中）</h1><p>答:水平居中设置:<br>1.行内元素<br>设置 text-align:center；<br>2.Flex布局<br>设置display:flex;justify-content:center;(灵活运用,支持Chroime，Firefox，IE9+)</p>
+<p>垂直居中设置：<br>1.父元素高度确定的单行文本（内联元素）<br>设置 height = line-height；<br>2.父元素高度确定的多行文本（内联元素）<br>a:插入 table （插入方法和水平居中一样），然后设置 vertical-align:middle；<br>b:先设置 display:table-cell 再设置 vertical-align:middle；<br>块级元素居中方案</p>
+<p>水平居中设置：<br>1.定宽块状元素<br>设置 左右 margin 值为 auto；<br>2.不定宽块状元素<br>a:在元素外加入 table 标签（完整的，包括 table、tbody、tr、td），该元素写在 td 内，然后设置 margin 的值为 auto；<br>b:给该元素设置 displa:inine 方法；<br>c:父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left:50%；</p>
+<p>垂直居中设置：<br>使用position:absolute（fixed）,设置left、top、margin-left、margin-top的属性;<br>利用position:fixed（absolute）属性，margin:auto这个必须不要忘记了;<br>利用display:table-cell属性使内容垂直居中;<br>使用css3的新属性transform:translate(x,y)属性;<br>使用:before元素;</p>
+<h1 id="CSS3有哪些新特性？"><a href="#CSS3有哪些新特性？" class="headerlink" title="CSS3有哪些新特性？"></a>CSS3有哪些新特性？</h1><p>答:CSS3实现圆角（border-radius: 8px），阴影（box-shadow: 10px），<br>对文字加特效（text-shadow），线性渐变（gradient），变换（transform）<br>transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜<br>还增加了更多的CSS选择器，多背景，rgba等</p>
+<h1 id="事件委托是什么？"><a href="#事件委托是什么？" class="headerlink" title="事件委托是什么？"></a>事件委托是什么？</h1><p>答:利用事件冒泡的原理，使自己的所触发的事件，让它的父元素代替执行！</p>
+<h1 id="什么叫优雅降级和渐进增强？"><a href="#什么叫优雅降级和渐进增强？" class="headerlink" title="什么叫优雅降级和渐进增强？"></a>什么叫优雅降级和渐进增强？</h1><p>答:优雅降级:Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。由于IE独特的盒模型布局问题，针对不同版本的IE的hack实践过优雅降级了,为那些无法支持功能的浏览器增加候选方案，使之在旧式浏览器上以某种形式降级体验却不至于完全失效。<br>渐进增强：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能,向页面增加无害于基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。</p>
+<h1 id="JavaScript原型，原型链都是什么-有什么特点？"><a href="#JavaScript原型，原型链都是什么-有什么特点？" class="headerlink" title="JavaScript原型，原型链都是什么? 有什么特点？"></a>JavaScript原型，原型链都是什么? 有什么特点？</h1><p>答:原型对象也是普通的对象，是对象一个自带隐式的 <strong>proto</strong>属性，原型也有可能有自己的原型，如果一个原型对象的原型不为null的话，我们就称之为原型链。<br>原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。</p>
+<h1 id="如何阻止事件冒泡和默认事件"><a href="#如何阻止事件冒泡和默认事件" class="headerlink" title="如何阻止事件冒泡和默认事件"></a>如何阻止事件冒泡和默认事件</h1><p>答:阻止冒泡:<br>现代浏览器:e.stopPropagation<br>低版本浏览器:e.cancelBubble=true</p>
+<p>阻止默认事件:<br>现代浏览器:e.preventDefult()<br>低版本浏览器:return false</p>
+<h1 id="iOS苹果和微信中音频和视频实现自动播放的方法"><a href="#iOS苹果和微信中音频和视频实现自动播放的方法" class="headerlink" title="iOS苹果和微信中音频和视频实现自动播放的方法"></a>iOS苹果和微信中音频和视频实现自动播放的方法</h1><p>答:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以 </span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'audio'</span>).play(); </div><div class="line"><span class="comment">//必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效 </span></div><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"WeixinJSBridgeReady"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'audio'</span>).play(); </div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'video'</span>).play(); </div><div class="line">&#125;, <span class="literal">false</span>);</div></pre></td></tr></table></figure></p>
+<h1 id="解释GET-POST的区别"><a href="#解释GET-POST的区别" class="headerlink" title="解释GET/POST的区别"></a>解释GET/POST的区别</h1><p>答:GET请求，请求的数据会附加在URL之后，以?分割URL和传输数据，多个参数用&amp;连接。URL的编码格式采用的是ASCII编码，而不是uniclde，即是说所有的非ASCII字符都要编码之后再传输。<br>POST请求：POST请求会把请求的数据放置在HTTP请求包的包体中。<br>因此，GET请求的数据会暴露在地址栏中，而POST请求则不会。<br>关于传输数据的大小<br>在HTTP规范中，没有对URL的长度和传输的数据大小进行限制。但是在实际开发过程中，对于GET，特定的浏览器和服务器对URL的长度有限制。因此，在使用GET请求时，传输数据会受到URL长度的限制。<br>对于POST，由于不是URL传值，理论上是不会受限制的，但是实际上各个服务器会规定对POST提交数据大小进行限制，Apache、IIS都有各自的配置。<br>关于安全性<br>Get是Form的默认方法，安全性相对比较低</p>
+<h1 id="描述一下cookies，sessionStorage和localStorage的区别"><a href="#描述一下cookies，sessionStorage和localStorage的区别" class="headerlink" title="描述一下cookies，sessionStorage和localStorage的区别"></a>描述一下cookies，sessionStorage和localStorage的区别</h1><p>答:sessionStorage和localStorage是HTML5 Web Storage API 提供的，可以方便的在web请求之间保存数据。有了本地数据，就可以避免数据在浏览器和服务器间不必要地来回传递。<br>sessionStorage、localStorage、cookie都是在浏览器端存储的数据，其中 sessionStorage的概念很特别，引入了一个“浏览器窗口”的概念。sessionStorage 是在同源的同窗口（或tab）中，始终存在的数据。也就是说只要这个浏览器窗口没有关闭，即使刷新页面或进入同源另一页面，数据仍然存在。关闭窗口后，sessionStorage即被销毁。同时“独立”打开的不同窗口，即使是同一页面， sessionStorage对象也是不同的。cookies会发送到服务器端。其余两个不会。<br>Microsoft指出Internet Explorer 8增加cookie限制为每个域名50个，但IE7似乎也允许每个域名50个cookie。Firefox每个域名cookie限制为50个。Opera每个域名cookie限制为30个。Firefox和Safari允许cookie多达4097个字节，包括名name）、值（value）和等号。Opera许cookie多达4096个字节，包括：名（name）、值（value）和等号。Internet Explorer允许cookie多达4095 个字节，包括：名（name）、值（value）和等号。<br>区别：<br>Cookie:<br>每个域名存储量比较小（各浏览器不同，大致 4K ）<br>所有域名的存储量有限制（各浏览器不同，大致 4K ）<br>有个数限制（各浏览器不同）<br>会随请求发送到服务器<br>LocalStorage:<br>永久存储<br>单个域名存储量比较大（推荐 5MB ，各浏览器不同）<br>总体数量无限制<br>SessionStorage:<br>只在Session内有效<br>存储量更大（推荐没有限制，但是实际上各浏览器也不同）</p>
+<h1 id="image和canvas在处理图片的时候有什么区别？"><a href="#image和canvas在处理图片的时候有什么区别？" class="headerlink" title="image和canvas在处理图片的时候有什么区别？"></a>image和canvas在处理图片的时候有什么区别？</h1><p>答:image是通过对象的形式描述图片的。<br>canvas通过专门的API将图片绘制在画布上。</p>
+<h1 id="响应式布局的时候，轮播图使用两张不同的图片去适配大屏幕和超小屏幕，还是一张图片进行压缩适配不同终端，说明原因？"><a href="#响应式布局的时候，轮播图使用两张不同的图片去适配大屏幕和超小屏幕，还是一张图片进行压缩适配不同终端，说明原因？" class="headerlink" title="响应式布局的时候，轮播图使用两张不同的图片去适配大屏幕和超小屏幕，还是一张图片进行压缩适配不同终端，说明原因？"></a>响应式布局的时候，轮播图使用两张不同的图片去适配大屏幕和超小屏幕，还是一张图片进行压缩适配不同终端，说明原因？</h1><p>答:最好使用两张不同大小的图片去适配大屏幕和超小屏幕，这样可以针对不同设备的屏幕大小，来加载响应的图片，减少超小屏幕设备的网络流量消耗，加快响应速度，同时防止图片在大屏幕下分辨率不够导致失真的问题。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/08/浅谈Angular/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1087,163 +1274,6 @@ O.push(A)
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/JavaScript的一些基本知识 -- 函数/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Lymoo">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://olk97sdgv.bkt.clouddn.com/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Lymoo's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Lymoo's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/11/JavaScript的一些基本知识 -- 函数/" itemprop="url">
-                  JavaScript的一些基本知识 -- 函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T20:42:24+08:00">
-                2017-03-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/11/JavaScript的一些基本知识 -- 函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/11/JavaScript的一些基本知识 -- 函数/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="JavaScript的基本函数"><a href="#JavaScript的基本函数" class="headerlink" title="JavaScript的基本函数"></a>JavaScript的基本函数</h1><h2 id="函数的定义方法"><a href="#函数的定义方法" class="headerlink" title="函数的定义方法"></a>函数的定义方法</h2><h3 id="1-静态方法"><a href="#1-静态方法" class="headerlink" title="1.静态方法"></a>1.静态方法
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/11/JavaScript的一些基本知识 -- 函数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1293,7 +1323,7 @@ O.push(A)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1302,7 +1332,7 @@ O.push(A)
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1311,7 +1341,7 @@ O.push(A)
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -1,0 +1,1248 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="j5M8mJpYfT" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Lymoo's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://olk97sdgv.bkt.clouddn.com/pagetitlehead.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="什么是ReactReact是一个用于构建用户界面的JavaScript库，而不是一个MVC框架，但可以使用React作为MVC架构的View层轻易的在已有项目中使用。React起源于Facebook的内部项目，用来架设Instagram的网站，并于2013年5月开源。React拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="了解React基础">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/了解React基础/index.html">
+<meta property="og:site_name" content="Lymoo's Blog">
+<meta property="og:description" content="什么是ReactReact是一个用于构建用户界面的JavaScript库，而不是一个MVC框架，但可以使用React作为MVC架构的View层轻易的在已有项目中使用。React起源于Facebook的内部项目，用来架设Instagram的网站，并于2013年5月开源。React拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base1.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base2.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base3.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base4.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base5.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base6.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base7.png">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/react-base8.png">
+<meta property="og:updated_time" content="2017-04-10T13:39:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="了解React基础">
+<meta name="twitter:description" content="什么是ReactReact是一个用于构建用户界面的JavaScript库，而不是一个MVC框架，但可以使用React作为MVC架构的View层轻易的在已有项目中使用。React起源于Facebook的内部项目，用来架设Instagram的网站，并于2013年5月开源。React拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。">
+<meta name="twitter:image" content="http://olk97sdgv.bkt.clouddn.com/react-base1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/10/了解React基础/"/>
+
+
+
+
+
+  <title> 了解React基础 | Lymoo's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3a0df7ad2c146b5262101964b60ca1c8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Lymoo's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">www.lymooz.com</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+<li style="margin-top: -20px;"> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+function c() {
+var e = document.createElement("link");
+e.setAttribute("type", "text/css");
+e.setAttribute("rel", "stylesheet");
+e.setAttribute("href", f);
+e.setAttribute("class", l);
+document.body.appendChild(e)
+}
+
+function h() {
+var e = document.getElementsByClassName(l);
+for (var t = 0; t < e.length; t++) {
+document.body.removeChild(e[t])
+}
+}
+
+function p() {
+var e = document.createElement("div");
+e.setAttribute("class", a);
+document.body.appendChild(e);
+setTimeout(function() {
+document.body.removeChild(e)
+}, 100)
+}
+
+function d(e) {
+return {
+height : e.offsetHeight,
+width : e.offsetWidth
+}
+}
+
+function v(i) {
+var s = d(i);
+return s.height > e && s.height < n && s.width > t && s.width < r
+}
+
+function m(e) {
+var t = e;
+var n = 0;
+while (!!t) {
+n += t.offsetTop;
+t = t.offsetParent
+}
+return n
+}
+
+function g() {
+var e = document.documentElement;
+if (!!window.innerWidth) {
+return window.innerHeight
+} else if (e && !isNaN(e.clientHeight)) {
+return e.clientHeight
+}
+return 0
+}
+
+function y() {
+if (window.pageYOffset) {
+return window.pageYOffset
+}
+return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+}
+
+function E(e) {
+var t = m(e);
+return t >= w && t <= b + w
+}
+
+function S() {
+var e = document.createElement("audio");
+e.setAttribute("class", l);
+e.src = i;
+e.loop = false;
+e.addEventListener("canplay", function() {
+setTimeout(function() {
+x(k)
+}, 500);
+setTimeout(function() {
+N();
+p();
+for (var e = 0; e < O.length; e++) {
+T(O[e])
+}
+}, 15500)
+}, true);
+e.addEventListener("ended", function() {
+N();
+h()
+}, true);
+e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+document.body.appendChild(e);
+e.play()
+}
+
+function x(e) {
+e.className += " " + s + " " + o
+}
+
+function T(e) {
+e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+}
+
+function N() {
+var e = document.getElementsByClassName(s);
+var t = new RegExp("\\b" + s + "\\b");
+for (var n = 0; n < e.length; ) {
+e[n].className = e[n].className.replace(t, "")
+}
+}
+
+var e = 30;
+var t = 30;
+var n = 350;
+var r = 350;
+var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+var s = "mw-harlem_shake_me";
+var o = "im_first";
+var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+var a = "mw-strobe_light";
+var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+var l = "mw_added_css";
+var b = g();
+var w = y();
+var C = document.getElementsByTagName("*");
+var k = null;
+for (var L = 0; L < C.length; L++) {
+var A = C[L];
+if (v(A)) {
+if (E(A)) {
+k = A;
+break
+}
+}
+}
+if (A === null) {
+console.warn("Could not find a node of the right size. Please try a different page.");
+return
+}
+c();
+S();
+var O = [];
+for (var L = 0; L < C.length; L++) {
+var A = C[L];
+if (v(A)) {
+O.push(A)
+}
+}
+})()    '>High一下</a> </li>
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/了解React基础/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lymoo">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olk97sdgv.bkt.clouddn.com/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Lymoo's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Lymoo's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                了解React基础
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T19:11:32+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/10/了解React基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/10/了解React基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="什么是React"><a href="#什么是React" class="headerlink" title="什么是React"></a>什么是React</h1><p>React是一个用于构建用户界面的JavaScript库，而不是一个MVC框架，但可以使用React作为MVC架构的View层轻易的在已有项目中使用。React起源于Facebook的内部项目，用来架设Instagram的网站，并于2013年5月开源。React拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。<a id="more"></a></p>
+<h1 id="React的特点"><a href="#React的特点" class="headerlink" title="React的特点"></a>React的特点</h1><h2 id="虚拟DOM结构"><a href="#虚拟DOM结构" class="headerlink" title="虚拟DOM结构"></a>虚拟DOM结构</h2><p>以前没有ajax技术的时候，web页面从服务端整体渲染出html输出到浏览器端进行渲染，同样的，用户的一个改变页面的操作也会刷新整个页面来完成。直到有了ajax出现，实现页面局部刷新，带来的高效和分离让web开发者们惊叹不已。但随之而来的问题是，复杂的用户交互及展现需要通过大量的DOM操作来完成，这让页面的性能以及开发的效率又出现了新的瓶颈。<br>时至今日，谈到前端性能优化，减少DOM元素、减少reflow和repaint、编码过程中尽量减少DOM的查询等手段是大家耳熟能详的。而页面任何UI的变化都是通过整体刷新来完成的。幸运的是，React通过自己实现的DOM Diff算法，计算出虚拟页面当前版本和新版本之间的差异，最小化重绘，避免不必要的DOM操作，解决了这两个公认的前端性能瓶颈，实现高效DOM渲染。<br>我们知道，频繁的操作DOM所带来的性能消耗是很大的，而React之所以快，是因为它不直接操作DOM，而是引进虚拟DOM的实现来解决这个问题<br>对于页面的更新，React通过自己实现的DOM Diff算法来进行差异对比、差异更新，反映到页面上就是只重绘了更新的部分，从而提高渲染效率。</p>
+<h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><p>在业务开发中，遇到公共的模板部分，我们不得不将模板和规定的数据格式耦合在一起来实现组件。而在React中，我们可以使用JSX语法来封装组件，将组件的结构、数据逻辑甚至样式都聚合在一起，更加简单、明了、直观的定义组件。<br>有了组件化的实现，我们可以很直观的将一个复杂的页面分割成若干个独立组件，再将这些独立组件组合完成一个复杂的页面。这样既减少了逻辑复杂度，又实现了代码的重用。</p>
+<h1 id="配置React的开发环境"><a href="#配置React的开发环境" class="headerlink" title="配置React的开发环境"></a>配置React的开发环境</h1><h2 id="获取相关文件"><a href="#获取相关文件" class="headerlink" title="获取相关文件"></a>获取相关文件</h2><p>首先我们需要获取到React的开发文件，可以从<a href="http://reactjs.cn/react/downloads.html" target="_blank" rel="external">React官网</a>下载相关配置文件，由于React用到的是JSX语法，浏览器是不能够直接进行解析的，还需要配置一个<a href="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" target="_blank" rel="external">将JSX转换成JavaScript</a>的文件，将链接中的代码复制到自己本地的任意新建的一个文件中保存完成配置，最后配置文件如下图所示：<br><img src="http://olk97sdgv.bkt.clouddn.com/react-base1.png" alt="React所需的环境配置文件"></p>
+<h2 id="配置React开发文件模板"><a href="#配置React开发文件模板" class="headerlink" title="配置React开发文件模板"></a>配置React开发文件模板</h2><p>新建一个HTML文件进行如下配置，当这个文件配置好之后，以后需要开发React的程序都可以以这个为模板进行开发。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--引入react核心库--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--引入react的DOM操作--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--把JSX语法转换成浏览器能识别的JavaScript--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/browser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--把通过react生成的DOM放置在#container里面--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--写JSX的地方需要设置为text/babel--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="undefined"></span></div><div class="line">        // 在这里写react代码</div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="JSX的认识"><a href="#JSX的认识" class="headerlink" title="JSX的认识"></a>JSX的认识</h1><p>上文提到的JSX是什么东西呢？其实JSX是一种语法，不是一门新的语言，它既包括JavaScript和Xhtml语言，XHTML用标签来进行表示，JavaScript用{}展示。<br>这里主要注意的是<strong>写JSX的地方需要设置为text/babel，以及内部的书写规范</strong></p>
+<h1 id="简单的React示例"><a href="#简单的React示例" class="headerlink" title="简单的React示例"></a>简单的React示例</h1><p>这里举一个例子展示一个最简单的React程序<br>因为React放置的是虚拟的DOM结构，我们需要将它渲染至页面上，它提供的语法为<strong>ReactDOM.render()</strong><br>它里面可以有三个参数，第一个为我们想要渲染至页面上的DOM元素，第二个为我们想在页面的哪个节点元素中进行渲染，第三个为渲染成功以后的回调<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"build/browser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="xml"></span></div><div class="line">        var name = "zhangsan";</div><div class="line">        ReactDOM.render(</div><div class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>,</div><div class="line">           document.getElementById("container")</div><div class="line">        );</div><div class="line">        // 这里有第二种写法</div><div class="line">        ReactDOM.render(</div><div class="line">            React.createElement("h1", null, "hello " + name),</div><div class="line">            document.getElementById("container")</div><div class="line">        )</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>展示的效果为<img src="http://olk97sdgv.bkt.clouddn.com/react-base2.png" alt="image"><br>如果想要渲染出多个相同标签的不同内容，React也提供了一种方式，用<strong>key</strong>来确定标签的不同，以下展示部分<strong>script</strong>代码<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> names = [<span class="string">"Alice"</span>, <span class="string">"Cindy"</span>, <span class="string">"Rose"</span>];</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line">        &#123;</div><div class="line">            names.map(function (name, key) &#123;</div><div class="line">                return <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;key&#125;</span>&gt;</span>&#123;name&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>展示的效果为<img src="http://olk97sdgv.bkt.clouddn.com/react-base3.png" alt="image"></p>
+<h1 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h1><p>在react中将一些重用的dom结构进行了封装，就称为组件，它便于我们进行代码管理以及代码复用</p>
+<h2 id="组件的命名规则"><a href="#组件的命名规则" class="headerlink" title="组件的命名规则"></a>组件的命名规则</h2><p>首字母必须大写，使用驼峰命名法</p>
+<h2 id="组件的构建方法"><a href="#组件的构建方法" class="headerlink" title="组件的构建方法"></a>组件的构建方法</h2><p>React提供了一个命令为<strong>React.createClass()</strong>来创建一个组件，它内部包含一个必须要有的方法<strong>render</strong>，用来返回一个或多个的DOM结构</p>
+<h2 id="封装一个简单的组件示例"><a href="#封装一个简单的组件示例" class="headerlink" title="封装一个简单的组件示例"></a>封装一个简单的组件示例</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> HelloMessage = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello message<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这样就简单的封装了一个名为HelloMessage的组件，如果想要调用这个组件，方法为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">HelloMessage</span>/&gt;</span></span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<h2 id="复合组件"><a href="#复合组件" class="headerlink" title="复合组件"></a>复合组件</h2><p>复合组件简单来说即是组件套用组件，我们来尝试封装一个复合组件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Component1 = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>蓝鸥科技<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> Component2 = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.lanou3g.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>蓝鸥科技<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> Component3 = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">                <span class="tag">&lt;<span class="name">Component1</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">Component2</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h1 id="React的CSS样式"><a href="#React的CSS样式" class="headerlink" title="React的CSS样式"></a>React的CSS样式</h1><p>React有三种添加样式的方法</p>
+<h2 id="1-内联样式"><a href="#1-内联样式" class="headerlink" title="1.内联样式"></a>1.内联样式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> StyleTest = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;backgroundColor:</span> "<span class="attr">red</span>", <span class="attr">border:</span> "<span class="attr">10px</span> <span class="attr">solid</span> #<span class="attr">ccc</span>"&#125;&#125;&gt;</span>Test<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">StyleTest</span>/&gt;</span></span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>效果展示：<img src="http://olk97sdgv.bkt.clouddn.com/react-base4.png" alt="image"></p>
+<h2 id="2-对象样式"><a href="#2-对象样式" class="headerlink" title="2.对象样式"></a>2.对象样式</h2><p>注意这里的styles都是以对象的格式进行书写的，千万不要以前的习惯后面写封号，字段名不加引号等等<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> styles = &#123;</div><div class="line">    <span class="attr">color</span>: <span class="string">"blue"</span>,</div><div class="line">    <span class="attr">backgroundColor</span>: <span class="string">"green"</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> StyleTest = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;styles&#125;</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">StyleTest</span>/&gt;</span></span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>效果展示：<img src="http://olk97sdgv.bkt.clouddn.com/react-base5.png" alt="image"></p>
+<h2 id="3-选择器样式"><a href="#3-选择器样式" class="headerlink" title="3.选择器样式"></a>3.选择器样式</h2><p>这个就和我们原来的CSS书写差不多，但是类名的添加不再是class，注意这里是<strong>className</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">    .styles&#123;</div><div class="line">        color: yellow;</div><div class="line">        background-color: black;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">var StyleTest = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return &lt;div className="styles"&gt;Test&lt;/div&gt;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">        &lt;StyleTest/&gt;,</div><div class="line">    document.getElementById("container")</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>效果展示：<img src="http://olk97sdgv.bkt.clouddn.com/react-base6.png" alt="image"></p>
+<h1 id="React的属性props"><a href="#React的属性props" class="headerlink" title="React的属性props"></a>React的属性props</h1><p>props简单来说就是一个组件的私有属性，从父组件传递一些需要的值到子组件中来使用<br>使用方法为<strong>this.props</strong>，这里的this便代表它的父组件，props则代表了父组件上的所有元素，是一个数组<br>用法示例:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> PropsTest = React.createClass(&#123;</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">PropsTest</span> <span class="attr">name</span>=<span class="string">"zhangsan"</span>/&gt;</span>,  // 这里的name值会传递到h1的标签中相应的位置</span></div><div class="line">    document.getElementById("container")</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>这里有一个特例为<strong>this.props.children</strong>，它表示的是组件的所有子节点<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var PropsTest = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return &#123;</div><div class="line">            <span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">            	&#123;</div><div class="line">            	    React.Children.map(this.props.children, function (child)) &#123;</div><div class="line">            	        return <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;child&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            	    &#125;</div><div class="line">                &#125;</div><div class="line">            <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">ReactDOM.render(&#123;</div><div class="line">	<span class="tag">&lt;<span class="name">PropsTest</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>world<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">PropsTest</span>&gt;</span>,</div><div class="line">	document.getElementById("conotainer")</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>效果展示：<img src="http://olk97sdgv.bkt.clouddn.com/react-base7.png" alt="image"></p>
+<h2 id="设置默认值"><a href="#设置默认值" class="headerlink" title="设置默认值"></a>设置默认值</h2><p>React提供一个专门设置props的默认值命令<strong>getDefaultProps</strong><br>具体用法为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> PropsTest = React.createClass(&#123;</div><div class="line">    <span class="attr">getDefaultProps</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// 设置该组件属性的初始值</span></div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">name</span>: <span class="string">"lisi"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">PropsTest</span>/&gt;</span></span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>效果展示：<img src="http://olk97sdgv.bkt.clouddn.com/react-base8.png" alt="image"></p>
+<h2 id="设置props数据类型"><a href="#设置props数据类型" class="headerlink" title="设置props数据类型"></a>设置props数据类型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> PropsTest = React.createClass(&#123;</div><div class="line">    <span class="attr">propTypes</span>: &#123;</div><div class="line">        <span class="comment">// 设置数据的类型</span></div><div class="line">        name: React.PropTypes.string.isRequired</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getDefaultProps</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">name</span>: <span class="string">"lisi"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">PropsTest</span>/&gt;</span></span>,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"container"</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h1 id="React的状态state"><a href="#React的状态state" class="headerlink" title="React的状态state"></a>React的状态state</h1><p>React把组件看成是一个状态机（State Machines）。通过与用户的交互，实现不同状态，然后渲染UI，让用户界面和数据保持一致。<br>React里，只需更新组件的state，然后根据新的state重新渲染用户界面（不要操作DOM）。<br><strong>getInitialState</strong>方法用于定义初始状态，也就是一个对象，这个对象可以通过this.state属性读取。当用户点击组件，导致状态变化，<strong>this.setState</strong>方法就修改状态值，每次修改以后，自动调用this.render方法，再次渲染组件。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> LikeButton = React.createClass(&#123;</div><div class="line">    <span class="attr">getInitialState</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;<span class="attr">liked</span>: <span class="literal">false</span>&#125;;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">handleClick</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">liked</span>: !<span class="keyword">this</span>.state.liked&#125;);</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> text = <span class="keyword">this</span>.state.liked ? <span class="string">'喜欢'</span> : <span class="string">'不喜欢'</span>;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">onClick</span>=<span class="string">&#123;this.handleClick&#125;</span>&gt;</span></span></div><div class="line">                你<span class="tag">&lt;<span class="name">b</span>&gt;</span>&#123;text&#125;<span class="tag">&lt;/<span class="name">b</span>&gt;</span>我。点击切换状态。</div><div class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">LikeButton</span> /&gt;</span>,</span></div><div class="line">    document.getElementById("container")</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h1 id="React组件生命周期"><a href="#React组件生命周期" class="headerlink" title="React组件生命周期"></a>React组件生命周期</h1><p>React的生命周期可以分为三个状态：<br>1.<strong>Mounting</strong>：已插入真实DOM<br>2.<strong>Updating</strong>：正在被重新渲染<br>3.<strong>Unmounting</strong>：已移出真实DOM</p>
+<h2 id="生命周期的方法"><a href="#生命周期的方法" class="headerlink" title="生命周期的方法"></a>生命周期的方法</h2><p><strong>componentWillMount</strong>:在渲染前调用,在客户端也在服务端。<br><strong>componentDidMount</strong>:在第一次渲染后调用，只在客户端。之后组件已经生成了对应的DOM结构，可以通过this.getDOMNode()来进行访问。 如果你想和其他JavaScript框架一起使用，可以在这个方法中调用setTimeout, setInterval或者发送AJAX请求等操作(防止异部操作阻塞UI)。<br><strong>componentWillReceiveProps</strong>:在组件接收到一个新的prop时被调用。这个方法在初始化render时不会被调用。<br><strong>shouldComponentUpdate</strong>:返回一个布尔值。在组件接收到新的props或者state时被调用。在初始化时或者使用forceUpdate时不被调用。<br>可以在你确认不需要更新组件时使用。<br><strong>componentWillUpdate</strong>:在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用。<br><strong>componentDidUpdate</strong>:在组件完成更新后立即调用。在初始化时不会被调用。<br><strong>componentWillUnmount</strong>:在组件从DOM中移除的时候立刻被调用。<br>以下示例在Hello组件加载以后，通过componentDidMount方法设置一个定时器，每隔100毫秒重新设置组件的透明度，并重新渲染<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Hello = React.createClass(&#123;</div><div class="line">    <span class="attr">getInitialState</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">opacity</span>: <span class="number">1.0</span></div><div class="line">        &#125;;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">componentDidMount</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> opacity = <span class="keyword">this</span>.state.opacity;</div><div class="line">            opacity -= <span class="number">.05</span>;</div><div class="line">            <span class="keyword">if</span> (opacity &lt; <span class="number">0.1</span>) &#123;</div><div class="line">                opacity = <span class="number">1.0</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">this</span>.setState(&#123;</div><div class="line">                <span class="attr">opacity</span>: opacity</div><div class="line">            &#125;);</div><div class="line">        &#125;.bind(<span class="keyword">this</span>), <span class="number">100</span>);</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;opacity:</span> <span class="attr">this.state.opacity</span>&#125;&#125;&gt;</span></span></div><div class="line">                Hello &#123;this.props.name&#125;</div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">Hello</span> <span class="attr">name</span>=<span class="string">"world"</span>/&gt;</span>,</span></div><div class="line">    document.getElementById('example')</div><div class="line">);</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://olk97sdgv.bkt.clouddn.com/WeChat-public.jpg" alt="Lymoo wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，关注一下萝莉教授哦！友情链接中也有萝莉教授的微博哦！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您小小的支持将会鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://olk97sdgv.bkt.clouddn.com/wechatpay.JPG" alt="Lymoo WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://olk97sdgv.bkt.clouddn.com/AliPay.JPG" alt="Lymoo Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/08/一些前端面试题的整理/" rel="next" title="一些前端面试题的整理">
+                <i class="fa fa-chevron-left"></i> 一些前端面试题的整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/10/了解React基础/"
+           data-title="了解React基础" data-url="http://yoursite.com/2017/04/10/了解React基础/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olk97sdgv.bkt.clouddn.com/avatar.jpg"
+               alt="Lymoo" />
+          <p class="site-author-name" itemprop="name">Lymoo</p>
+           
+              <p class="site-description motion-element" itemprop="description">好心态才有好状态。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Lymoo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5340228952?topnav=1&wvr=6&topsug=1&is_all=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/li-mo-zhu-lymoo/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-graduation-cap"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/github_37582965" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-bank"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/185b5853712e" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://hexo.io/" title="Hexo" target="_blank">Hexo</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://weibo.com/u/3179738570?from=myfollow_all" title="萝莉教授" target="_blank">萝莉教授</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shop104377383.taobao.com/?spm=a230r.7195193.1997079397.2.cJvyzv" title="小熊美淘宝店" target="_blank">小熊美淘宝店</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是React"><span class="nav-number">1.</span> <span class="nav-text">什么是React</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React的特点"><span class="nav-number">2.</span> <span class="nav-text">React的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟DOM结构"><span class="nav-number">2.1.</span> <span class="nav-text">虚拟DOM结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化"><span class="nav-number">2.2.</span> <span class="nav-text">组件化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置React的开发环境"><span class="nav-number">3.</span> <span class="nav-text">配置React的开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取相关文件"><span class="nav-number">3.1.</span> <span class="nav-text">获取相关文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置React开发文件模板"><span class="nav-number">3.2.</span> <span class="nav-text">配置React开发文件模板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSX的认识"><span class="nav-number">4.</span> <span class="nav-text">JSX的认识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的React示例"><span class="nav-number">5.</span> <span class="nav-text">简单的React示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React组件"><span class="nav-number">6.</span> <span class="nav-text">React组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件的命名规则"><span class="nav-number">6.1.</span> <span class="nav-text">组件的命名规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件的构建方法"><span class="nav-number">6.2.</span> <span class="nav-text">组件的构建方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装一个简单的组件示例"><span class="nav-number">6.3.</span> <span class="nav-text">封装一个简单的组件示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合组件"><span class="nav-number">6.4.</span> <span class="nav-text">复合组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React的CSS样式"><span class="nav-number">7.</span> <span class="nav-text">React的CSS样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-内联样式"><span class="nav-number">7.1.</span> <span class="nav-text">1.内联样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-对象样式"><span class="nav-number">7.2.</span> <span class="nav-text">2.对象样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-选择器样式"><span class="nav-number">7.3.</span> <span class="nav-text">3.选择器样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React的属性props"><span class="nav-number">8.</span> <span class="nav-text">React的属性props</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置默认值"><span class="nav-number">8.1.</span> <span class="nav-text">设置默认值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置props数据类型"><span class="nav-number">8.2.</span> <span class="nav-text">设置props数据类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React的状态state"><span class="nav-number">9.</span> <span class="nav-text">React的状态state</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React组件生命周期"><span class="nav-number">10.</span> <span class="nav-text">React组件生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期的方法"><span class="nav-number">10.1.</span> <span class="nav-text">生命周期的方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script>
+host3 = window.location.href;
+chinadomai3 = "http://www.lymooz.com/"; 
+if (host3.indexOf(chinadomain3)!=-1)  {
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<div class="copyright" >
+  
+  Copyright &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-html5"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lymoo</span>
+</div>
+
+
+<div class="powered-by">
+  版权所有
+</div>
+
+<div class="theme-info">
+  制作 -
+  <a class="theme-link" href="http://www.lymooz.com/">
+    Lymoo
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zzcLymoo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/04/08/%E6%B5%85%E8%B0%88Angular/</loc>
+    <lastmod>2017-04-11T09:47:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈AngularJS</title>
+        <pubTime>2017-04-08T02:57:28.000Z</pubTime>
+        
+        <tag>angularJS</tag>
+         
+         
+           
+             
+              <breadCrumb title="angularJS" url="http://yoursite.com/categories/angularJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/04/10/%E4%BA%86%E8%A7%A3React%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2017-04-11T01:13:30.000Z</lastmod>
     <data>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="面试题" url="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/04/08/%E6%B5%85%E8%B0%88Angular/</loc>
-    <lastmod>2017-04-08T06:11:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>浅谈Angular</title>
-        <pubTime>2017-04-08T02:57:28.000Z</pubTime>
-        
-        <tag>angular</tag>
-         
-         
-           
-             
-              <breadCrumb title="angular" url="http://yoursite.com/categories/angular/"/>
           
         </display>
     </data>

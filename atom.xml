@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-13T11:26:24.000Z</updated>
+  <updated>2017-04-13T11:56:56.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>React-Native中一些组件的用法</title>
+    <link href="http://yoursite.com/2017/04/13/React-Native%E4%B8%AD%E4%B8%80%E4%BA%9B%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/04/13/React-Native中一些组件的用法/</id>
+    <published>2017-04-13T11:56:46.000Z</published>
+    <updated>2017-04-13T11:56:56.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    
+    
+      <category term="React，React Native" scheme="http://yoursite.com/tags/React%EF%BC%8CReact-Native/"/>
+    
+  </entry>
+  
+  <entry>
     <title>了解React-Native</title>
     <link href="http://yoursite.com/2017/04/13/%E4%BA%86%E8%A7%A3React-Native/"/>
     <id>http://yoursite.com/2017/04/13/了解React-Native/</id>
     <published>2017-04-13T11:17:14.000Z</published>
-    <updated>2017-04-13T11:26:24.000Z</updated>
+    <updated>2017-04-13T11:55:37.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="什么是React-Native"><a href="#什么是React-Native" class="headerlink" title="什么是React-Native"></a>什么是React-Native</h1><p>随着新的移动互联网的发展，这种能够跨平台混合开发已经成为了一种趋势，混合开发的人才需求越来越大，ReactNative是Facebook发布的一个能够进行混合开发的框架，通过ReactNative能同时为IOS和Android开发应用程序，使用ReactNative开发的应用程序，既保留了原生应用的性能，这种良好的人机交互的体验，又保留了ReactNative的良好的开发效率，它是把原生应用和Web应用的优点集一身。<a id="more"></a></p>
 <h1 id="React-Native的特点"><a href="#React-Native的特点" class="headerlink" title="React-Native的特点"></a>React-Native的特点</h1><h2 id="性能媲美原生应用"><a href="#性能媲美原生应用" class="headerlink" title="性能媲美原生应用"></a>性能媲美原生应用</h2><p>由于React-Native提供的组件是对原生API的暴露。虽然我们是用js写的代码，但实际上调用的是原生API，原生的UI组件。体验上足以媲美原生应用。</p>
@@ -29,6 +47,23 @@
 <h2 id="实时远程调试"><a href="#实时远程调试" class="headerlink" title="实时远程调试"></a>实时远程调试</h2><p>React-Native的调试比Cordova不知道好到哪里去了。开启了实时重载之后，代码一改，app就自动更新成最新，对于UI的搭建简直是省了不少的编译时间。同时可以打开XCode实时的看到所有的 log信息。</p>
 <h2 id="代码热部署"><a href="#代码热部署" class="headerlink" title="代码热部署"></a>代码热部署</h2><p>我们知道AppStore审核流程超级久。而由于React-Native是用的js来写的代码，实时编译的过程能让我们实现应用像网页一样做到热更新，随时发布。真正能够做到上架审核一次，永久0审核更新。</p>
 <h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>加载慢，安装包大。</p>
+<h1 id="配置React-Native开发环境"><a href="#配置React-Native开发环境" class="headerlink" title="配置React-Native开发环境"></a>配置React-Native开发环境</h1><p>具体的开发环境教程可以查看<a href="http://reactnative.cn/docs/0.43/getting-started.html#content" target="_blank" rel="external">React-Native开发环境教程</a>，上面有很详细的介绍。<br>主要就是安装一下最新版本的Xcode，Homebrew，node，Watchman，Flow等，并且要保证自己的8081端口没有被占用。</p>
+<h1 id="创建React-Native项目"><a href="#创建React-Native项目" class="headerlink" title="创建React-Native项目"></a>创建React-Native项目</h1><p>打开终端输入<code>react-native init ProjectName</code>，这里的ProjectName可以改成你想创建的项目名称。然后有两种方法启动项目</p>
+<h2 id="1-从终端开启"><a href="#1-从终端开启" class="headerlink" title="1.从终端开启"></a>1.从终端开启</h2><p>在终端找到刚才创建的项目进入它的路径如<code>cd ProjectName</code>，之后启动它<code>react-native run-ios</code>即可。</p>
+<h2 id="2-从Xcode开启"><a href="#2-从Xcode开启" class="headerlink" title="2.从Xcode开启"></a>2.从Xcode开启</h2><p>在项目中找到以xcodeproj为后缀结尾的文件双击，即可在xcode打开项目，然后在xcode编辑器中点击启动按钮即可启动。</p>
+<h1 id="React-Native代码的执行逻辑"><a href="#React-Native代码的执行逻辑" class="headerlink" title="React-Native代码的执行逻辑"></a>React-Native代码的执行逻辑</h1><h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>导入reactNative包，以及必须组件。<br>AppRegistry:是通过Js运行reactNative应用的入口。<br>StyleSheet：ReactNative中的样式表，类似于css样式表。</p>
+<h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><p>创建ReactNative组件，模板中使用的是ES6的语法 </p>
+<h2 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h2><p>通过StyleSheet.create()创建样式实例（在应用中只会创建一次，不用每次在渲染周期中创建）。</p>
+<h2 id="第四部分"><a href="#第四部分" class="headerlink" title="第四部分"></a>第四部分</h2><p>注册入口组件AppRegistry：负责注册运行。<br>ReactNative应用的js入口。<br>registerComponent注册应用程序的入口组件，告知哪一个组件被注册为应用的根容器。</p>
+<h2 id="React-Native代码调试"><a href="#React-Native代码调试" class="headerlink" title="React-Native代码调试"></a>React-Native代码调试</h2><p><strong>common+R</strong>：重启项目<br><strong>common+D</strong>：调取调试工具（如：热更新、js调试等）</p>
+<h1 id="React-Native的样式设置"><a href="#React-Native的样式设置" class="headerlink" title="React-Native的样式设置"></a>React-Native的样式设置</h1><p>样式可以分为外部样式和内联样式</p>
+<h2 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h2><p>外部样式可以通过StyleSheet.create()进行创建，样式以对象形式展示。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">	container: &#123;</div><div class="line">		flex: 1,</div><div class="line">		justifyContent: ‘center’,</div><div class="line">		alignItems: ‘center’,</div><div class="line">		backgroundColor: ‘cyan’</div><div class="line">	&#125;,</div><div class="line">	welcome: &#123;</div><div class="line">		fontSize: 20,</div><div class="line">		textAlign: ‘center’,</div><div class="line">		margin: 10</div><div class="line">	&#125;,</div><div class="line">	instructions: &#123;</div><div class="line">		textAlign: ‘center’,</div><div class="line">		color: ‘#333333’,</div><div class="line">		marginBottom: 5</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="书写格式（与原生css的区别）"><a href="#书写格式（与原生css的区别）" class="headerlink" title="书写格式（与原生css的区别）"></a>书写格式（与原生css的区别）</h2><p>1、HTML中以”;”结尾，react以”,”结尾<br>2、HTML中key和value都不加引号，react中key必须使用驼峰命名法，value需要加引号<br>3、HTML中value是数值时，需要添加单位，react不需要，会自动适配</p>
+<h2 id="拼接样式"><a href="#拼接样式" class="headerlink" title="拼接样式"></a>拼接样式</h2><p>要设置多个样式的话需要用一个数组里面传递对象，在数组里面越往后面的优先级越高。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var LessonStyle = React.createClass(&#123;</div><div class="line">    render:function()&#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;[styles.top, styles.other, styles.common]&#125;&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;[styles.bottom, styles.common, styles.other]&#125;&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h1 id="FlexBox布局"><a href="#FlexBox布局" class="headerlink" title="FlexBox布局"></a>FlexBox布局</h1><p>我们在React-Native中使用Flexbox规则来指定某个组件的子元素的布局。Flexbox可以在不同屏幕尺寸上提供一致的布局结构。</p>
+<h2 id="弹性盒模型介绍"><a href="#弹性盒模型介绍" class="headerlink" title="弹性盒模型介绍"></a>弹性盒模型介绍</h2><p>这里博主就不多做介绍了，网上有许多大神整理过它的相关资料，可以参考阮一峰的<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="external">Flex布局教程</a>来学习一下。</p>
+<h1 id="RN中FlexBox的用法介绍"><a href="#RN中FlexBox的用法介绍" class="headerlink" title="RN中FlexBox的用法介绍"></a>RN中FlexBox的用法介绍</h1><p>1.React-Native里的FlexBox跟CSS3里的FlexBox属性名称写法不同，React-Native里全部是用驼峰式命名法。<br>2.React-Native里的FlexBox支持很有限，他是FlexBox的一个子集。<br>FlexBox布局一共要分三步：第一步父容器定义对其方式。第二部子项目放到父容器里面，子项目定义个性的定义方式。<br>flexDirection：“row” /“column”，定义FlexBox的排列顺序，React-Native里的默认排列是纵向排列的，</p>
+<h1 id="RN中的FlexBox与CSS中的FlexBox不同之处"><a href="#RN中的FlexBox与CSS中的FlexBox不同之处" class="headerlink" title="RN中的FlexBox与CSS中的FlexBox不同之处"></a>RN中的FlexBox与CSS中的FlexBox不同之处</h1><p>flexDirection: React-Native中默认为flexDirection:’column’，在Web CSS中默认为flex-direction:’row’。<br>alignItems: React-Native中默认为alignItems:’stretch’，在Web CSS中默认align-items:’flex-start’。<br>flex: 相比Web CSS的flex接受多参数，如:flex: 2 2 10%;，但在 React-Native中flex只接受一个参数。<br>不支持属性：align-content，flex-basis，order，flex-basis，flex-flow，flex-grow，flex-shrink。</p>
 ]]></content>
     
     <summary type="html">
@@ -819,37 +854,6 @@ fgets只返回一行，返回的类型也是字符串再次返回就从下一行
     
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人收集的前端相关的网站</title>
-    <link href="http://yoursite.com/2017/02/18/%E4%B8%AA%E4%BA%BA%E6%94%B6%E9%9B%86%E7%9A%84%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9A%84%E7%BD%91%E7%AB%99/"/>
-    <id>http://yoursite.com/2017/02/18/个人收集的前端相关的网站/</id>
-    <published>2017-02-18T06:50:03.000Z</published>
-    <updated>2017-02-20T02:42:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p></p><h3 id="学习类" style="background-color: #eee;padding-top: 0;text-align: center;">学习类</h3><a href="http://www.w3school.com.cn/" target="_blank" rel="external">w3school</a><br><a href="http://www.w3cmark.com/" target="_blank" rel="external">w3cmark<em>前端笔记</em></a><br><a href="http://www.cricode.com/" target="_blank" rel="external">快课网</a><br><a href="http://lib.csdn.net/bases?page=2&type=all#md" target="_blank" rel="external">知识库 - CSDN</a><br><a href="http://am-team.github.io/amg/dev-exp-doc.html" target="_blank" rel="external">无线Web开发经验谈</a><br><a href="http://www.gbtags.com/gb/index.htm" target="_blank" rel="external">极客标签</a><br><a href="http://weekly.manong.io/issues/" target="_blank" rel="external">往期回顾码农周刊</a><br><a href="http://www.imooc.com/" target="_blank" rel="external">慕课网</a><a id="more"></a><br><a href="http://div.io/#/welcome" target="_blank" rel="external">Div.IO</a><br><a href="http://www.w3cplus.com/" target="_blank" rel="external">w3cplus_引领web前沿，打造前端精品教程</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">JavaScript | MDN</a><br><a href="http://ghmagical.com/article/page/id/uwzkWO5UXjug" target="_blank" rel="external">canvas动画包教不包会</a><br><a href="http://study.163.com/courses" target="_blank" rel="external">网易云课堂</a><br><a href="http://www.lvyestudy.com/" target="_blank" rel="external">绿叶学习网</a><br><a href="http://zkiie.com/2017/02/11/%E5%89%8D%E7%AB%AF%E6%94%B6%E8%B4%B9%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B%E5%88%86%E4%BA%AB/" target="_blank" rel="external">前端收费视频课程分享 | ByZhkc3</a><br><a href="http://php.net/manual/zh/" target="_blank" rel="external">PHP: PHP 手册 - Manual</a><br><a href="http://cn.vuejs.org/v2/guide/" target="_blank" rel="external">介绍 - vue.js</a><br><a href="https://mp.weixin.qq.com/debug/wxadoc/introduction/?t=20161221#产品定位及功能介绍" target="_blank" rel="external">微信小程序接入指南</a><br><a href="http://play.csssecrets.io/" target="_blank" rel="external">csssecrets</a><p></p>
-<p></p><h3 id="jQuery类" style="background-color: #eee;padding-top: 0;text-align: center;">jQuery类</h3><a href="http://www.htmleaf.com/" target="_blank" rel="external">jQuery之家</a><br><a href="http://www.jq22.com/" target="_blank" rel="external">jQuery插件库</a><br><a href="http://jquery.cuishifeng.cn/" target="_blank" rel="external">jQuery API 3.1 中文文档</a><p></p>
-<p></p><h3 id="社区论坛博客类" style="background-color: #eee;padding-top: 0;text-align: center;">社区论坛博客类</h3><a href="http://www.lymoo.online/" target="_blank" rel="external">Lymoo’s blog</a><br><a href="http://www.wxapp-union.com/" target="_blank" rel="external">微信小程序联盟</a><br><a href="http://www.csdn.net/" target="_blank" rel="external">CSDN.NET</a><br><a href="http://www.cnblogs.com/" target="_blank" rel="external">博客园</a><br><a href="http://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰</a><br><a href="https://gold.xitu.io/welcome/frontend/?utm_source=zhangxinxu&utm_medium=banner&utm_content=gaoshou&utm_campaign=q3_personal" target="_blank" rel="external">掘金</a><br><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="external">阮一峰</a><br><a href="http://www.zhangxinxu.com/wordpress/2016/04/" target="_blank" rel="external">张鑫旭</a><br><a href="https://www.h5jun.com/post/?page=2" target="_blank" rel="external">十年踪迹</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/4649709.html" target="_blank" rel="external">王福朋</a><br><a href="http://blog.bingo929.com/" target="_blank" rel="external">彬Go</a><br><a href="http://f2er.club/" target="_blank" rel="external">前端人的俱乐部</a><br><a href="http://www.css88.com/" target="_blank" rel="external">WEB前端开发</a><br><a href="http://jiongks.name/" target="_blank" rel="external">囧克斯</a><br><a href="http://caibaojian.com/" target="_blank" rel="external">前端开发博客</a><br><a href="https://my.oschina.net/mumu/" target="_blank" rel="external">大漠穷秋</a><br><a href="http://taobaofed.org/" target="_blank" rel="external">Taobao FED</a><br><a href="http://www.alloyteam.com/" target="_blank" rel="external">腾讯</a><br><a href="https://zhuanlan.zhihu.com/oldtimes?topic=%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F" target="_blank" rel="external">小楼昨夜又秋风 - 知乎专栏</a><br><a href="https://www.zhihu.com/" target="_blank" rel="external">知乎</a><p></p>
-<p></p><h3 id="前端综合类" style="background-color: #eee;padding-top: 0;text-align: center;">前端综合类</h3><a href="http://www.kancloud.cn/explore" target="_blank" rel="external">广场 - 看云</a><br><a href="http://luuman.github.io/FrontEndGuide/V1/index.html#page_8" target="_blank" rel="external">前端导航</a><br><a href="https://news.ycombinator.com/news" target="_blank" rel="external">黑客新闻</a><br><a href="https://www.infoq.com/" target="_blank" rel="external">InfoQ中文站</a><br><a href="https://aotu.io/" target="_blank" rel="external">Aotu.io「凹凸实验室」</a><br><a href="http://codepen.io/2013/popular/pens/" target="_blank" rel="external">Top Pens of 2013 on CodePen</a><br><a href="http://www.html5tricks.com/" target="_blank" rel="external">HTML5资源教程</a><br><a href="http://www.j--d.com/page/2" target="_blank" rel="external">html5前端开发技术分享网</a><br><a href="http://www.qdfuns.com/" target="_blank" rel="external">前端网（QDFuns）</a><br><a href="http://bennettfeely.com/gradients/" target="_blank" rel="external">CSS Gradients with background-blend-mode</a><br><a href="http://www.cssmagic.net/demo/20090215-arc-nav/index.html###" target="_blank" rel="external">CSS魔法 - 弧形排列的可折叠二级导航</a><br><a href="http://www.codeweblog.com/" target="_blank" rel="external">编程之家</a><br><a href="http://techbrood.com/" target="_blank" rel="external">踏得网</a><br><a href="http://www.jeffjade.com/2016/03/30/104-front-end-tutorial/" target="_blank" rel="external">晚晴幽草轩</a><p></p>
-<p></p><h3 id="前端工具类" style="background-color: #eee;padding-top: 0;text-align: center;">前端工具类</h3><a href="http://www.swiper.com.cn/demo/index.html" target="_blank" rel="external">Swiper中文网</a><br><a href="http://www.tuhaokuai.com/" target="_blank" rel="external">图片压缩</a><br><a href="http://laydate.layui.com/" target="_blank" rel="external">日期控件与时间插件</a><br><a href="http://www.pc6.com/mach/macsvn/" target="_blank" rel="external">mac svn客户端</a><br><a href="https://modao.cc/signin#start" target="_blank" rel="external">墨刀</a><br><a href="http://tools.jb51.net/regex/javascript" target="_blank" rel="external">JavaScript正则在线测试工具</a><br><a href="http://css3test.com/" target="_blank" rel="external">CSS3的测试</a><br><a href="http://www.bejson.com/" target="_blank" rel="external">你的浏览器支持 ES6 吗？ - ES-Checker</a><br><a href="http://tool.oschina.net/commons?type=4" target="_blank" rel="external">ASCII码对照表</a><br><a href="http://www.sdifenzhou.com/" target="_blank" rel="external">史蒂芬周的博客</a><br><a href="https://avocode.com/" target="_blank" rel="external">Avocode - PSD</a><p></p>
-<p></p><h3 id="Node类" style="background-color: #eee;padding-top: 0;text-align: center;">Node类</h3><a href="http://nqdeng.github.io/7-days-nodejs/" target="_blank" rel="external">七天学会NodeJS</a><br><a href="http://cnodejs.org/topic/523513d3101e57452141d0b1" target="_blank" rel="external">CNode技术社区</a><p></p>
-<p></p><h3 id="面试题类" style="background-color: #eee;padding-top: 0;text-align: center;">面试题类</h3><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions" target="_blank" rel="external">前端开发面试题小集</a><br><a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Chinese#fun-questions" target="_blank" rel="external">前端工作面试问题小集</a><br><a href="https://segmentfault.com/a/1190000002627927" target="_blank" rel="external">我是如何同时拿到阿里和腾讯offer的 - Web开发手记 - SegmentFault</a><br><a href="https://www.nowcoder.com/ta/front-end-interview" target="_blank" rel="external">前端面试经典题目合集_牛客网</a><br><a href="http://blog.imcyk.com/?id=3" target="_blank" rel="external">web前端面试题目-朝圣言</a><br><a href="http://www.cnblogs.com/coco1s/p/4029708.html" target="_blank" rel="external">BAT及各大互联网公司2014前端笔试面试题–JavaScript篇 - ChokCoco</a><br><a href="http://blog.csdn.net/kongjiea/article/details/46341575" target="_blank" rel="external">前端面试题 - kongjiea笔记 - 博客频道</a><p></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;h3 id=&quot;学习类&quot; style=&quot;background-color: #eee;padding-top: 0;text-align: center;&quot;&gt;学习类&lt;/h3&gt;&lt;a href=&quot;http://www.w3school.com.cn/&quot;&gt;w3school&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cmark.com/&quot;&gt;w3cmark&lt;em&gt;前端笔记&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cricode.com/&quot;&gt;快课网&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://lib.csdn.net/bases?page=2&amp;type=all#md&quot;&gt;知识库 - CSDN&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://am-team.github.io/amg/dev-exp-doc.html&quot;&gt;无线Web开发经验谈&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.gbtags.com/gb/index.htm&quot;&gt;极客标签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://weekly.manong.io/issues/&quot;&gt;往期回顾&lt;/em&gt;码农周刊&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.imooc.com/&quot;&gt;慕课网&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="前端网址" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E7%BD%91%E5%9D%80/"/>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-13T13:55:00.000Z</updated>
+  <updated>2017-04-13T14:03:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/04/13/React-Native%E4%B8%AD%E4%B8%80%E4%BA%9B%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%A8%E6%B3%95(%E4%B8%80)/"/>
     <id>http://yoursite.com/2017/04/13/React-Native中一些组件的用法(一)/</id>
     <published>2017-04-13T11:56:46.000Z</published>
-    <updated>2017-04-13T13:55:00.000Z</updated>
+    <updated>2017-04-13T14:03:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文为大家介绍一下React-Native中一些常用的组件<a id="more"></a>，由于对ES6的语法并没有完全掌握，这里暂时用ES5和ES6混用的语法。</p>
 <h1 id="View组件"><a href="#View组件" class="headerlink" title="View组件"></a>View组件</h1><p>View是一个支持Flexbox布局、样式、一些触摸处理、和一些无障碍功能的容器，并且它可以放到其它的视图里，也可以有任意多个任意类型的子视图。<br>View的设计初衷是和StyleSheet搭配使用，这样可以使代码更清晰并且获得更高的性能。尽管内联样式也同样可以使用。</p>
@@ -58,7 +58,7 @@
     
     </summary>
     
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+      <category term="React Native" scheme="http://yoursite.com/categories/React-Native/"/>
     
     
       <category term="React" scheme="http://yoursite.com/tags/React/"/>
@@ -72,7 +72,7 @@
     <link href="http://yoursite.com/2017/04/13/%E4%BA%86%E8%A7%A3React-Native/"/>
     <id>http://yoursite.com/2017/04/13/了解React-Native/</id>
     <published>2017-04-13T11:17:14.000Z</published>
-    <updated>2017-04-13T14:00:08.000Z</updated>
+    <updated>2017-04-13T14:03:46.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="什么是React-Native"><a href="#什么是React-Native" class="headerlink" title="什么是React-Native"></a>什么是React-Native</h1><p>随着新的移动互联网的发展，这种能够跨平台混合开发已经成为了一种趋势，混合开发的人才需求越来越大，ReactNative是Facebook发布的一个能够进行混合开发的框架，通过ReactNative能同时为IOS和Android开发应用程序，使用ReactNative开发的应用程序，既保留了原生应用的性能，这种良好的人机交互的体验，又保留了ReactNative的良好的开发效率，它是把原生应用和Web应用的优点集一身。<a id="more"></a></p>
 <h1 id="React-Native的特点"><a href="#React-Native的特点" class="headerlink" title="React-Native的特点"></a>React-Native的特点</h1><h2 id="性能媲美原生应用"><a href="#性能媲美原生应用" class="headerlink" title="性能媲美原生应用"></a>性能媲美原生应用</h2><p>由于React-Native提供的组件是对原生API的暴露。虽然我们是用js写的代码，但实际上调用的是原生API，原生的UI组件。体验上足以媲美原生应用。</p>
@@ -106,7 +106,7 @@
     
     </summary>
     
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+      <category term="React Native" scheme="http://yoursite.com/categories/React-Native/"/>
     
     
       <category term="React" scheme="http://yoursite.com/tags/React/"/>

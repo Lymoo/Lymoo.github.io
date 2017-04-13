@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-11T01:13:30.000Z</updated>
+  <updated>2017-04-13T11:26:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>了解React-Native</title>
+    <link href="http://yoursite.com/2017/04/13/%E4%BA%86%E8%A7%A3React-Native/"/>
+    <id>http://yoursite.com/2017/04/13/了解React-Native/</id>
+    <published>2017-04-13T11:17:14.000Z</published>
+    <updated>2017-04-13T11:26:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是React-Native"><a href="#什么是React-Native" class="headerlink" title="什么是React-Native"></a>什么是React-Native</h1><p>随着新的移动互联网的发展，这种能够跨平台混合开发已经成为了一种趋势，混合开发的人才需求越来越大，ReactNative是Facebook发布的一个能够进行混合开发的框架，通过ReactNative能同时为IOS和Android开发应用程序，使用ReactNative开发的应用程序，既保留了原生应用的性能，这种良好的人机交互的体验，又保留了ReactNative的良好的开发效率，它是把原生应用和Web应用的优点集一身。<a id="more"></a></p>
+<h1 id="React-Native的特点"><a href="#React-Native的特点" class="headerlink" title="React-Native的特点"></a>React-Native的特点</h1><h2 id="性能媲美原生应用"><a href="#性能媲美原生应用" class="headerlink" title="性能媲美原生应用"></a>性能媲美原生应用</h2><p>由于React-Native提供的组件是对原生API的暴露。虽然我们是用js写的代码，但实际上调用的是原生API，原生的UI组件。体验上足以媲美原生应用。</p>
+<h2 id="开发效率高"><a href="#开发效率高" class="headerlink" title="开发效率高"></a>开发效率高</h2><p>相比于原生开发，js学习成本低、语法灵活。允许让Web开发者更多地基于现有经验开发App。</p>
+<h2 id="节约开发成本"><a href="#节约开发成本" class="headerlink" title="节约开发成本"></a>节约开发成本</h2><p>百分之90多界面可以通过React-Native开发，一份代码同时可以适配Android和iOS。并通过一些手段自动匹配不同屏幕大小的手机，再也不需要自己去计算视图的大小和位置。</p>
+<h2 id="实时远程调试"><a href="#实时远程调试" class="headerlink" title="实时远程调试"></a>实时远程调试</h2><p>React-Native的调试比Cordova不知道好到哪里去了。开启了实时重载之后，代码一改，app就自动更新成最新，对于UI的搭建简直是省了不少的编译时间。同时可以打开XCode实时的看到所有的 log信息。</p>
+<h2 id="代码热部署"><a href="#代码热部署" class="headerlink" title="代码热部署"></a>代码热部署</h2><p>我们知道AppStore审核流程超级久。而由于React-Native是用的js来写的代码，实时编译的过程能让我们实现应用像网页一样做到热更新，随时发布。真正能够做到上架审核一次，永久0审核更新。</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>加载慢，安装包大。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是React-Native&quot;&gt;&lt;a href=&quot;#什么是React-Native&quot; class=&quot;headerlink&quot; title=&quot;什么是React-Native&quot;&gt;&lt;/a&gt;什么是React-Native&lt;/h1&gt;&lt;p&gt;随着新的移动互联网的发展，这种能够跨平台混合开发已经成为了一种趋势，混合开发的人才需求越来越大，ReactNative是Facebook发布的一个能够进行混合开发的框架，通过ReactNative能同时为IOS和Android开发应用程序，使用ReactNative开发的应用程序，既保留了原生应用的性能，这种良好的人机交互的体验，又保留了ReactNative的良好的开发效率，它是把原生应用和Web应用的优点集一身。
+    
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    
+    
+      <category term="React，React Native" scheme="http://yoursite.com/tags/React%EF%BC%8CReact-Native/"/>
+    
+  </entry>
   
   <entry>
     <title>了解React基础</title>

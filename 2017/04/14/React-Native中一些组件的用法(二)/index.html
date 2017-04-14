@@ -1,0 +1,1251 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="j5M8mJpYfT" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React,React Native," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Lymoo's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://olk97sdgv.bkt.clouddn.com/pagetitlehead.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="本文为大家介绍一下React-Native中一些深入些的组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Native中一些组件的用法(二)">
+<meta property="og:url" content="http://yoursite.com/2017/04/14/React-Native中一些组件的用法(二)/index.html">
+<meta property="og:site_name" content="Lymoo's Blog">
+<meta property="og:description" content="本文为大家介绍一下React-Native中一些深入些的组件">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/RN2-base.gif">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/RN2-base2.gif">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/RN2-base3.gif">
+<meta property="og:image" content="http://olk97sdgv.bkt.clouddn.com/RN2-base4.gif">
+<meta property="og:updated_time" content="2017-04-14T11:06:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React-Native中一些组件的用法(二)">
+<meta name="twitter:description" content="本文为大家介绍一下React-Native中一些深入些的组件">
+<meta name="twitter:image" content="http://olk97sdgv.bkt.clouddn.com/RN2-base.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/14/React-Native中一些组件的用法(二)/"/>
+
+
+
+
+
+  <title> React-Native中一些组件的用法(二) | Lymoo's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3a0df7ad2c146b5262101964b60ca1c8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Lymoo's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">www.lymooz.com</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+<li style="margin-top: -20px;"> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+function c() {
+var e = document.createElement("link");
+e.setAttribute("type", "text/css");
+e.setAttribute("rel", "stylesheet");
+e.setAttribute("href", f);
+e.setAttribute("class", l);
+document.body.appendChild(e)
+}
+
+function h() {
+var e = document.getElementsByClassName(l);
+for (var t = 0; t < e.length; t++) {
+document.body.removeChild(e[t])
+}
+}
+
+function p() {
+var e = document.createElement("div");
+e.setAttribute("class", a);
+document.body.appendChild(e);
+setTimeout(function() {
+document.body.removeChild(e)
+}, 100)
+}
+
+function d(e) {
+return {
+height : e.offsetHeight,
+width : e.offsetWidth
+}
+}
+
+function v(i) {
+var s = d(i);
+return s.height > e && s.height < n && s.width > t && s.width < r
+}
+
+function m(e) {
+var t = e;
+var n = 0;
+while (!!t) {
+n += t.offsetTop;
+t = t.offsetParent
+}
+return n
+}
+
+function g() {
+var e = document.documentElement;
+if (!!window.innerWidth) {
+return window.innerHeight
+} else if (e && !isNaN(e.clientHeight)) {
+return e.clientHeight
+}
+return 0
+}
+
+function y() {
+if (window.pageYOffset) {
+return window.pageYOffset
+}
+return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+}
+
+function E(e) {
+var t = m(e);
+return t >= w && t <= b + w
+}
+
+function S() {
+var e = document.createElement("audio");
+e.setAttribute("class", l);
+e.src = i;
+e.loop = false;
+e.addEventListener("canplay", function() {
+setTimeout(function() {
+x(k)
+}, 500);
+setTimeout(function() {
+N();
+p();
+for (var e = 0; e < O.length; e++) {
+T(O[e])
+}
+}, 15500)
+}, true);
+e.addEventListener("ended", function() {
+N();
+h()
+}, true);
+e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+document.body.appendChild(e);
+e.play()
+}
+
+function x(e) {
+e.className += " " + s + " " + o
+}
+
+function T(e) {
+e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+}
+
+function N() {
+var e = document.getElementsByClassName(s);
+var t = new RegExp("\\b" + s + "\\b");
+for (var n = 0; n < e.length; ) {
+e[n].className = e[n].className.replace(t, "")
+}
+}
+
+var e = 30;
+var t = 30;
+var n = 350;
+var r = 350;
+var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+var s = "mw-harlem_shake_me";
+var o = "im_first";
+var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+var a = "mw-strobe_light";
+var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+var l = "mw_added_css";
+var b = g();
+var w = y();
+var C = document.getElementsByTagName("*");
+var k = null;
+for (var L = 0; L < C.length; L++) {
+var A = C[L];
+if (v(A)) {
+if (E(A)) {
+k = A;
+break
+}
+}
+}
+if (A === null) {
+console.warn("Could not find a node of the right size. Please try a different page.");
+return
+}
+c();
+S();
+var O = [];
+for (var L = 0; L < C.length; L++) {
+var A = C[L];
+if (v(A)) {
+O.push(A)
+}
+}
+})()    '>High一下</a> </li>
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/14/React-Native中一些组件的用法(二)/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lymoo">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olk97sdgv.bkt.clouddn.com/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Lymoo's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Lymoo's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                React-Native中一些组件的用法(二)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-14T09:54:54+08:00">
+                2017-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React-Native/" itemprop="url" rel="index">
+                    <span itemprop="name">React Native</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/14/React-Native中一些组件的用法(二)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/14/React-Native中一些组件的用法(二)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文为大家介绍一下React-Native中一些深入些的组件<a id="more"></a>，由于对ES6的语法并没有完全掌握，这里暂时用ES5和ES6混用的语法。</p>
+<h1 id="ScrollView组件"><a href="#ScrollView组件" class="headerlink" title="ScrollView组件"></a>ScrollView组件</h1><p>能够调用移动平台的ScrollView（滚动视图）的组件，同时还集成了触摸锁定的“响应者”系统。<br>注意一定要给scrollview一个高度，或者是他父级的高度。</p>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p>onScrollBeginDrag:开始拖拽的时候;<br>onScrollEndDrag：结束拖拽的时候;<br>onMomentumScrollBegin：开始滑动;<br>onMomentumScrollEnd：开始滑动;</p>
+<h2 id="特殊组件"><a href="#特殊组件" class="headerlink" title="特殊组件"></a>特殊组件</h2><p><strong>RefreshControl</strong> 以用在ScrollView或ListView内部，为其添加下拉刷新的功能。<br>当ScrollView处于竖直方向的起点位置（scrollY: 0），此时下拉会触发一个onRefresh事件。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>创建一个scroll.js文件<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    StyleSheet,</div><div class="line">    View,</div><div class="line">    ScrollView,</div><div class="line">    RefreshControl</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var dataSource = require(&quot;./data.json&quot;);</div><div class="line">// 创建组件</div><div class="line">var ScrollTest = React.createClass(&#123;</div><div class="line">    // 下面的几种函数可以根据自己的需求添加</div><div class="line">    _onScrollBeginDrag () &#123;</div><div class="line">       // 这里是开始拖拽的函数</div><div class="line">    &#125;,</div><div class="line">    _onScrollEndDrag () &#123;</div><div class="line">       // 这里是拖拽结束的函数</div><div class="line">    &#125;,</div><div class="line">    _onMomentumScrollBegin () &#123;</div><div class="line">       // 这里是开始滚动的函数</div><div class="line">    &#125;,</div><div class="line">    _onMomentumScrollEnd () &#123;</div><div class="line">       // 这里是滚动结束的函数</div><div class="line">    &#125;,</div><div class="line">    _refresh () &#123;</div><div class="line">       // 这里是请求数据的函数</div><div class="line">       alert(&quot;正在请求数据&quot;);</div><div class="line">    &#125;,</div><div class="line">    render () &#123;</div><div class="line">        return (</div><div class="line">            &lt;ScrollView style=&#123;styles.container&#125;</div><div class="line">                        onScrollBeginDrag=&#123;this._onScrollBeginDrag&#125;</div><div class="line">                        onScrollEndDrag=&#123;this._onScrollEndDrag&#125;</div><div class="line">                        onMomentumScrollBegin=&#123;this._onMomentumScrollBegin&#125;</div><div class="line">                        onMomentumScrollEnd=&#123;this._onMomentumScrollEnd&#125;</div><div class="line">                        refreshControl=&#123;</div><div class="line">                            &lt;RefreshControl refreshing=&#123;false&#125;</div><div class="line">                                            titleColor=&#123;&quot;red&quot;&#125;</div><div class="line">                                            title=&#123;&quot;正在刷新.......&quot;&#125;</div><div class="line">                                            tintColor=&#123;&quot;cyan&quot;&#125;</div><div class="line">                                            onRefresh=&#123;this._refresh&#125; /&gt;</div><div class="line">                        &#125;&gt;</div><div class="line">                &lt;View style=&#123;[styles.item, styles.item1]&#125;&gt;&lt;/View&gt;</div><div class="line">                &lt;View style=&#123;[styles.item, styles.item2]&#125;&gt;&lt;/View&gt;</div><div class="line">                &lt;View style=&#123;[styles.item, styles.item3]&#125;&gt;&lt;/View&gt;</div><div class="line">            &lt;/ScrollView&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">// 实例化样式</div><div class="line">var styles = StyleSheet.create(&#123;</div><div class="line">    container: &#123;</div><div class="line">        marginTop: 25,</div><div class="line">        height: 300,</div><div class="line">        borderWidth: 1,</div><div class="line">        borderColor: &quot;#ccc&quot;</div><div class="line">    &#125;,</div><div class="line">    item: &#123;</div><div class="line">        width: 280,</div><div class="line">        height: 150,</div><div class="line">        margin: 20</div><div class="line">    &#125;,</div><div class="line">    item1: &#123;</div><div class="line">        backgroundColor: &quot;red&quot;</div><div class="line">    &#125;,</div><div class="line">    item2: &#123;</div><div class="line">        backgroundColor: &quot;green&quot;</div><div class="line">    &#125;,</div><div class="line">    item3: &#123;</div><div class="line">        backgroundColor: &quot;yellow&quot;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">module.exports = ScrollTest;</div></pre></td></tr></table></figure></p>
+<p>再将index.ios.js文件改成如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">  AppRegistry,</div><div class="line">  View,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var Scroll = require(&quot;./scroll&quot;);</div><div class="line">var ScrollTest = React.createClass(&#123;</div><div class="line">    render () &#123;</div><div class="line">      return (</div><div class="line">          &lt;View&gt;</div><div class="line">            &lt;Scroll&gt;&lt;/Scroll&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">AppRegistry.registerComponent(&apos;useComponent&apos;, () =&gt; ScrollTest);</div></pre></td></tr></table></figure></p>
+<p>最终效果：<img src="http://olk97sdgv.bkt.clouddn.com/RN2-base.gif" alt="ScrollView组件效果展示"></p>
+<h1 id="ListView组件"><a href="#ListView组件" class="headerlink" title="ListView组件"></a>ListView组件</h1><p>用于高效地显示一个可以垂直滚动的变化的数据列表。<br>最基本的使用方式就是创建一个<strong>ListView.DataSource</strong>数据源，然后给它传递一个普通的数据数组，再使用数据源来实例化一个ListView组件，并且定义它的renderRow回调函数，这个函数会接受数组中的每个数据作为参数，返回一个可渲染的组件（作为listview的每一行）。</p>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><p><strong>ListView.DataSource</strong>为ListView组件提供高性能的数据处理和访问。<br>我们需要调用方法从原始输入数据中抽取数据来创建ListViewDataSource对象，并用其进行数据变更的比较。<br>DataSource初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">getInitialState:function () &#123;</div><div class="line">//  实例化DataSource对象</div><div class="line">    var ds = new ListView.DataSource(&#123;</div><div class="line">        rowHasChanged:(oldData,newData) =&gt; oldData !== newData</div><div class="line">    &#125;);</div><div class="line">    return &#123;</div><div class="line">        data:ds.cloneWithRows(news)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h2><p>设置数据源：dataSource={this.state.dataSource}<br>设置列表组件：renderRow={this._renderRow}<br>设置ListView头部：renderHeader={this._renderHeader}<br>设置列表项之间的间隔：renderSeparator={this._renderSeparator}</p>
+<h2 id="示例-制作一个电影列表"><a href="#示例-制作一个电影列表" class="headerlink" title="示例 制作一个电影列表"></a>示例 制作一个电影列表</h2><p>博主先前从猫眼电影里获取了一些电影介绍的json文件，有兴趣的同学可以去<a href="http://m.maoyan.com/movie/list.json?type=hot&amp;offset=0&amp;limit=10" target="_blank" rel="external">猫眼电影列表</a>获取一些信息，注意这里需要json格式转换一下！<br>这里创建一个movieList.js的文件<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    StyleSheet,</div><div class="line">    Text,</div><div class="line">    View,</div><div class="line">    Image,</div><div class="line">    ListView</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">// 通过ListView实现电影列表</div><div class="line">var movies = require(&quot;./data.json&quot;).data.movies;</div><div class="line"></div><div class="line">// 创建组件</div><div class="line">var ListMovie = React.createClass(&#123;</div><div class="line">    getInitialState () &#123;</div><div class="line">        var ds = new ListView.DataSource(&#123;</div><div class="line">            rowHasChanged: (oldData, newData) =&gt; oldData !== newData</div><div class="line">        &#125;);</div><div class="line">        return &#123;dataSource: ds.cloneWithRows(movies)&#125;</div><div class="line">    &#125;,</div><div class="line">    _renderRow (movie) &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.row&#125;&gt;</div><div class="line">                &lt;Image style=&#123;styles.img&#125; source=&#123;&#123;uri: movie.img&#125;&#125;/&gt;</div><div class="line">                &lt;View style=&#123;styles.right&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;styles.name&#125;&gt;&#123;movie.nm&#125;&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;styles.dir&#125;&gt;导演：&#123;movie.dir&#125;&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;styles.dir&#125;&gt;上映时间：&#123;movie.rt&#125;&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;,</div><div class="line">    _renderHeader () &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.header&#125;&gt;</div><div class="line">                &lt;Text style=&#123;styles.title&#125;&gt;猫眼热门电影&lt;/Text&gt;</div><div class="line">                &lt;View style=&#123;[styles.separator, &#123;width: &quot;100%&quot;&#125;]&#125;&gt;&lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;,</div><div class="line">    _renderSeparator () &#123;</div><div class="line">        return &lt;View style=&#123;styles.separator&#125;&gt;&lt;/View&gt;</div><div class="line">    &#125;,</div><div class="line">    render () &#123;</div><div class="line">        return &lt;ListView style=&#123;styles.container&#125;</div><div class="line">                         dataSource=&#123;this.state.dataSource&#125;</div><div class="line">                         renderRow=&#123;this._renderRow&#125;</div><div class="line">                         renderHeader=&#123;this._renderHeader&#125;</div><div class="line">                         renderSeparator=&#123;this._renderSeparator&#125;</div><div class="line">               /&gt;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 实例化样式</div><div class="line">var styles = StyleSheet.create(&#123;</div><div class="line">    container: &#123;</div><div class="line">        marginTop: 25</div><div class="line">    &#125;,</div><div class="line">    row: &#123;</div><div class="line">        flexDirection: &quot;row&quot;,</div><div class="line">        alignItems: &quot;center&quot;,</div><div class="line">        padding: 10</div><div class="line">    &#125;,</div><div class="line">    img: &#123;</div><div class="line">        width: 78,</div><div class="line">        height: 128</div><div class="line">    &#125;,</div><div class="line">    right: &#123;</div><div class="line">        marginLeft: 15,</div><div class="line">        flex: 1</div><div class="line">    &#125;,</div><div class="line">    name: &#123;</div><div class="line">        fontSize: 20,</div><div class="line">        fontWeight: &quot;bold&quot;,</div><div class="line">        marginTop: 3,</div><div class="line">        marginBottom: 10</div><div class="line">    &#125;,</div><div class="line">    dir: &#123;</div><div class="line">        fontSize: 15,</div><div class="line">        marginBottom: 3,</div><div class="line">        color: &quot;#686868&quot;</div><div class="line">    &#125;,</div><div class="line">    header: &#123;</div><div class="line">        height: 44,</div><div class="line">        alignItems: &quot;center&quot;</div><div class="line">    &#125;,</div><div class="line">    title: &#123;</div><div class="line">        fontSize: 25,</div><div class="line">        fontWeight: &quot;bold&quot;,</div><div class="line">        lineHeight: 44</div><div class="line">    &#125;,</div><div class="line">    separator: &#123;</div><div class="line">        height: 1,</div><div class="line">        backgroundColor: &quot;#ccc&quot;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">module.exports = ListMovie;</div></pre></td></tr></table></figure></p>
+<p>再将index.ios.js文件改成如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">  AppRegistry,</div><div class="line">  View,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var ListMovie = require(&quot;./listMovie&quot;);</div><div class="line">var Movie = React.createClass(&#123;</div><div class="line">    render () &#123;</div><div class="line">      return (</div><div class="line">          &lt;View&gt;</div><div class="line">            &lt;ListMovie&gt;&lt;/ListMovie&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">AppRegistry.registerComponent(&apos;useComponent&apos;, () =&gt; Movie);</div></pre></td></tr></table></figure></p>
+<p>最终效果：<img src="http://olk97sdgv.bkt.clouddn.com/RN2-base2.gif" alt="ScrollView组件效果展示"></p>
+<h1 id="Navigator组件"><a href="#Navigator组件" class="headerlink" title="Navigator组件"></a>Navigator组件</h1><p>使用导航器可以让你在应用的不同场景（页面）间进行切换。其实质上类似于HTML里导航条功能。<br>不过导航器页面的跳转需要通过路由对象来分辨不同的场景。<br>利用<strong>renderScene</strong>方法，导航栏可以根据指定的路由来渲染场景。</p>
+<h2 id="导航器的设置步骤"><a href="#导航器的设置步骤" class="headerlink" title="导航器的设置步骤"></a>导航器的设置步骤</h2><p>第一步：设置属性initialRoute：初始化route对象，指定默认页面，也就是启动app之后所看到的第一个页面；<br>第二步：configureScene：配置场景动画和手势；<br>第三步：renderScene；渲染场景，参数route（第一步创建并设置的导航器路由对象），navigator（导航器对象）<br>代码展示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;Navigator</div><div class="line">    initialRoute=&#123;rootRoute&#125;</div><div class="line">    configureScene=&#123;(route)=&gt;Navigator.SceneConfigs.PushFromRight&#125;</div><div class="line">    renderScene=&#123;</div><div class="line">        (route,navigator)=&gt;&#123;</div><div class="line">            var MySceneComponent = route.component;</div><div class="line">            console.log(MySceneComponent);</div><div class="line">            console.log(“aaaa”);</div><div class="line">            return (</div><div class="line">                &lt;MySceneComponent route=&#123;route&#125; navigator=&#123;navigator&#125;/&gt;</div><div class="line">            )</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h2><p>创建一个nav.js文件<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Created by lanou on 17/4/13.</div><div class="line"> */</div><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    StyleSheet,</div><div class="line">    Text,</div><div class="line">    View,</div><div class="line">    Navigator,</div><div class="line">    TouchableOpacity,</div><div class="line">    TextInput</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">// 在进行导航时，需要先构成一些页面，使用Navigator</div><div class="line"></div><div class="line">// 创建组件</div><div class="line">var FirstPage = React.createClass(&#123;</div><div class="line">    getInitialState () &#123;</div><div class="line">        return &#123;text: &quot;&quot;&#125;</div><div class="line">    &#125;,</div><div class="line">    saveText (text) &#123;</div><div class="line">        this.setState(&#123;text: text&#125;)</div><div class="line">    &#125;,</div><div class="line">    changePage () &#123;</div><div class="line">        // 把需要传递的值，都放在路由的nextPass属性里</div><div class="line">        var nextRoute = &#123;</div><div class="line">            component: SecondPage,</div><div class="line">            nextPass: &#123;text: this.state.text&#125;</div><div class="line">        &#125;;</div><div class="line">        this.props.navigator.push(nextRoute);</div><div class="line">    &#125;,</div><div class="line">    render () &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;[styles.container, &#123;backgroundColor: &quot;cyan&quot;&#125;]&#125;&gt;</div><div class="line">                &lt;TextInput style=&#123;styles.input&#125; placeholder=&#123;&quot;请输入&quot;&#125; onChangeText=&#123;this.saveText&#125;/&gt;</div><div class="line">                &lt;TouchableOpacity onPress=&#123;this.changePage&#125; style=&#123;styles.btn&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;styles.btnText&#125;&gt;跳转到下一页&lt;/Text&gt;</div><div class="line">                &lt;/TouchableOpacity&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var SecondPage = React.createClass(&#123;</div><div class="line">    changePage () &#123;</div><div class="line">        this.props.navigator.pop();</div><div class="line">    &#125;,</div><div class="line">    render () &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;[styles.container, &#123;backgroundColor: &quot;yellowgreen&quot;&#125;]&#125;&gt;</div><div class="line">                &lt;Text&gt;接收到的数据是&#123;this.props.text&#125;&lt;/Text&gt;</div><div class="line">                &lt;TouchableOpacity onPress=&#123;this.changePage&#125; style=&#123;styles.btn&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;styles.btnText&#125;&gt;返回上一页&lt;/Text&gt;</div><div class="line">                &lt;/TouchableOpacity&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var Nav = React.createClass(&#123;</div><div class="line">    render () &#123;</div><div class="line">        // 初始路由，首页</div><div class="line">        var rootRoute = &#123;</div><div class="line">            component: FirstPage,</div><div class="line">            nextPass: &#123;&#125;</div><div class="line">        &#125;;</div><div class="line">        return (</div><div class="line">            &lt;Navigator</div><div class="line">                // 第一步需要进行初始路由的设置</div><div class="line">                initialRoute=&#123;rootRoute&#125;</div><div class="line">                // 第二步设置页面的切换方式</div><div class="line">                configureScene=&#123;(route) =&gt; Navigator.SceneConfigs.FloatFromBottom&#125;</div><div class="line">                // 第三部确定要渲染的场景(页面)</div><div class="line">                renderScene=&#123;(route, navigator) =&gt; &#123;</div><div class="line">                    // 找到要渲染的页面</div><div class="line">                    var Component = route.component;</div><div class="line">                    // 渲染时，需要把route和Navigator作为属性传递下去，传递的值也作为属性传递</div><div class="line">                    // ...route.nextPass把route中的nextPass里的数据都传递下去</div><div class="line">                    return &lt;Component &#123;...route.nextPass&#125; text=&#123;route.nextPass.text&#125; route=&#123;route&#125; navigator=&#123;navigator&#125; /&gt;</div><div class="line">                &#125;&#125;</div><div class="line">            /&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 实例化样式</div><div class="line">var styles = StyleSheet.create(&#123;</div><div class="line">    container: &#123;</div><div class="line">        flex: 1,</div><div class="line">        justifyContent: &quot;center&quot;,</div><div class="line">        alignItems: &quot;center&quot;,</div><div class="line">    &#125;,</div><div class="line">    btn: &#123;</div><div class="line">        backgroundColor: &quot;#25f30d&quot;,</div><div class="line">        width: 115,</div><div class="line">        height: 30,</div><div class="line">        borderRadius: 5,</div><div class="line">        justifyContent: &quot;center&quot;,</div><div class="line">        alignItems: &quot;center&quot;</div><div class="line">    &#125;,</div><div class="line">    btnText: &#123;</div><div class="line">        fontSize: 14,</div><div class="line">        fontWeight: &quot;bold&quot;</div><div class="line">    &#125;,</div><div class="line">    input: &#123;</div><div class="line">        margin: 30,</div><div class="line">        borderWidth: 1,</div><div class="line">        borderColor: &quot;#ccc&quot;,</div><div class="line">        height: 30,</div><div class="line">        backgroundColor: &quot;#77ccb1&quot;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">module.exports = Nav;</div></pre></td></tr></table></figure></p>
+<p>在index.ios.js文件中代码更改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">  AppRegistry,</div><div class="line">  View,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var Nav = require(&quot;./nav&quot;);</div><div class="line">var NavTest = React.createClass(&#123;</div><div class="line">    render () &#123;</div><div class="line">      return (</div><div class="line">          &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;</div><div class="line">            &lt;Nav&gt;&lt;/Nav&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">AppRegistry.registerComponent(&apos;useComponent&apos;, () =&gt; NavTest);</div></pre></td></tr></table></figure></p>
+<p>最终效果：<img src="http://olk97sdgv.bkt.clouddn.com/RN2-base3.gif" alt="ScrollView组件效果展示"></p>
+<h1 id="TableBarIOS组件"><a href="#TableBarIOS组件" class="headerlink" title="TableBarIOS组件"></a>TableBarIOS组件</h1><p>TableBar是放置在屏幕的最下方会有很多平级的标签图标的标签栏，用户可以击内部不同的图标切换屏幕中显示的视图，TableBarIOS只适用于IOS平台</p>
+<h2 id="常用属性-1"><a href="#常用属性-1" class="headerlink" title="常用属性"></a>常用属性</h2><p>barTintColor：标签栏的背景颜色<br>tintColor:当前被选中标签图标的颜色<br>unselectedItemTintColor：当前没有被选中的标签图标的颜色</p>
+<h2 id="TabBarIOS-Item"><a href="#TabBarIOS-Item" class="headerlink" title="TabBarIOS.Item"></a>TabBarIOS.Item</h2><p>TabBarIOS.Item是每个可以点击标签不图标，根据点击的不同显示不同的视图</p>
+<h3 id="常用属性-2"><a href="#常用属性-2" class="headerlink" title="常用属性"></a>常用属性</h3><p>title：在图标下面显示的标题文字<br>icon：给当前标签指定一个自定义的图标<br>onPress：当此标签被选中时调用。你应该修改组件的状态来使得selected={true}<br>selected：这个属性决定了子视图是否可见。如果你看到一个空白的页面，很可能是没有选中任何一个标签。<br>代码展示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;TabBarIOS.Item</div><div class="line">    title=“movieTest”</div><div class="line">    icon=&#123;require(“./passport.png”)&#125;</div><div class="line">    onPress=&#123;this.changeTab.bind(this, ”movieTest”)&#125;</div><div class="line">    selected=&#123;this.state.selectTab == “movieTest”&#125;</div><div class="line">&gt;</div><div class="line">    &lt;MovieList&gt;&lt;/MovieList&gt;</div><div class="line">&lt;/TabBarIOS.Item&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h2><p>创建一个tabBar.js文件<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    TabBarIOS</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">//引入三个选项页面（这里引入的是之前做好的几个组件）</div><div class="line">var Nav = require(&quot;./nav&quot;);</div><div class="line">var MovieList = require(&quot;./movieList&quot;);</div><div class="line">var ImageTest = require(&quot;./image&quot;);</div><div class="line"></div><div class="line">var TabBarTest = React.createClass(&#123;</div><div class="line">    getInitialState:function () &#123;</div><div class="line">        //显示当前显示的标签</div><div class="line">        return &#123;</div><div class="line">            selectTab: &quot;首页&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    changeTab:function (name) &#123;</div><div class="line">        this.setState(&#123;</div><div class="line">            selectTab:name</div><div class="line">        &#125;)</div><div class="line">    &#125;,</div><div class="line">    render:function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;TabBarIOS barTintColor=&quot;#ccc&quot;</div><div class="line">                       tintColor=&#123;&quot;red&quot;&#125;</div><div class="line">                       unselectedItemTintColor=&#123;&quot;cyan&quot;&#125;</div><div class="line">            &gt;</div><div class="line">                &#123;/*下部的标签栏*/&#125;</div><div class="line">                &lt;TabBarIOS.Item</div><div class="line">                    title=&quot;首页&quot;</div><div class="line">                    icon=&#123;require(&quot;./images/index.png&quot;)&#125;</div><div class="line">                    onPress=&#123;this.changeTab.bind(this,&quot;首页&quot;)&#125;</div><div class="line">                    selected=&#123;this.state.selectTab == &quot;首页&quot;&#125;</div><div class="line">                &gt;</div><div class="line">                    &#123;/*每一个选项*/&#125;</div><div class="line">                    &lt;Input/&gt;</div><div class="line">                &lt;/TabBarIOS.Item&gt;</div><div class="line">                &lt;TabBarIOS.Item</div><div class="line">                    title=&quot;图片&quot;</div><div class="line">                    icon=&#123;require(&quot;./images/picture.png&quot;)&#125;</div><div class="line">                    onPress=&#123;this.changeTab.bind(this,&quot;图片&quot;)&#125;</div><div class="line">                    selected=&#123;this.state.selectTab == &quot;图片&quot;&#125;</div><div class="line">                &gt;</div><div class="line">                    &#123;/*每一个选项*/&#125;</div><div class="line">                    &lt;ImageTest/&gt;</div><div class="line">                &lt;/TabBarIOS.Item&gt;</div><div class="line">                &lt;TabBarIOS.Item</div><div class="line">                    title=&quot;电影&quot;</div><div class="line">                    icon=&#123;require(&quot;./images/movie.png&quot;)&#125;</div><div class="line">                    onPress=&#123;this.changeTab.bind(this,&quot;电影&quot;)&#125;</div><div class="line">                    selected=&#123;this.state.selectTab == &quot;电影&quot;&#125;</div><div class="line">                &gt;</div><div class="line">                    &#123;/*每一个选项*/&#125;</div><div class="line">                    &lt;MovieList/&gt;</div><div class="line">                &lt;/TabBarIOS.Item&gt;</div><div class="line">            &lt;/TabBarIOS&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">module.exports = TabBarTest;</div></pre></td></tr></table></figure></p>
+<p>在index.ios.js文件中，代码更改为如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import React, &#123; Component &#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">  AppRegistry,</div><div class="line">  View,</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var TabBarTest = require(&quot;./tabBar&quot;);</div><div class="line">var TabTest = React.createClass(&#123;</div><div class="line">    render () &#123;</div><div class="line">      return (</div><div class="line">          &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;</div><div class="line">            &lt;TabBarTest&gt;&lt;/TabBarTest&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">AppRegistry.registerComponent(&apos;useComponent&apos;, () =&gt; TabTest);</div></pre></td></tr></table></figure></p>
+<p>最终效果：<img src="http://olk97sdgv.bkt.clouddn.com/RN2-base4.gif" alt="ScrollView组件效果展示"></p>
+<h1 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h1><p>React Native提供了和web标准一致的Fetch API，用于满足开发者访问网络的需求。与之前学过的AJAX很相似。<br>fetch()第一个参数为请求地址<br><code>fetch(‘https://mywebsite.com/mydata.json’);</code><br>第二个参数可选，可以用来定制HTTP请求一些参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fetch(‘https://mywebsite.com/endpoint/‘, &#123;</div><div class="line">  method: ‘POST’,</div><div class="line">  headers: &#123;</div><div class="line">    ‘Accept’: ‘application/json’,</div><div class="line">    ‘Content-Type’: ‘application/json’,</div><div class="line">  &#125;,</div><div class="line">  body: JSON.stringify(&#123;</div><div class="line">    firstParam: ‘yourValue’,</div><div class="line">    secondParam: ‘yourOtherValue’,</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>其中body表示要传输的数据<br>Fetch 方法会返回一个Promise，需要对返回的数据进行处理<br>通过链式结构添加then方法进行成功数据处理<br>如果有错，通过catch方式捕捉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">getDate:function () &#123;</div><div class="line">    fetch(url)</div><div class="line">        .then((res)=&gt;&#123;</div><div class="line">            return res.json();</div><div class="line">        &#125;)</div><div class="line">        .then((resData)=&gt;&#123;</div><div class="line">            this.setState(&#123;</div><div class="line">                loaded:true,</div><div class="line">                dataSource:this.state.dataSource.cloneWithRows(resData.data.movies)</div><div class="line">            &#125;)</div><div class="line">        &#125;)</div><div class="line">        .catch((err)=&gt;&#123;</div><div class="line">            alert(err)</div><div class="line">        &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://olk97sdgv.bkt.clouddn.com/WeChat-public.jpg" alt="Lymoo wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，关注一下萝莉教授哦！友情链接中也有萝莉教授的微博哦！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您小小的支持将会鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://olk97sdgv.bkt.clouddn.com/wechatpay.JPG" alt="Lymoo WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://olk97sdgv.bkt.clouddn.com/AliPay.JPG" alt="Lymoo Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+            <a href="/tags/React-Native/" rel="tag"># React Native</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/13/React-Native中一些组件的用法(一)/" rel="next" title="React-Native中一些组件的用法(一)">
+                <i class="fa fa-chevron-left"></i> React-Native中一些组件的用法(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/14/React-Native中一些组件的用法(二)/"
+           data-title="React-Native中一些组件的用法(二)" data-url="http://yoursite.com/2017/04/14/React-Native中一些组件的用法(二)/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olk97sdgv.bkt.clouddn.com/avatar.jpg"
+               alt="Lymoo" />
+          <p class="site-author-name" itemprop="name">Lymoo</p>
+           
+              <p class="site-description motion-element" itemprop="description">好心态才有好状态。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Lymoo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5340228952?topnav=1&wvr=6&topsug=1&is_all=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/li-mo-zhu-lymoo/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-graduation-cap"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/github_37582965" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-bank"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/185b5853712e" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/58ec31dd570c350057e732cf" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-money"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://hexo.io/" title="Hexo" target="_blank">Hexo</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://weibo.com/u/3179738570?from=myfollow_all" title="萝莉教授" target="_blank">萝莉教授</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://shop104377383.taobao.com/?spm=a230r.7195193.1997079397.2.cJvyzv" title="小熊美淘宝店" target="_blank">小熊美淘宝店</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ScrollView组件"><span class="nav-number">1.</span> <span class="nav-text">ScrollView组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用方法"><span class="nav-number">1.1.</span> <span class="nav-text">常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊组件"><span class="nav-number">1.2.</span> <span class="nav-text">特殊组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.3.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ListView组件"><span class="nav-number">2.</span> <span class="nav-text">ListView组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理"><span class="nav-number">2.1.</span> <span class="nav-text">数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用属性"><span class="nav-number">2.2.</span> <span class="nav-text">常用属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-制作一个电影列表"><span class="nav-number">2.3.</span> <span class="nav-text">示例 制作一个电影列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Navigator组件"><span class="nav-number">3.</span> <span class="nav-text">Navigator组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导航器的设置步骤"><span class="nav-number">3.1.</span> <span class="nav-text">导航器的设置步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-1"><span class="nav-number">3.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TableBarIOS组件"><span class="nav-number">4.</span> <span class="nav-text">TableBarIOS组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用属性-1"><span class="nav-number">4.1.</span> <span class="nav-text">常用属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TabBarIOS-Item"><span class="nav-number">4.2.</span> <span class="nav-text">TabBarIOS.Item</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用属性-2"><span class="nav-number">4.2.1.</span> <span class="nav-text">常用属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-2"><span class="nav-number">4.3.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络请求"><span class="nav-number">5.</span> <span class="nav-text">网络请求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script>
+host3 = window.location.href;
+chinadomai3 = "http://www.lymooz.com/"; 
+if (host3.indexOf(chinadomain3)!=-1)  {
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<div class="copyright" >
+  
+  Copyright &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-html5"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lymoo</span>
+</div>
+
+
+<div class="powered-by">
+  版权所有
+</div>
+
+<div class="theme-info">
+  制作 -
+  <a class="theme-link" href="http://www.lymooz.com/">
+    Lymoo
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zzcLymoo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

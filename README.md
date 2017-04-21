@@ -1,8 +1,6 @@
 # 个人博客
 
->## 展示地址
-
-[个人博客](http://www.lymooz.com)
+展示地址：[个人博客](http://www.lymooz.com)
 
 >## 使用Hexo配置的博客
 

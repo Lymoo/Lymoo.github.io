@@ -3,6 +3,27 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/2017/04/21/Vue%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</loc>
+    <lastmod>2017-04-22T07:14:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue学习之路</title>
+        <pubTime>2017-04-21T09:53:58.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
     
   <url>
     <loc>http://yoursite.com/2017/04/14/React-Native%E4%B8%AD%E4%B8%80%E4%BA%9B%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%A8%E6%B3%95(%E4%BA%8C)/</loc>
@@ -369,7 +390,6 @@
     </data>
     </url>
 
-    
     
     
     
